@@ -27,7 +27,7 @@
     font-family: "Noto Sans TC", system-ui, "Microsoft JhengHei", sans-serif;
     font-size: 18px; line-height: 1.8; -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 48px 24px 80px; }
 
   .back-link {
     display: inline-block; color: var(--muted); text-decoration: none;
@@ -50,6 +50,28 @@
     margin: 0 0 14px; padding-left: 12px; border-left: 5px solid var(--brand);
   }
   .section { margin-bottom: 40px; }
+
+  /* 左右兩欄：週報（左）/ 速報（右） */
+  .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+  .columns .section { margin-bottom: 0; }
+
+  /* 最新一篇：實心紫底 + 白字 */
+  a.report.latest { background: var(--brand-dark); border-color: var(--brand-dark); }
+  a.report.latest:hover { border-color: #5b21a6; box-shadow: 0 6px 18px rgba(109,40,217,.38); }
+  .report.latest .meta { color: #fff; opacity: .9; }
+  .report.latest .lead { color: #fff; }
+  .report.latest .go { color: #fff; opacity: .85; }
+
+  /* 超過 3 筆收合 + 查看更多 */
+  .report.extra { display: none; }
+  .more-btn {
+    display: none; width: 100%; text-align: center; cursor: pointer;
+    background: #faf9fe; color: var(--brand-dark); border: 1px dashed var(--brand);
+    border-radius: 10px; padding: 12px; font-size: 14px; font-weight: 700;
+    font-family: inherit; transition: background .15s;
+  }
+  .more-btn:hover { background: #f0eafb; }
+  .more-btn::after { content: " ↓"; }
 
   /* 遊戲速報區塊（最新，會被覆蓋）— 低調卡片，左側細紫條作為區分 */
   a.flash {
@@ -93,6 +115,20 @@
     color: var(--muted); font-size: 14px;
   }
 
+  @media (max-width: 768px) {
+    /* 單欄交錯：最新週報→最新速報→舊週報群→舊速報群 */
+    .columns { display: flex; flex-direction: column; gap: 14px; }
+    .columns .section { display: contents; }
+    .weekly .report.latest   { order: 1; margin-bottom: 0; }
+    .flash-col .report.latest { order: 2; margin-bottom: 0; }
+    .weekly .section-title    { order: 3; margin-top: 26px; }
+    .weekly .report:not(.latest) { order: 4; }
+    .weekly .more-btn         { order: 5; }
+    .flash-col .section-title { order: 6; margin-top: 26px; }
+    .flash-col .report:not(.latest) { order: 7; }
+    .flash-col .more-btn      { order: 8; }
+  }
+
   @media (max-width: 600px) {
     body { font-size: 17px; }
     .wrap { padding: 32px 18px 60px; }
@@ -120,28 +156,14 @@
     </div>
   </header>
 
-  <!-- ===== 遊戲速報：保留歷史，最新的放最上面，每期新增一張 a.report，連到 flash/Fxx/ ===== -->
-  <div class="section">
-    <p class="section-title">遊戲速報</p>
+  <!-- ===== 左右兩欄：週報（左）／速報（右）；各欄最新在最上、最新一篇加 latest 重點底色 ===== -->
+  <div class="columns">
 
-    <a class="report" href="flash/F02/">
-      <div class="meta">第 2 期 ｜ 2026/06/03</div>
-      <div class="lead">Super Wildrix</div>
-      <div class="go">閱讀本期速報</div>
-    </a>
-
-    <a class="report" href="flash/F01/">
-      <div class="meta">第 1 期 ｜ 2026/06/02</div>
-      <div class="lead">Charge Bison、Joker's Revenge</div>
-      <div class="go">閱讀本期速報</div>
-    </a>
-  </div>
-
-  <!-- ===== 每週週報：保留歷史，最新的放最上面，每週新增一張 a.report ===== -->
+  <!-- ===== 每週週報（左欄）：保留歷史，最新的放最上面並加 latest，每週新增一張 a.report ===== -->
   <div class="section weekly">
     <p class="section-title">每週週報</p>
 
-    <a class="report" href="weeks/W23/">
+    <a class="report latest" href="weeks/W23/">
       <div class="meta">第 23 週 ｜ 2026/06/01 – 06/05</div>
       <div class="lead">Bingo Plus 廠商鐘擺、PlayTime 返水加碼到 2%</div>
       <div class="go">閱讀本週週報</div>
@@ -152,6 +174,29 @@
       <div class="lead">Bingo Plus 單週 7 成換血，JILI 以新作汰換舊作</div>
       <div class="go">閱讀本週週報</div>
     </a>
+
+    <button class="more-btn" type="button">查看更多週報</button>
+  </div>
+
+  <!-- ===== 遊戲速報（右欄）：保留歷史，最新的放最上面並加 latest，每期新增一張 a.report，連到 flash/Fxx/ ===== -->
+  <div class="section flash-col">
+    <p class="section-title">遊戲速報</p>
+
+    <a class="report latest" href="flash/F02/">
+      <div class="meta">第 2 期 ｜ 2026/06/03</div>
+      <div class="lead">Super Wildrix</div>
+      <div class="go">閱讀本期速報</div>
+    </a>
+
+    <a class="report" href="flash/F01/">
+      <div class="meta">第 1 期 ｜ 2026/06/02</div>
+      <div class="lead">Charge Bison、Joker's Revenge</div>
+      <div class="go">閱讀本期速報</div>
+    </a>
+
+    <button class="more-btn" type="button">查看更多速報</button>
+  </div>
+
   </div>
 
   <footer>
@@ -159,5 +204,23 @@
   </footer>
 
 </div>
+<script>
+  document.querySelectorAll('.columns .section').forEach(function(sec) {
+    var cards = sec.querySelectorAll('.report');
+    var btn = sec.querySelector('.more-btn');
+    if (cards.length > 3) {
+      for (var i = 3; i < cards.length; i++) { cards[i].classList.add('extra'); }
+      if (btn) {
+        btn.style.display = 'block';
+        btn.addEventListener('click', function() {
+          sec.querySelectorAll('.report.extra').forEach(function(c) { c.classList.remove('extra'); });
+          btn.style.display = 'none';
+        });
+      }
+    } else if (btn) {
+      btn.style.display = 'none';
+    }
+  });
+</script>
 </body>
 </html>
