@@ -56,8 +56,8 @@
   .columns .section { margin-bottom: 0; }
 
   /* 最新一篇：實心紫底 + 白字 */
-  a.report.latest { background: var(--brand-dark); border-color: var(--brand-dark); }
-  a.report.latest:hover { border-color: #5b21a6; box-shadow: 0 6px 18px rgba(109,40,217,.38); }
+  a.report.latest { background: #8A6BBE; border-color: #8A6BBE; }
+  a.report.latest:hover { border-color: #74569f; box-shadow: 0 6px 18px rgba(138,107,190,.34); }
   .report.latest .meta { color: #fff; opacity: .9; }
   .report.latest .lead { color: #fff; }
   .report.latest .go { color: #fff; opacity: .85; }
@@ -92,9 +92,9 @@
 
   /* 週報卡片列表 */
   a.report {
-    display: block; text-decoration: none; color: inherit;
+    display: flex; flex-direction: column; text-decoration: none; color: inherit;
     border: 1px solid var(--line); border-radius: 10px;
-    padding: 20px 22px; margin: 0 0 16px;
+    padding: 20px 22px; margin: 0 0 16px; min-height: 150px;
     transition: border-color .15s, box-shadow .15s, transform .15s;
   }
   a.report:hover {
@@ -107,7 +107,7 @@
     color: var(--brand); margin-bottom: 6px;
   }
   .report .lead { font-size: 18px; font-weight: 700; color: var(--text); line-height: 1.5; }
-  .report .go { font-size: 14px; color: var(--muted); margin-top: 8px; }
+  .report .go { font-size: 14px; color: var(--muted); margin-top: auto; padding-top: 8px; }
   .report .go::after { content: " →"; }
 
   footer {
