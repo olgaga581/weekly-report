@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>遊戲速報｜2026/06/08</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="新遊戲分享 KONG ISLAND">
+<meta property="og:description" content="iGaming 遊戲速報｜2026/06/08 — KONG ISLAND（FA CHAI）">
+<meta property="og:image" content="https://olgaga581.github.io/weekly-report/igaming/flash/F03/kong-island.jpg">
+<meta property="og:url" content="https://olgaga581.github.io/weekly-report/igaming/flash/F03/">
+<style>
+  :root {
+    --brand: #24b4cc;
+    --brand-dark: #167d91;
+    --text: #1a1a1a;
+    --muted: #5a6470;
+    --line: #e3e8ee;
+    --bg: #ffffff;
+    --card-bg: #f8fbfc;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: system-ui, "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif;
+    font-size: 17px; line-height: 1.8; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+  header { border-bottom: 3px solid var(--brand); padding-bottom: 16px; margin-bottom: 32px; }
+  .head-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .head-row img { height: 56px; width: auto; flex-shrink: 0; }
+  .head-text { text-align: right; }
+  .head-text h1 { font-size: 26px; line-height: 1.4; margin: 0; color: var(--brand-dark); }
+  .head-text .date { color: var(--muted); font-size: 15px; margin-top: 4px; }
+  .summary-bar {
+    background: #eef7f9; border-radius: 8px; padding: 16px 22px; margin-bottom: 32px;
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .summary-bar .count { font-size: 15px; color: var(--muted); white-space: nowrap; }
+  .summary-bar .count strong { font-size: 28px; font-weight: 700; color: var(--brand-dark); margin-right: 4px; }
+  .summary-divider { width: 1px; height: 36px; background: var(--line); flex-shrink: 0; }
+  .summary-games { display: flex; flex-wrap: wrap; gap: 8px; }
+  .summary-chip {
+    background: #fff; border: 1px solid var(--brand); border-radius: 20px;
+    padding: 4px 14px; font-size: 14px; color: var(--brand-dark); font-weight: 500;
+    text-decoration: none; transition: background .15s;
+  }
+  .summary-chip:hover { background: var(--brand); color: #fff; }
+  .game-card { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
+  .card-header { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 100%); padding: 20px 24px 16px; color: #fff; }
+  .card-index { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; opacity: .7; text-transform: uppercase; margin-bottom: 4px; }
+  .card-title { font-size: 22px; font-weight: 700; margin: 0; line-height: 1.3; }
+  .card-vendor-badge { display: inline-block; background: rgba(255,255,255,.2); border-radius: 4px; padding: 2px 10px; font-size: 13px; font-weight: 500; margin-top: 8px; }
+  .card-image { width: 100%; background: #dce8ec; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; min-height: 60px; }
+  .card-image img { width: auto; max-width: 100%; max-height: 420px; height: auto; display: block; margin: 0 auto; }
+  .card-body { padding: 24px; background: #fff; }
+  .tags-section { margin-bottom: 22px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  .tags-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .tag { display: inline-flex; align-items: center; gap: 5px; border-radius: 6px; padding: 4px 10px; font-size: 13px; font-weight: 500; line-height: 1.4; }
+  .tag-label { font-size: 11px; font-weight: 700; opacity: .65; text-transform: uppercase; letter-spacing: .5px; }
+  .tag-theme   { background: #e8f4f7; color: #167d91; }
+  .tag-rule    { background: #f0f4ff; color: #3d5af1; }
+  .tag-trigger { background: #fff4e6; color: #c26a00; }
+  .tag-maxwin  { background: #fef0f0; color: #c0392b; }
+  .section-label { font-size: 12px; font-weight: 700; letter-spacing: 1px; color: var(--brand); text-transform: uppercase; margin-bottom: 10px; }
+  .section-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; display: flex; align-items: center; gap: 7px; }
+  .section-title::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: var(--brand); flex-shrink: 0; }
+  .section-title.icon-core::before { background: var(--brand-dark); border-radius: 50%; }
+  .gameplay-list { list-style: none; margin: 0 0 24px; padding: 0; counter-reset: step; }
+  .gameplay-list li { counter-increment: step; display: flex; gap: 14px; margin-bottom: 12px; line-height: 1.7; font-size: 16px; }
+  .gameplay-list li::before {
+    content: counter(step); min-width: 26px; height: 26px; background: var(--brand); color: #fff;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 3px; transition: background .2s;
+  }
+  .gameplay-list li.step-active::before { background: #0c3547; }
+  .core-block { background: var(--card-bg); border-left: 4px solid var(--brand); border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 20px; font-size: 15px; color: var(--text); line-height: 1.75; }
+  .gameplay-toggle {
+    display: flex; align-items: center; justify-content: space-between; cursor: pointer;
+    user-select: none; padding: 10px 14px; margin-bottom: 20px; background: #eef7f9;
+    border-radius: 6px; border: 1px solid #c8e8ef; transition: background .15s;
+  }
+  .gameplay-toggle:hover { background: #ddf0f5; }
+  .gameplay-toggle:hover .section-label { color: var(--brand-dark); }
+  .gameplay-toggle .section-label { margin-bottom: 0; }
+  .toggle-icon { font-size: 13px; color: var(--muted); transition: transform .25s ease; line-height: 1; }
+  .toggle-icon.open { transform: rotate(180deg); }
+  .gameplay-content { overflow: hidden; max-height: 0; transition: max-height .35s ease, opacity .25s ease; opacity: 0; }
+  .gameplay-content.open { max-height: 9999px; opacity: 1; }
+  .note-block { background: #fffdf5; border-left: 4px solid #e7c14b; border-radius: 0 8px 8px 0; padding: 16px 18px; margin-bottom: 20px; font-size: 15px; color: var(--text); line-height: 1.8; }
+  .note-block ol { margin: 8px 0; padding-left: 20px; }
+  .note-block .q { color: var(--brand-dark); font-weight: 700; margin-top: 12px; }
+  .note-block .fix-h { font-weight: 700; margin-top: 14px; color: #b58a00; }
+  .note-block ul { margin: 4px 0 0; padding-left: 18px; }
+  .note-block .note-intro { margin-bottom: 16px; }
+  .note-block .dim { margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px dashed #ead9a0; }
+  .note-block .dim:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+  .note-block .dim-title { font-weight: 700; color: #b58a00; margin-bottom: 8px; }
+  .note-block .dim p { margin: 0 0 7px; }
+  .note-block .dim p:last-child { margin-bottom: 0; }
+  .note-block .tag-obs, .note-block .tag-sol {
+    display: inline-block; font-size: 11px; font-weight: 700; border-radius: 4px;
+    padding: 1px 8px; margin-right: 8px; vertical-align: 2px;
+  }
+  .note-block .tag-obs { background: #eef2f7; color: #5a6470; }
+  .note-block .tag-sol { background: #e6f4ea; color: #2c7a4b; }
+  .gallery { margin: 20px 0 24px; border-top: 1px solid var(--line); padding-top: 20px; }
+  .gallery-main { width: 100%; background: #dce8ec; border-radius: 8px; overflow: hidden; margin-bottom: 10px; border: 1px solid var(--line); min-height: 60px; display: flex; align-items: center; justify-content: center; }
+  .gallery-main img { width: auto; max-width: 100%; max-height: 480px; height: auto; display: block; margin: 0 auto; transition: opacity .2s ease; }
+  .gallery-main .placeholder { color: var(--muted); font-size: 14px; text-align: center; padding: 24px; }
+  .gallery-thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
+  .gallery-thumbs .thumb { width: 120px; height: 80px; border-radius: 6px; overflow: hidden; cursor: pointer; border: 2px solid transparent; background: #dce8ec; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: border-color .15s; }
+  .gallery-thumbs .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery-thumbs .thumb.active { border-color: var(--brand); }
+  .gallery-thumbs .thumb:hover { border-color: var(--brand); opacity: .85; }
+  .thumb-placeholder { font-size: 10px; color: var(--muted); text-align: center; line-height: 1.3; padding: 4px; }
+  .trial-link { display: inline-flex; align-items: center; gap: 6px; background: var(--brand); color: #fff; text-decoration: none; padding: 9px 20px; border-radius: 6px; font-size: 14px; font-weight: 700; transition: background .15s; }
+  .trial-link:hover { background: var(--brand-dark); }
+  .trial-link svg { width: 14px; height: 14px; fill: currentColor; }
+  .back-to-top { display: block; text-align: center; margin: 32px 0 24px; padding: 10px; border: 1px solid var(--line); border-radius: 8px; color: var(--brand-dark); text-decoration: none; font-size: 14px; font-weight: 500; transition: background .15s; }
+  .back-to-top:hover { background: var(--card-bg); }
+  .bottom-row { position: relative; margin: 32px 0 0; }
+  .bottom-row .back-to-top { margin: 0; }
+  .note-toggle {
+    position: absolute; right: 12px; bottom: 8px; cursor: pointer;
+    color: var(--muted); font-size: 12px; line-height: 1; user-select: none;
+    padding: 4px; transition: transform .25s ease, color .15s;
+  }
+  .note-toggle:hover { color: var(--brand-dark); }
+  .note-toggle.open { transform: rotate(180deg); }
+  .note-panel { margin-top: 10px; }
+  .note-block b { color: var(--brand-dark); }
+  footer { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 28px 16px 60px; }
+    .head-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .head-row img { height: 44px; }
+    .head-text { text-align: left; }
+    .head-text h1 { font-size: 22px; }
+    .summary-bar { gap: 12px; }
+    .card-title { font-size: 19px; }
+    .card-body { padding: 18px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <a href="../../" style="display:inline-block;font-size:14px;color:var(--brand-dark);text-decoration:none;margin-bottom:16px;">← iGaming 競品動態</a>
+
+  <header>
+    <div class="head-row">
+      <img src="logo.png" alt="傳奇亞太科技 ALPHABET">
+      <div class="head-text">
+        <h1>iGaming 遊戲速報</h1>
+        <div class="date">2026/06/08｜新遊戲分享</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-bar">
+    <div class="count"><strong>1</strong> 款新遊戲分享</div>
+    <div class="summary-divider"></div>
+    <div class="summary-games">
+      <a class="summary-chip" href="#game-1">KONG ISLAND</a>
+    </div>
+  </div>
+
+  <!-- 遊戲 1：KONG ISLAND -->
+  <article class="game-card" id="game-1">
+    <div class="card-header">
+      <div class="card-index">01 / 01</div>
+      <h2 class="card-title">KONG ISLAND</h2>
+      <span class="card-vendor-badge">FA CHAI</span>
+    </div>
+    <div class="card-image">
+      <img src="kong-island.jpg" alt="KONG ISLAND" onerror="this.parentElement.innerHTML='<span>遊戲主圖（待提供）</span>'">
+    </div>
+    <div class="card-body">
+      <div class="tags-section">
+        <div class="tags-row">
+          <span class="tag tag-theme"><span class="tag-label">主題</span>熱帶海島 / 金剛</span>
+          <span class="tag tag-maxwin"><span class="tag-label">Max Win</span>3,000×</span>
+        </div>
+        <div class="tags-row">
+          <span class="tag tag-rule"><span class="tag-label">計線</span>LINE</span>
+          <span class="tag tag-rule"><span class="tag-label">線數</span>5</span>
+          <span class="tag tag-rule"><span class="tag-label">盤面</span>3×3</span>
+          <span class="tag tag-trigger"><span class="tag-label">觸發</span>隨機觸發</span>
+        </div>
+      </div>
+
+      <div class="section-title">規格簡述</div>
+      <div class="core-block">3×3 / 5 LINES / 計線 LINE / Max Win 3,000×<br>掉落消除＋5 階連勝倍數燈，無 Free Game／Scatter／累積彩金，機制精簡</div>
+
+      <div class="section-title">遊戲玩法</div>
+      <div class="gameplay-content open">
+        <ol class="gameplay-list" style="margin-top:14px">
+          <li>連勝倍數燈共 5 階：1x → 2x → 3x → 6x → 10x，無傳統 Free Game／Scatter／累積彩金。</li>
+          <li>Wild 限 R2、R3 出現，戴墨鏡金剛＝Wild，只替代基礎符號。</li>
+          <li>消除中獎符號 → 倍數燈前進一階；<br>該 spin 未中獎則重置回起始倍數。</li>
+          <li>Feature Spin 轉動中隨機觸發：R1＋R3 必落相同符號、R2 整列 stacked Wild，cascade 連消到無可消為止。</li>
+        </ol>
+        <div class="gallery">
+          <div class="gallery-main" id="gallery-main-1">
+            <img src="kong-island-1.jpg" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>步驟 1 截圖（待提供）</div>'">
+          </div>
+          <div class="gallery-thumbs" id="gallery-thumbs-1">
+            <div class="thumb active" data-gallery="1" data-src="kong-island-1.jpg" data-step="1"><img src="kong-island-1.jpg" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;thumb-placeholder&quot;>步驟 1</div>'"></div>
+            <div class="thumb" data-gallery="1" data-src="kong-island-2.jpg" data-step="2"><img src="kong-island-2.jpg" alt="步驟 2" onerror="this.parentElement.innerHTML='<div class=&quot;thumb-placeholder&quot;>步驟 2</div>'"></div>
+            <div class="thumb" data-gallery="1" data-src="kong-island-3.jpg" data-step="3"><img src="kong-island-3.jpg" alt="步驟 3" onerror="this.parentElement.innerHTML='<div class=&quot;thumb-placeholder&quot;>步驟 3</div>'"></div>
+            <div class="thumb" data-gallery="1" data-src="kong-island-4.jpg" data-step="4"><img src="kong-island-4.jpg" alt="步驟 4" onerror="this.parentElement.innerHTML='<div class=&quot;thumb-placeholder&quot;>步驟 4</div>'"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title icon-core">核心設計</div>
+      <div class="core-block">期待點：等待 Feature Spin 觸發、R2 整列 stacked Wild 落下的瞬間。<br>爆發邏輯：R1／R3 鏡像同符鎖定 5 條線，cascade 每消一次推進連勝倍數燈一階（1x→10x），堆疊 WILD 消除後續掉、延長連消。</div>
+
+      <a class="trial-link" href="https://fachaigaming.com/en/games/slot/kong-island" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm1.5 4.5L6 8l3.5 3.5 1-1L8 8l2.5-2.5-1-1z"/></svg>立即試玩
+      </a>
+      <div class="bottom-row">
+        <a class="back-to-top" href="#top">↑ 回到最上方</a>
+        <span class="note-toggle" onclick="toggleNote(this)" title="企劃心得與提問">▼</span>
+      </div>
+      <div class="gameplay-content note-panel">
+        <div class="note-block">
+          <div class="note-intro">3×3／5 LINE／掉落消除，本身連消不易。整體機制簡單，期待感集中在堆疊 WILD。以下分三個面向，各列觀察與可能解方。</div>
+
+          <div class="dim">
+            <div class="dim-title">面向 1｜連消難達成</div>
+            <p><span class="tag-obs">觀察</span>掉落消除本身很難連起來，連消到 10X <b>幾乎全靠掉 WILD</b>，玩起來變化少、略顯枯燥。</p>
+            <p><span class="tag-sol">解方</span>偶爾掉一顆 <b>Sticky Wild（黏著百搭）</b>，停 1～2 輪——不是每顆都黏，而是偶爾一顆。</p>
+          </div>
+
+          <div class="dim">
+            <div class="dim-title">面向 2｜瞇牌感不足</div>
+            <p><span class="tag-obs">觀察</span>Feature Spin 隨機觸發（R1／R3 鏡像同符＋R2 堆疊 Wild），掉幾輪就得分，但<b>停太快</b>，瞇牌感不夠。</p>
+            <p><span class="tag-sol">解方</span>兩個方向——</p>
+            <ul>
+              <li><b>逐軸停輪</b>：R1、R3 先停，若同符，R2 轉輪上方發亮，把焦點導過去、拉長揭曉感。</li>
+              <li><b>前兆</b>：轉動中偶爾閃金剛剪影／邊框預告，讓玩家「看到快來了」。</li>
+            </ul>
+          </div>
+
+          <div class="dim">
+            <div class="dim-title">面向 3｜落單格落差</div>
+            <p><span class="tag-obs">觀察</span>R1／R3 鏡像時，<b>R2 只掉 2 顆 Wild</b>，最底排消不掉、原封不動，形成「看得到卻碰不到」的落差。</p>
+            <p><span class="tag-sol">解方</span>Wild 中獎後<b>展開補滿整列</b>：當輪一中獎就讓 Wild 展開填滿 R2 → 最底排補成 Wild、整盤消光，順帶也補足瞇牌感。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <footer>© 2026 傳奇亞太科技有限公司 ALPHABET ｜ 遊戲速報</footer>
+
+</div>
+<script>
+  function toggleGameplay(toggleEl) {
+    var content = toggleEl.nextElementSibling;
+    var icon = toggleEl.querySelector('.toggle-icon');
+    if (content) content.classList.toggle('open');
+    if (icon) icon.classList.toggle('open');
+  }
+
+  function toggleNote(arrowEl) {
+    arrowEl.classList.toggle('open');
+    var row = arrowEl.closest('.bottom-row');
+    var panel = row ? row.nextElementSibling : null;
+    if (panel) panel.classList.toggle('open');
+  }
+
+  document.querySelectorAll('.gameplay-list').forEach(function(list) {
+    var first = list.querySelector('li');
+    if (first) first.classList.add('step-active');
+  });
+
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    if (thumb.dataset.src) { var pre = new Image(); pre.src = thumb.dataset.src; }
+  });
+
+  function setMain(mainEl, src, step) {
+    if (src) {
+      var img = mainEl.querySelector('img');
+      if (img) { img.src = src; img.alt = '步驟 ' + step; }
+      else { mainEl.innerHTML = '<img src="' + src + '" alt="步驟 ' + step + '">'; }
+    } else {
+      mainEl.innerHTML = '<div class="placeholder">步驟 ' + step + ' 截圖（待提供）</div>';
+    }
+  }
+
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      var galleryId = thumb.dataset.gallery;
+      var src = thumb.dataset.src;
+      var step = thumb.dataset.step;
+      var mainEl = document.getElementById('gallery-main-' + galleryId);
+      document.querySelectorAll('.thumb[data-gallery="' + galleryId + '"]').forEach(function(t) { t.classList.remove('active'); });
+      thumb.classList.add('active');
+      var card = thumb.closest('.game-card');
+      if (card) {
+        card.querySelectorAll('.gameplay-list li').forEach(function(li) { li.classList.remove('step-active'); });
+        var targetLi = card.querySelectorAll('.gameplay-list li')[parseInt(step) - 1];
+        if (targetLi) targetLi.classList.add('step-active');
+      }
+      setMain(mainEl, src, step);
+    });
+  });
+
+  document.querySelectorAll('.gameplay-list li').forEach(function(li) {
+    li.style.cursor = 'pointer';
+    li.addEventListener('click', function() {
+      var card = li.closest('.game-card');
+      if (!card) return;
+      var step = Array.prototype.indexOf.call(li.parentNode.children, li) + 1;
+      var thumb = card.querySelector('.gallery-thumbs .thumb[data-step="' + step + '"]');
+      if (thumb) thumb.click();
+    });
+  });
+</script>
+</body>
+</html>
