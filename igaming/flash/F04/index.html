@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>遊戲速報｜2026/06/05</title>
+<style>
+  :root{--brand:#24b4cc;--brand-dark:#167d91;--text:#1a1a1a;--muted:#5a6470;--line:#e3e8ee;--bg:#fff;--card-bg:#f8fbfc;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:#fff;color:#1a1a1a;font-family:system-ui,"Microsoft JhengHei","PingFang TC",sans-serif;font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:800px;margin:0 auto;padding:48px 24px 80px;}
+  header{border-bottom:3px solid var(--brand);padding-bottom:16px;margin-bottom:32px;}
+  .head-row{display:flex;align-items:center;justify-content:space-between;gap:24px;}
+  .head-row img{height:56px;width:auto;flex-shrink:0;}
+  .head-text{text-align:right;}
+  .head-text h1{font-size:26px;line-height:1.4;margin:0;color:var(--brand-dark);}
+  .head-text .date{color:var(--muted);font-size:15px;margin-top:4px;}
+  .summary-bar{background:#eef7f9;border-radius:8px;padding:16px 22px;margin-bottom:32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+  .summary-bar .count{font-size:15px;color:var(--muted);white-space:nowrap;}
+  .summary-bar .count strong{font-size:28px;font-weight:700;color:var(--brand-dark);margin-right:4px;}
+  .summary-divider{width:1px;height:36px;background:var(--line);flex-shrink:0;}
+  .summary-games{display:flex;flex-wrap:wrap;gap:8px;}
+  .summary-chip{background:#fff;border:1px solid var(--brand);border-radius:20px;padding:4px 14px;font-size:14px;color:var(--brand-dark);font-weight:500;text-decoration:none;transition:background .15s;}
+  .summary-chip:hover{background:var(--brand);color:#fff;}
+  .game-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:40px;box-shadow:0 2px 8px rgba(0,0,0,.04);}
+  .card-header{background:linear-gradient(135deg,var(--brand-dark) 0%,var(--brand) 100%);padding:20px 24px 16px;color:#fff;}
+  .card-index{font-size:12px;font-weight:700;letter-spacing:1.5px;opacity:.7;text-transform:uppercase;margin-bottom:4px;}
+  .card-title{font-size:22px;font-weight:700;margin:0;line-height:1.3;}
+  .card-vendor-badge{display:inline-block;background:rgba(255,255,255,.2);border-radius:4px;padding:2px 10px;font-size:13px;font-weight:500;margin-top:8px;}
+  .card-image{width:100%;background:#dce8ec;display:flex;align-items:center;justify-content:center;min-height:60px;}
+  .card-image img{width:auto;max-width:100%;max-height:420px;height:auto;display:block;margin:0 auto;}
+  .card-body{padding:24px;background:#fff;}
+  .tags-section{margin-bottom:22px;padding-bottom:20px;border-bottom:1px solid var(--line);}
+  .tags-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;}
+  .tag{display:inline-flex;align-items:center;gap:5px;border-radius:6px;padding:4px 10px;font-size:13px;font-weight:500;line-height:1.4;}
+  .tag-label{font-size:11px;font-weight:700;opacity:.65;text-transform:uppercase;letter-spacing:.5px;}
+  .tag-theme{background:#e8f4f7;color:#167d91;}
+  .tag-rule{background:#f0f4ff;color:#3d5af1;}
+  .tag-trigger{background:#fff4e6;color:#c26a00;}
+  .tag-maxwin{background:#fef0f0;color:#c0392b;}
+  .section-title{font-size:15px;font-weight:700;color:#1a1a1a;margin-bottom:10px;display:flex;align-items:center;gap:7px;}
+  .section-title::before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--brand);flex-shrink:0;}
+  .section-title.icon-core::before{background:var(--brand-dark);border-radius:50%;}
+  .gameplay-list{list-style:none;margin:0 0 24px;padding:0;counter-reset:step;}
+  .gameplay-list li{counter-increment:step;display:flex;gap:14px;margin-bottom:12px;line-height:1.7;font-size:16px;}
+  .gameplay-list li::before{content:counter(step);min-width:26px;height:26px;background:var(--brand);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:3px;transition:background .2s;}
+  .gameplay-list li.step-active::before{background:#0c3547;}
+  .core-block{background:var(--card-bg);border-left:4px solid var(--brand);border-radius:0 8px 8px 0;padding:14px 18px;margin-bottom:20px;font-size:15px;line-height:1.75;}
+  .gameplay-content{overflow:hidden;max-height:0;transition:max-height .35s ease,opacity .25s ease;opacity:0;}
+  .gameplay-content.open{max-height:9999px;opacity:1;}
+  .gallery{margin:20px 0 24px;border-top:1px solid var(--line);padding-top:20px;}
+  .gallery-main{width:100%;background:#dce8ec;border-radius:8px;overflow:hidden;margin-bottom:10px;border:1px solid var(--line);min-height:60px;display:flex;align-items:center;justify-content:center;}
+  .gallery-main img{width:auto;max-width:100%;max-height:480px;height:auto;display:block;margin:0 auto;transition:opacity .2s;}
+  .gallery-main .placeholder{color:var(--muted);font-size:14px;text-align:center;padding:24px;}
+  .gallery-thumbs{display:flex;gap:8px;flex-wrap:wrap;}
+  .gallery-thumbs .thumb{width:120px;height:80px;border-radius:6px;overflow:hidden;cursor:pointer;border:2px solid transparent;background:#dce8ec;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:border-color .15s;}
+  .gallery-thumbs .thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .gallery-thumbs .thumb.active{border-color:var(--brand);}
+  .gallery-thumbs .thumb:hover{border-color:var(--brand);opacity:.85;}
+  .thumb-placeholder{font-size:10px;color:var(--muted);text-align:center;line-height:1.3;padding:4px;}
+  .trial-link{display:inline-flex;align-items:center;gap:6px;background:var(--brand);color:#fff;text-decoration:none;padding:9px 20px;border-radius:6px;font-size:14px;font-weight:700;transition:background .15s;}
+  .trial-link:hover{background:var(--brand-dark);}
+  .trial-link svg{width:14px;height:14px;fill:currentColor;}
+  .bottom-row{position:relative;margin:32px 0 0;}
+  .bottom-row .back-to-top{margin:0;}
+  .back-to-top{display:block;text-align:center;padding:10px;border:1px solid var(--line);border-radius:8px;color:var(--brand-dark);text-decoration:none;font-size:14px;font-weight:500;transition:background .15s;}
+  .back-to-top:hover{background:var(--card-bg);}
+  .note-toggle{position:absolute;right:12px;bottom:8px;cursor:pointer;color:var(--muted);font-size:12px;line-height:1;user-select:none;padding:4px;transition:transform .25s ease,color .15s;}
+  .note-toggle:hover{color:var(--brand-dark);}
+  .note-toggle.open{transform:rotate(180deg);}
+  .note-panel{margin-top:10px;}
+  .note-block{background:#fffdf5;border-left:4px solid #e7c14b;border-radius:0 8px 8px 0;padding:16px 18px;font-size:15px;line-height:1.8;}
+  .note-block .dim{margin-bottom:16px;padding-bottom:14px;border-bottom:1px dashed #ead9a0;}
+  .note-block .dim:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+  .note-block .dim-title{font-weight:700;color:#b58a00;margin-bottom:8px;}
+  .note-block .dim p{margin:0 0 7px;}
+  footer{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;}
+  @media(max-width:600px){body{font-size:16px;}.wrap{padding:28px 16px 60px;}.head-row{flex-direction:column;align-items:flex-start;gap:12px;}.head-text{text-align:left;}.head-text h1{font-size:22px;}.card-title{font-size:19px;}.card-body{padding:18px 16px;}}
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <a href="../" style="display:inline-block;font-size:14px;color:var(--brand-dark);text-decoration:none;margin-bottom:16px;">&#8592; iGaming 競品動態</a>
+  <header>
+    <div class="head-row">
+      <img src="logo.png" alt="傳奇亞太科技 ALPHABET">
+      <div class="head-text"><h1>iGaming 遊戲速報</h1><div class="date">2026/06/05｜今日新增</div></div>
+    </div>
+  </header>
+  <div class="summary-bar">
+    <div class="count"><strong>2</strong> 款今日更新</div>
+    <div class="summary-divider"></div>
+    <div class="summary-games">
+      <a class="summary-chip" href="#game-1">Pirate Fortune Tap</a>
+      <a class="summary-chip" href="#game-2">Bear Crazy</a>
+    </div>
+  </div>
+
+  <article class="game-card" id="game-1">
+    <div class="card-header"><div class="card-index">01 / 02</div><h2 class="card-title">Pirate Fortune Tap</h2><span class="card-vendor-badge">JILI</span></div>
+    <div class="card-image"><img src="pirate-fortune-tap-title.jpg" alt="Pirate Fortune Tap" onerror="this.parentElement.innerHTML='<span>遊戲主圖</span>'"></div>
+    <div class="card-body">
+      <div class="tags-section"><div class="tags-row">
+        <span class="tag tag-theme"><span class="tag-label">主題</span>海盜 / 射擊冒險</span>
+        <span class="tag tag-maxwin"><span class="tag-label">Max Win</span>3,000×</span>
+      </div><div class="tags-row">
+        <span class="tag tag-rule"><span class="tag-label">類型</span>非 Reel 射擊</span>
+        <span class="tag tag-trigger"><span class="tag-label">觸發</span>集 3 BONUS → Bonus Game（5 free shots）</span>
+      </div></div>
+      <div class="section-title">規格簡述</div>
+      <div class="core-block">非 Reel 射擊機制 / Max Win 3,000× / Min bet 1 / Max bet 1,000<br>Bonus Game（5 free shots）poster 倍率 additive stacking；Lucky Chest 翻牌最高 500×bet。</div>
+      <div class="section-title">遊戲玩法</div>
+      <div class="gameplay-content open">
+        <ol class="gameplay-list" style="margin-top:14px">
+          <li>非 Reel 射擊機制：每局一砲，RNG 決定落點與 Bounty Poster（倍率 0.2x–100x）；每砲可額外觸發 Poster Multiplier（2x–5x），乘以 poster 面值發放。</li>
+          <li>BONUS 符號（炸彈球）：擊沉船時隨機獲得，集滿 3 個觸發 Bonus Game（5 free shots）；Bonus 中每砲全場 poster 可觸發 2x–10x 倍率，相同 poster 多次觸發倍率相加，持續累積直到 poster 被收走。</li>
+          <li>Bonus Game 倍率飛輪：5 砲期間未被收走的 poster 可無限累積倍率；Retrigger：Bonus 中集 3 BONUS = +2 free shots。</li>
+          <li>Lucky Chest（隨機事件）：擊沉船有機率掉落 Key → 打開寶箱，12 枚硬幣翻牌，3 枚相同倍率即得獎（10x–500x）；5 秒自動選取；Bonus Game 期間停用。</li>
+          <li>Max Win 3,000×bet；Min bet 1 / Max bet 1,000；Auto Spin 支援批量執行。</li>
+        </ol>
+        <div class="gallery">
+          <div class="gallery-main" id="gallery-main-1">
+            <img src="pirate-fortune-tap-1.jpg" alt="步驟 1">
+          </div>
+          <div class="gallery-thumbs">
+            <div class="thumb active" data-gallery="1" data-src="pirate-fortune-tap-1.jpg" data-step="1"><img src="pirate-fortune-tap-1.jpg" alt="步驟 1"></div>
+            <div class="thumb" data-gallery="1" data-src="pirate-fortune-tap-2.jpg" data-step="2"><img src="pirate-fortune-tap-2.jpg" alt="步驟 2"></div>
+            <div class="thumb" data-gallery="1" data-src="pirate-fortune-tap-3.jpg" data-step="3"><img src="pirate-fortune-tap-3.jpg" alt="步驟 3"></div>
+            <div class="thumb" data-gallery="1" data-src="pirate-fortune-tap-5.jpg" data-step="5"><img src="pirate-fortune-tap-5.jpg" alt="步驟 5"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section-title icon-core">核心設計</div>
+      <div class="core-block">在 Bonus 的 5 砲裡，眼睜睜看著高倍 poster 倍率一砲一砲往上疊——賭那張沒被收走的 100x poster 最後爆成 3,000x。</div>
+      <a class="trial-link" href="https://slotslaunch.com/tada-gaming/pirate-fortune-tap" target="_blank" rel="noopener"><svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm1.5 4.5L6 8l3.5 3.5 1-1L8 8l2.5-2.5-1-1z"/></svg>立即試玩</a>
+      <a class="back-to-top" href="#top" style="margin-top:32px;">&#8593; 回到最上方</a>
+    </div>
+  </article>
+
+  <article class="game-card" id="game-2">
+    <div class="card-header"><div class="card-index">02 / 02</div><h2 class="card-title">Bear Crazy</h2><span class="card-vendor-badge">Pragmatic Play</span></div>
+    <div class="card-image"><img src="bear-crazy-title.jpg" alt="Bear Crazy"></div>
+    <div class="card-body">
+      <div class="tags-section"><div class="tags-row">
+        <span class="tag tag-theme"><span class="tag-label">主題</span>動物 / 野外（熊）</span>
+        <span class="tag tag-maxwin"><span class="tag-label">Max Win</span>3,900×</span>
+      </div><div class="tags-row">
+        <span class="tag tag-rule"><span class="tag-label">計線</span>LINE</span>
+        <span class="tag tag-rule"><span class="tag-label">線數</span>20</span>
+        <span class="tag tag-rule"><span class="tag-label">盤面</span>5×3</span>
+        <span class="tag tag-trigger"><span class="tag-label">觸發</span>3+ SCATTER（熊臉）→ Honey Jar 選模式</span>
+      </div></div>
+      <div class="section-title">規格簡述</div>
+      <div class="core-block">5×3 / 20 線 / High 波動 / RTP 96.52% / Max Win 3,900×<br>FS 前 Honey Jar 選模式（Mega / Multiplied / Expanding Bears）；PAW Trail 集 7 → Crazy Bears（+10 FS + 追加 WILD）；Buy Feature 100x / 300x 共 6 選項。</div>
+      <div class="section-title">遊戲玩法</div>
+      <div class="gameplay-content open">
+        <ol class="gameplay-list" style="margin-top:14px">
+          <li>3+ SCATTER（熊臉）觸發 FS；2+ SCATTER 觸發 RESPIN，非 SCATTER 轉軸重轉。</li>
+          <li>FS 前從 Honey Jar 選擇模式：Mega / Multiplied / Expanding Bears（3+SCATTER 分別給 10 / 15 / 20 轉）。</li>
+          <li>PAW Trail：FS 期間 PAW 符號填入頂部軌道，集滿 7 → Crazy Bears（+10 FS + 追加 WILD）；第 9 次 retrigger 後停止追加 WILD。</li>
+          <li>Mega Bears：每轉 R3–R5 可落 3×3 大圖騰符號；retrigger 時當輪全局倍率 +1x。</li>
+          <li>Multiplied Bears：WILD 各帶隨機倍率（2x / 3x / 5x），同一 payway 多顆 WILD 倍率相乘套用。</li>
+          <li>Expanding Bears：WILD 落下後展開填滿整列；多顆 WILD 同轉可同時展開。</li>
+          <li>Buy Feature 6 選項：基礎版 100x（Mega / Multiplied / Expanding）/ SUPER 版 300x；Ante Bet 雙倍押注提升 SCATTER 出現率。</li>
+          <li>賠率表</li>
+        </ol>
+        <div class="gallery">
+          <div class="gallery-main" id="gallery-main-2"><img src="bear-crazy-1.jpg" alt="步驟 1"></div>
+          <div class="gallery-thumbs">
+            <div class="thumb active" data-gallery="2" data-src="bear-crazy-1.jpg" data-step="1"><img src="bear-crazy-1.jpg" alt="步驟 1"></div>
+            <div class="thumb" data-gallery="2" data-src="bear-crazy-2.jpg" data-step="2"><img src="bear-crazy-2.jpg" alt="步驟 2"></div>
+            <div class="thumb" data-gallery="2" data-src="bear-crazy-3.jpg" data-step="3"><img src="bear-crazy-3.jpg" alt="步驟 3"></div>
+            <div class="thumb" data-gallery="2" data-src="bear-crazy-4.jpg" data-step="4"><img src="bear-crazy-4.jpg" alt="步驟 4"></div>
+            <div class="thumb" data-gallery="2" data-src="bear-crazy-5.jpg" data-step="5"><img src="bear-crazy-5.jpg" alt="步驟 5"></div>
+            <div class="thumb" data-gallery="2" data-src="bear-crazy-6.jpg" data-step="6"><img src="bear-crazy-6.jpg" alt="步驟 6"></div>
+            <div class="thumb" data-gallery="2" data-src="bear-crazy-7.jpg" data-step="7"><img src="bear-crazy-7.jpg" alt="步驟 7"></div>
+<div class="thumb" data-gallery="2" data-src="bear-crazy-paytable.png" data-step="8"><img src="bear-crazy-paytable.png" alt="賠率表"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section-title icon-core">核心設計</div>
+      <div class="core-block">FS 期間 PAW 符號沿頂部軌道一格格推進，玩家的核心期待在於 Crazy Bears 引爆的那一刻——集滿 7 PAW 後追加 10 轉並湧入大量 WILD，讓事前選擇的模式特色（Mega 大圖騰 / Multiplied 倍率相乘 / Expanding 整列展開）全力爆發。</div>
+      <a class="trial-link" href="https://www.aboutslots.com/casino-slots/bear-crazy" target="_blank" rel="noopener"><svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm1.5 4.5L6 8l3.5 3.5 1-1L8 8l2.5-2.5-1-1z"/></svg>立即試玩</a>
+      <a class="back-to-top" href="#top" style="margin-top:32px;">&#8593; 回到最上方</a>
+    </div>
+  </article>
+
+  <footer>&#169; 2026 傳奇亞太科技有限公司 ALPHABET ｜ 遊戲速報</footer>
+</div>
+<script>
+  function toggleNote(arrowEl) {
+    arrowEl.classList.toggle('open');
+    var row = arrowEl.closest('.bottom-row');
+    var panel = row ? row.nextElementSibling : null;
+    if (panel) panel.classList.toggle('open');
+  }
+  document.querySelectorAll('.gameplay-list').forEach(function(list) {
+    var first = list.querySelector('li');
+    if (first) first.classList.add('step-active');
+  });
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    if (thumb.dataset.src) { var pre = new Image(); pre.src = thumb.dataset.src; }
+  });
+  function setMain(mainEl, src, step) {
+    if (src) {
+      var img = mainEl.querySelector('img');
+      if (img) { img.src = src; img.alt = '步驟 ' + step; }
+      else { mainEl.innerHTML = '<img src="' + src + '" alt="步驟 ' + step + '">'; }
+    } else {
+      mainEl.innerHTML = '<div class="placeholder">步驟 ' + step + ' 截圖（待提供）</div>';
+    }
+  }
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      var galleryId = thumb.dataset.gallery;
+      var src = thumb.dataset.src;
+      var step = thumb.dataset.step;
+      var mainEl = document.getElementById('gallery-main-' + galleryId);
+      document.querySelectorAll('.thumb[data-gallery="' + galleryId + '"]').forEach(function(t) { t.classList.remove('active'); });
+      thumb.classList.add('active');
+      var card = thumb.closest('.game-card');
+      if (card) {
+        card.querySelectorAll('.gameplay-list li').forEach(function(li) { li.classList.remove('step-active'); });
+        var targetLi = card.querySelectorAll('.gameplay-list li')[parseInt(step) - 1];
+        if (targetLi) targetLi.classList.add('step-active');
+      }
+      setMain(mainEl, src, step);
+    });
+  });
+  document.querySelectorAll('.gameplay-list li').forEach(function(li) {
+    li.style.cursor = 'pointer';
+    li.addEventListener('click', function() {
+      var card = li.closest('.game-card');
+      if (!card) return;
+      var step = Array.prototype.indexOf.call(li.parentNode.children, li) + 1;
+      var thumb = card.querySelector('.gallery-thumbs .thumb[data-step="' + step + '"]');
+      if (thumb) thumb.click();
+    });
+  });
+</script>
+</body>
+</html>
