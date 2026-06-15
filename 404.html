@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>載入中…｜iGaming 競品動態</title>
+<style>
+  :root { --brand:#24b4cc; --brand-dark:#167d91; --text:#1a1a1a; --muted:#5a6470; --line:#e3e8ee; }
+  * { box-sizing:border-box; }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+    background:#f7fbfc; color:var(--text);
+    font-family:system-ui,"Microsoft JhengHei","PingFang TC","Noto Sans TC",sans-serif; }
+  .box { max-width:480px; text-align:center; padding:48px 28px; }
+  .badge { width:64px; height:64px; margin:0 auto 22px; border-radius:50%;
+    background:#e8f4f7; display:flex; align-items:center; justify-content:center; }
+  .badge svg { width:32px; height:32px; fill:var(--brand-dark); }
+  h1 { font-size:24px; margin:0 0 12px; color:var(--brand-dark); }
+  p { font-size:16px; line-height:1.8; color:var(--muted); margin:0 0 26px; }
+  .actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  a.btn, button.btn { font:inherit; font-size:15px; font-weight:700; cursor:pointer;
+    border-radius:8px; padding:11px 22px; text-decoration:none; border:1px solid var(--brand);
+    transition:background .15s; }
+  button.btn { background:var(--brand); color:#fff; }
+  button.btn:hover { background:var(--brand-dark); border-color:var(--brand-dark); }
+  a.btn { background:#fff; color:var(--brand-dark); }
+  a.btn:hover { background:#eef7f9; }
+  .hint { margin-top:20px; font-size:13px; color:#9aa4ad; }
+</style>
+</head>
+<body>
+  <div class="box">
+    <div class="badge">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+    </div>
+    <h1>載入中…再轉一把就好 🎰</h1>
+    <p>頁面正在更新，這一把還沒中～<br>網站好好的，稍候幾秒重新整理就看得到囉。</p>
+    <div class="actions">
+      <button class="btn" onclick="location.reload()">重新整理</button>
+    </div>
+    <div class="hint">iGaming 競品動態 ｜ 傳奇亞太科技 ALPHABET</div>
+  </div>
+</body>
+</html>
