@@ -138,7 +138,13 @@
   <div class="section weekly">
     <p class="section-title">每週週報</p>
 
-    <a class="report latest" href="weeks/W24/">
+    <a class="report latest" href="weeks/W25/">
+      <div class="meta">2026/06/15 – 06/18</div>
+      <div class="lead">OP 自家遊戲攻進 PlayTime、Bingo Plus，Casino／OK Bet 榜單整週凍結</div>
+      <div class="go">閱讀本週週報</div>
+    </a>
+
+    <a class="report" href="weeks/W24/">
       <div class="meta">2026/06/08 – 06/12</div>
       <div class="lead">榜單罕見凍結，僅 PlayTime 前段換血</div>
       <div class="go">閱讀本週週報</div>
@@ -230,15 +236,4 @@
       for (var i = 3; i < cards.length; i++) { cards[i].classList.add('extra'); }
       if (btn) {
         btn.style.display = 'block';
-        btn.addEventListener('click', function() {
-          sec.querySelectorAll('.report.extra').forEach(function(c) { c.classList.remove('extra'); });
-          btn.style.display = 'none';
-        });
-      }
-    } else if (btn) {
-      btn.style.display = 'none';
-    }
-  });
-</script>
-</body>
-</html>
+        
