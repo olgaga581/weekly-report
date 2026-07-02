@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>遊戲快訊｜3 Charge Bison、Lucky Tiger 2、Zombie Blasters</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="遊戲快訊 — 3 Charge Bison、Lucky Tiger 2、Zombie Blasters">
+<meta property="og:description" content="iGaming 遊戲快訊 2026/07/02 — 3 Charge Bison、Lucky Tiger 2（TaDa / JILI）＋ Zombie Blasters（PG Soft）">
+<meta property="og:image" content="https://olgaga581.github.io/weekly-report/igaming/flash/F10/zombie-blasters-title.jpg">
+<meta property="og:url" content="https://olgaga581.github.io/weekly-report/igaming/flash/F10/">
+<style>
+  :root {
+    --brand: #24b4cc;
+    --brand-dark: #167d91;
+    --text: #1a1a1a;
+    --muted: #5a6470;
+    --line: #e3e8ee;
+    --bg: #ffffff;
+    --card-bg: #f8fbfc;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: system-ui, "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif;
+    font-size: 17px; line-height: 1.8; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+  header { border-bottom: 3px solid var(--brand); padding-bottom: 16px; margin-bottom: 32px; }
+  .head-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .head-row img.logo { height: 56px; width: auto; flex-shrink: 0; }
+  .head-text { text-align: right; }
+  .head-text h1 { font-size: 26px; line-height: 1.4; margin: 0; color: var(--brand-dark); }
+  .head-text .date { color: var(--muted); font-size: 15px; margin-top: 4px; }
+  .summary-bar { background: #eef7f9; border-radius: 8px; padding: 16px 22px; margin-bottom: 32px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .summary-bar .count { font-size: 15px; color: var(--muted); white-space: nowrap; }
+  .summary-bar .count strong { font-size: 28px; font-weight: 700; color: var(--brand-dark); margin-right: 4px; }
+  .summary-divider { width: 1px; height: 36px; background: var(--line); flex-shrink: 0; }
+  .summary-games { display: flex; flex-wrap: wrap; gap: 8px; }
+  .summary-chip { background: #fff; border: 1px solid var(--brand); border-radius: 20px; padding: 4px 14px; font-size: 14px; color: var(--brand-dark); font-weight: 500; text-decoration: none; transition: background .15s; }
+  .summary-chip:hover { background: var(--brand); color: #fff; }
+  .game-card { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
+  .card-header { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 100%); padding: 20px 24px 16px; color: #fff; }
+  .card-index { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; opacity: .7; text-transform: uppercase; margin-bottom: 4px; }
+  .card-title { font-size: 22px; font-weight: 700; margin: 0; line-height: 1.3; }
+  .card-vendor-badge { display: inline-block; background: rgba(255,255,255,.2); border-radius: 4px; padding: 2px 10px; font-size: 13px; font-weight: 500; margin-top: 8px; }
+  .card-image { width: 100%; background: #ffffff; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; min-height: 60px; }
+  .card-image img { width: 100%; max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .card-body { padding: 24px; background: #fff; }
+  .tags-section { margin-bottom: 22px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  .tags-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .tag { display: inline-flex; align-items: center; gap: 5px; border-radius: 6px; padding: 4px 10px; font-size: 13px; font-weight: 500; line-height: 1.4; }
+  .tag-label { font-size: 11px; font-weight: 700; opacity: .65; text-transform: uppercase; letter-spacing: .5px; }
+  .tag-theme   { background: #e8f4f7; color: #167d91; }
+  .tag-rule    { background: #f0f4ff; color: #3d5af1; }
+  .tag-trigger { background: #fff4e6; color: #c26a00; }
+  .tag-maxwin  { background: #fef0f0; color: #c0392b; }
+  .section-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; display: flex; align-items: center; gap: 7px; }
+  .section-title::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: var(--brand); flex-shrink: 0; }
+  .section-title.icon-core::before { background: var(--brand-dark); border-radius: 50%; }
+  .gameplay-list { list-style: none; margin: 0 0 24px; padding: 0; counter-reset: step; }
+  .gameplay-list li { counter-increment: step; display: flex; gap: 14px; margin-bottom: 12px; line-height: 1.7; font-size: 16px; cursor: pointer; }
+  .gameplay-list li::before {
+    content: counter(step); min-width: 26px; height: 26px; background: var(--brand); color: #fff;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 3px; transition: background .2s;
+  }
+  .gameplay-list li.step-active::before { background: #0c3547; }
+  .gameplay-list li .step-body { flex: 1; min-width: 0; }
+  .gameplay-list li .step-body b { display: block; color: var(--brand-dark); margin-bottom: 2px; }
+  .core-block { background: var(--card-bg); border-left: 4px solid var(--brand); border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 20px; font-size: 15px; color: var(--text); line-height: 1.75; }
+  .gameplay-content { overflow: hidden; }
+  .gallery { margin: 20px 0 24px; border-top: 1px solid var(--line); padding-top: 20px; }
+  .gallery-main { width: 100%; background: #11202a; border-radius: 8px; overflow: hidden; margin-bottom: 10px; border: 1px solid var(--line); min-height: 60px; display: flex; align-items: center; justify-content: center; }
+  .gallery-main img { width: auto; max-width: 100%; max-height: 480px; height: auto; display: block; margin: 0 auto; transition: opacity .2s ease; }
+  .gallery-main .placeholder { color: var(--muted); font-size: 14px; text-align: center; padding: 24px; }
+  .gallery-caption { text-align:center; color: var(--muted); font-size: 13px; margin: -2px 0 12px; }
+  .gallery-thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
+  .gallery-thumbs .thumb { width: 78px; height: 110px; border-radius: 6px; overflow: hidden; cursor: pointer; border: 2px solid transparent; background: #11202a; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: border-color .15s; position: relative; }
+  .gallery-thumbs .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery-thumbs .thumb .thumb-no { position:absolute; left:3px; top:3px; background:rgba(12,53,71,.85); color:#fff; font-size:10px; font-weight:700; border-radius:4px; padding:1px 5px; }
+  .gallery-thumbs .thumb.active { border-color: var(--brand); }
+  .gallery-thumbs .thumb:hover { border-color: var(--brand); opacity: .9; }
+  .trial-link { display: inline-flex; align-items: center; gap: 6px; background: var(--brand); color: #fff; text-decoration: none; padding: 9px 20px; border-radius: 6px; font-size: 14px; font-weight: 700; transition: background .15s; }
+  .trial-link:hover { background: var(--brand-dark); }
+  .trial-link svg { width: 14px; height: 14px; fill: currentColor; }
+  .back-to-top { display: block; text-align: center; margin: 0; padding: 10px; border: 1px solid var(--line); border-radius: 8px; color: var(--brand-dark); text-decoration: none; font-size: 14px; font-weight: 500; transition: background .15s; }
+  .back-to-top:hover { background: var(--card-bg); }
+  .bottom-row { position: relative; margin: 32px 0 0; }
+  .note-toggle { position: absolute; right: 12px; bottom: 8px; cursor: pointer; color: var(--muted); font-size: 13px; line-height: 1; user-select: none; padding: 6px 8px; transition: transform .25s ease, color .15s; }
+  .note-toggle:hover { color: var(--brand-dark); }
+  .note-toggle.open { transform: rotate(180deg); }
+  .note-panel { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .35s ease, opacity .25s ease; }
+  .note-panel.open { max-height: 9999px; opacity: 1; margin-top: 10px; }
+  .note-block { background: #fffdf5; border-left: 4px solid #e7c14b; border-radius: 0 8px 8px 0; padding: 16px 18px; font-size: 15px; color: var(--text); line-height: 1.8; }
+  .note-block b { color: var(--brand-dark); }
+  .note-block .note-intro { margin-bottom: 16px; }
+  .note-block .dim { margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px dashed #ead9a0; }
+  .note-block .dim:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+  .note-block .dim-title { font-weight: 700; color: #b58a00; margin-bottom: 8px; }
+  .note-block .dim p { margin: 0 0 7px; }
+  .note-block .dim p:last-child { margin-bottom: 0; }
+  .note-block ul { margin: 4px 0 0; padding-left: 18px; }
+  .note-block li { margin-bottom: 6px; }
+  .note-block li:last-child { margin-bottom: 0; }
+  .note-block .tag-obs, .note-block .tag-sol { display: inline-block; font-size: 11px; font-weight: 700; border-radius: 4px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+  .note-block .tag-obs { background: #eef2f7; color: #5a6470; }
+  .note-block .tag-sol { background: #e6f4ea; color: #2c7a4b; }
+  footer { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 28px 16px 60px; }
+    .head-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .head-row img.logo { height: 44px; }
+    .head-text { text-align: left; }
+    .head-text h1 { font-size: 22px; }
+    .card-title { font-size: 19px; }
+    .card-body { padding: 18px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <a href="../../" style="display:inline-block;font-size:14px;color:var(--brand-dark);text-decoration:none;margin-bottom:16px;">← iGaming 競品動態</a>
+
+  <header>
+    <div class="head-row">
+      <img class="logo" src="logo.png" alt="傳奇亞太科技 ALPHABET" onerror="this.style.display='none'">
+      <div class="head-text">
+        <h1>iGaming 遊戲快訊</h1>
+        <div class="date">2026/07/02｜新上市</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-bar">
+    <div class="count"><strong>3</strong> 款本期新增</div>
+    <div class="summary-divider"></div>
+    <div class="summary-games">
+      <a class="summary-chip" href="#game-1">3 Charge Bison</a>
+      <a class="summary-chip" href="#game-2">Lucky Tiger 2</a>
+      <a class="summary-chip" href="#game-3">Zombie Blasters</a>
+    </div>
+  </div>
+
+  <!-- 3 Charge Bison -->
+  <article class="game-card" id="game-1">
+    <div class="card-header">
+      <div class="card-index">TaDa Gaming / JILI · 北美野牛西部</div>
+      <h2 class="card-title">3 Charge Bison</h2>
+      <span class="card-vendor-badge">TaDa Gaming / JILI</span>
+    </div>
+    <div class="card-image">
+      <img src="3-charge-bison-title.jpg" alt="3 Charge Bison" onerror="this.parentElement.innerHTML='<span>遊戲主圖（待提供）</span>'">
+    </div>
+    <div class="card-body">
+      <div class="tags-section">
+        <div class="tags-row">
+          <span class="tag tag-theme"><span class="tag-label">主題</span>北美野牛 / 西部</span>
+          <span class="tag tag-maxwin"><span class="tag-label">Max Win</span>10,000×</span>
+        </div>
+        <div class="tags-row">
+          <span class="tag tag-rule"><span class="tag-label">計線</span>1,024 Ways</span>
+          <span class="tag tag-rule"><span class="tag-label">盤面</span>4×5</span>
+          <span class="tag tag-trigger"><span class="tag-label">觸發</span>三色 Feature Coin → 8 場免費</span>
+        </div>
+      </div>
+
+      <div class="section-title">規格簡述</div>
+      <div class="core-block">4×5 / 1024 Ways / Max 10,000×<br>荒漠 WILD 替代除 Feature Coin 外符號（FG 帶 x2/x3）；三色 Feature Coin（紫 DOUBLE UP / 金 GOLD / 綠 CASH）任一或組合觸發 8 場免費遊戲，可複合同場。TaDa（TriLuck 系列）／RTP 97%、中高波動。</div>
+
+      <div class="section-title">遊戲玩法</div>
+      <div class="gameplay-content">
+        <ol class="gameplay-list" style="margin-top:14px">
+          <li><span class="step-body"><b>基本遊戲</b>4×5 / 1024 Ways 連線；荒漠 WILD 替代除 Feature Coin 外符號（FG 帶 x2/x3 隨機倍數）。</span></li>
+          <li><span class="step-body"><b>三色 Feature Coin</b>紫 DOUBLE UP / 金 GOLD / 綠 CASH 打擊觸發，任一或組合皆給 8 次免費遊戲。</span></li>
+          <li><span class="step-body"><b>DOUBLE UP（紫）</b>複製雙盤（4×5），上下兩盤各自獨立計分。</span></li>
+          <li><span class="step-body"><b>GOLD（金）</b>金牛隨機落盤收集，集滿指定量將對應符號轉紅牛（4鷹 / 3熊 / 6狼 / 3羊）。</span></li>
+          <li><span class="step-body"><b>CASH（綠）</b>金牛 / 紅牛帶隨機倍數獎金（0.5x~1000x），牛仔 WILD 限 CASH 場出現。</span></li>
+          <li><span class="step-body"><b>三色複合觸發</b>多特色同場（牛仔收分＋金牛收集＋雙盤），組合越多獎勵越強。</span></li>
+          <li><span class="step-body"><b>SCATTER（限特色場）</b>2 / 3 / 4 / 5 顆同輪組 = 5 / 8 / 15 / 20 次，可 retrigger。</span></li>
+          <li><span class="step-body"><b>Buy Bonus</b>50x（1+）/ 100x（2+）/ 150x（全 3）保證觸發對應特色場。</span></li>
+          <li><span class="step-body"><b>賠率表</b>各符號 Ways 賠付倍數對照，依下注額換算。</span></li>
+        </ol>
+        <div class="gallery">
+          <div class="gallery-main" id="gallery-main-1">
+            <img src="3-charge-bison-1.gif" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>步驟 1</div>'">
+          </div>
+          <div class="gallery-caption">點下方縮圖或左側步驟編號，切換對應機制動畫</div>
+          <div class="gallery-thumbs" id="gallery-thumbs-1">
+            <div class="thumb active" data-gallery="1" data-src="3-charge-bison-1.gif" data-step="1"><span class="thumb-no">1</span><img src="3-charge-bison-1.gif" alt="步驟 1"></div>
+            <div class="thumb" data-gallery="1" data-src="3-charge-bison-2.gif" data-step="2"><span class="thumb-no">2</span><img src="3-charge-bison-2.gif" alt="步驟 2"></div>
+            <div class="thumb" data-gallery="1" data-src="3-charge-bison-3.gif" data-step="3"><span class="thumb-no">3</span><img src="3-charge-bison-3.gif" alt="步驟 3"></div>
+            <div class="thumb" data-gallery="1" data-src="3-charge-bison-4.gif" data-step="4"><span class="thumb-no">4</span><img src="3-charge-bison-4.gif" alt="步驟 4"></div>
+            <div class="thumb" data-gallery="1" data-src="3-charge-bison-5.gif" data-step="5"><span class="thumb-no">5</span><img src="3-charge-bison-5.gif" alt="步驟 5"></div>
+            <div class="thumb" data-gallery="1" data-src="3-charge-bison-6.gif" data-step="6"><span class="thumb-no">6</span><img src="3-charge-bison-6.gif" alt="步驟 6"></div>
+            <div class="thumb" data-gallery="1" data-src="3-charge-bison-7.gif" data-step="7"><span class="thumb-no">7</span><img src="3-charge-bison-7.gif" alt="步驟 7"></div>
+            <div class="thumb" data-gallery="1" data-src="3-charge-bison-8.jpg" data-step="8"><span class="thumb-no">8</span><img src="3-charge-bison-8.jpg" alt="步驟 8"></div>
+            <div class="thumb" data-gallery="1" data-src="3-charge-bison-paytable.jpg" data-step="9"><span class="thumb-no">9</span><img src="3-charge-bison-paytable.jpg" alt="步驟 9 賠率表"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title icon-core">核心設計</div>
+      <div class="core-block">核心是 TriLuck 三合一：三色 Feature Coin 打擊觸發三種截然不同的特色——DOUBLE UP 複製雙盤放大面積、GOLD 收集金牛集滿轉整批符號、CASH 讓金牛 / 紅牛帶隨機倍數（最高 1000x）並召喚牛仔 WILD。三色可單觸發或複合同場，組合越多獎勵路徑越強。荒漠 WILD 在免費遊戲帶 x2 / x3，特色場 SCATTER 可 retrigger。1024 Ways + Max 10,000×、中高波動。為前作 Charge Buffalo（2021）的三特色進化版。</div>
+
+      <a class="trial-link" href="https://slotslaunch.com/tada-gaming/3-charge-bison" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm1.5 4.5L6 8l3.5 3.5 1-1L8 8l2.5-2.5-1-1z"/></svg>立即試玩
+      </a>
+
+      <div class="bottom-row">
+        <a class="back-to-top" href="#top">↑ 回到最上方</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Lucky Tiger 2 -->
+  <article class="game-card" id="game-2">
+    <div class="card-header">
+      <div class="card-index">TaDa Gaming / JILI · 老虎叢林</div>
+      <h2 class="card-title">Lucky Tiger 2</h2>
+      <span class="card-vendor-badge">TaDa Gaming / JILI</span>
+    </div>
+    <div class="card-image">
+      <img src="lucky-tiger-2-title.jpg" alt="Lucky Tiger 2" onerror="this.parentElement.innerHTML='<span>遊戲主圖（待提供）</span>'">
+    </div>
+    <div class="card-body">
+      <div class="tags-section">
+        <div class="tags-row">
+          <span class="tag tag-theme"><span class="tag-label">主題</span>老虎 / 叢林（卡通動物）</span>
+          <span class="tag tag-maxwin"><span class="tag-label">Max Win</span>待確認（推測≥3,000×）</span>
+        </div>
+        <div class="tags-row">
+          <span class="tag tag-rule"><span class="tag-label">計線</span>5 條固定線</span>
+          <span class="tag tag-rule"><span class="tag-label">盤面</span>3×3（＋Special Reel）</span>
+          <span class="tag tag-trigger"><span class="tag-label">觸發</span>WILD 觸發 Bonus</span>
+        </div>
+      </div>
+
+      <div class="section-title">規格簡述</div>
+      <div class="core-block">3×3 主盤 ＋ 上方 Special Reel／5 條固定線<br>WILD 老虎代替全符，連線帶彩金值 0.5x~Grand 500x；Special Reel 倍率 x2/x3/x5/x10 多軸相加乘算全部贏分，猴子收集相鄰倍率後重轉。Bonus Hold &amp; Respin：WILD 觸發、選定單符＋WILD 收集、3 轉重置。Extra Bet 1.5x／3x、Buy Bonus 50x。TaDa（JILI）／RTP 約 97%（待官方確認）。</div>
+
+      <div class="section-title">遊戲玩法</div>
+      <div class="gameplay-content">
+        <ol class="gameplay-list" style="margin-top:14px">
+          <li><span class="step-body"><b>基礎場</b>3×3／5 條固定線，左至右計獎；WILD 老虎代替所有符號，連線直接發放符號上彩金值（0.5x~7x 與 MINI 10x／MINOR 15x／MAJOR 50x／GRAND 500x）。</span></li>
+          <li><span class="step-body"><b>Special Reel 倍率</b>該轉得獎且某軸整軸同符（WILD 計入）時，觸發該軸上方倍率 x2／x3／x5／x10，多軸相加後乘算全部贏分。</span></li>
+          <li><span class="step-body"><b>猴子收集</b>Special Reel 落下猴子時，收集並加總相鄰倍率，收集位置再重轉揭新倍率。</span></li>
+          <li><span class="step-body"><b>Bonus 觸發</b>WILD 老虎落盤有機率觸發 Bonus Game（Lock &amp; Respin），開始前隨機選定一個符號。</span></li>
+          <li><span class="step-body"><b>Bonus 玩法</b>特色中僅選定符號與 WILD 落定並鎖住；初始 3 轉，落新符重置為 3，歸 0 一次結算全盤。</span></li>
+          <li><span class="step-body"><b>Extra Bet</b>1.5x／3x 兩模式提高 WILD 命中與 Bonus 觸發率；3x 模式再保證 Special Reel 倍率≥3x。</span></li>
+          <li><span class="step-body"><b>賠率表</b>各符號連線彩金值與彩金階對照，依下注額換算。</span></li>
+        </ol>
+        <div class="gallery">
+          <div class="gallery-main" id="gallery-main-2">
+            <img src="lucky-tiger-2-1.gif" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>步驟 1</div>'">
+          </div>
+          <div class="gallery-caption">點下方縮圖或左側步驟編號，切換對應機制動畫</div>
+          <div class="gallery-thumbs" id="gallery-thumbs-2">
+            <div class="thumb active" data-gallery="2" data-src="lucky-tiger-2-1.gif" data-step="1"><span class="thumb-no">1</span><img src="lucky-tiger-2-1.gif" alt="步驟 1"></div>
+            <div class="thumb" data-gallery="2" data-src="lucky-tiger-2-2.gif" data-step="2"><span class="thumb-no">2</span><img src="lucky-tiger-2-2.gif" alt="步驟 2"></div>
+            <div class="thumb" data-gallery="2" data-src="lucky-tiger-2-3.gif" data-step="3"><span class="thumb-no">3</span><img src="lucky-tiger-2-3.gif" alt="步驟 3"></div>
+            <div class="thumb" data-gallery="2" data-src="lucky-tiger-2-4.gif" data-step="4"><span class="thumb-no">4</span><img src="lucky-tiger-2-4.gif" alt="步驟 4"></div>
+            <div class="thumb" data-gallery="2" data-src="lucky-tiger-2-5.gif" data-step="5"><span class="thumb-no">5</span><img src="lucky-tiger-2-5.gif" alt="步驟 5"></div>
+            <div class="thumb" data-gallery="2" data-src="lucky-tiger-2-6.jpg" data-step="6"><span class="thumb-no">6</span><img src="lucky-tiger-2-6.jpg" alt="步驟 6"></div>
+            <div class="thumb" data-gallery="2" data-src="lucky-tiger-2-paytable.jpg" data-step="7"><span class="thumb-no">7</span><img src="lucky-tiger-2-paytable.jpg" alt="步驟 7 賠率表"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title icon-core">核心設計</div>
+      <div class="core-block">核心期待落在 Special Reel 的多軸疊倍：整軸鋪滿同符即觸發上方倍率，三軸相加（最高 x10×3）再乘算全部贏分，猴子還能收集相鄰倍率後重轉滾大。WILD 老虎兼「代替＋即時彩金（Grand 500x）」，同時是 Bonus 觸發與 Hold&amp;Respin 收集的核心符號。Bonus 為選定單符＋WILD 的收集型 Hold&amp;Respin，3 轉重置延長收集窗口；Extra Bet 1.5x／3x 讓玩家自選波動與倍率密度。</div>
+
+      <a class="trial-link" href="https://slotslaunch.com/tada-gaming/lucky-tiger-2" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm1.5 4.5L6 8l3.5 3.5 1-1L8 8l2.5-2.5-1-1z"/></svg>立即試玩
+      </a>
+
+      <div class="bottom-row">
+        <a class="back-to-top" href="#top">↑ 回到最上方</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Zombie Blasters -->
+  <article class="game-card" id="game-3">
+    <div class="card-header">
+      <div class="card-index">PG SOFT · 殭屍末日像素街機</div>
+      <h2 class="card-title">Zombie Blasters</h2>
+      <span class="card-vendor-badge">Pocket Games Soft</span>
+    </div>
+    <div class="card-image">
+      <img src="zombie-blasters-title.jpg" alt="Zombie Blasters" onerror="this.parentElement.innerHTML='<span>遊戲主圖（待提供）</span>'">
+    </div>
+    <div class="card-body">
+      <div class="tags-section">
+        <div class="tags-row">
+          <span class="tag tag-theme"><span class="tag-label">主題</span>殭屍末日 / 像素街機</span>
+          <span class="tag tag-maxwin"><span class="tag-label">Max Win</span>10,000×</span>
+        </div>
+        <div class="tags-row">
+          <span class="tag tag-rule"><span class="tag-label">計線</span>Scatter Pays</span>
+          <span class="tag tag-rule"><span class="tag-label">中獎</span>8+ 任意位置</span>
+          <span class="tag tag-rule"><span class="tag-label">盤面</span>6×5</span>
+          <span class="tag tag-trigger"><span class="tag-label">觸發</span>4/5/6 寶箱 → 10/15/20 免費</span>
+        </div>
+      </div>
+
+      <div class="section-title">規格簡述</div>
+      <div class="core-block">6×5 / Scatter Pays（8+ 任意位置）/ Tumble 連鎖消除 / Max Win 10,000×<br>PG 像素街機殭屍題材<br>三層倍數放大（倍數符號 → 警報轉盤 → 免費遊戲累加器），倍數採相加。</div>
+
+      <div class="section-title">遊戲玩法</div>
+      <div class="gameplay-content">
+        <ol class="gameplay-list" style="margin-top:14px">
+          <li><span class="step-body"><b>Scatter Pays 消除掉落</b>6×5 盤面，任意位置出現 8 個以上同符號即中獎，不限線、不限位置<br>中獎後消除、上方符號掉落補位，連鎖計獎至無新中獎為止。</span></li>
+          <li><span class="step-body"><b>x2 倍數符號</b>旋轉中可落 1 個以上倍數符號（×2、×4、×8…）<br>該局結算時，總贏獎 ×（盤面所有倍數符號加總，非相乘）。</span></li>
+          <li><span class="step-body"><b>警報轉盤</b>盤面出現警報符號、且該局有贏獎時，翻倍轉盤啟動開出 ×5～×50，並把盤面所有警報／倍數格覆寫成該值。</span></li>
+          <li><span class="step-body"><b>倍數符號 × 警報轉盤疊加</b>當盤面滿是倍數符號、又遇警報轉盤把所有倍數格覆寫成同一高值時，數值加總後單局倍數大幅放大。</span></li>
+          <li><span class="step-body"><b>Free Spins</b>4／5／6 顆以上寶箱，分別觸發 10／15／20 次免費旋轉<br>倍數累加器留在盤面下方、整局不重置，每轉 ×（當局盤面倍數＋下方累積總倍數）<br>免費遊戲中再湊 3 顆以上寶箱，加 5 轉。</span></li>
+          <li><span class="step-body"><b>賠率表</b>寶箱與角色、A／K／Q／J／10 等符號的群聚賠付倍數對照，依下注額換算。</span></li>
+        </ol>
+        <div class="gallery">
+          <div class="gallery-main" id="gallery-main-3">
+            <img src="zombie-blasters-1.gif" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>步驟 1</div>'">
+          </div>
+          <div class="gallery-caption">點下方縮圖或左側步驟編號，切換對應機制動畫</div>
+          <div class="gallery-thumbs" id="gallery-thumbs-3">
+            <div class="thumb active" data-gallery="3" data-src="zombie-blasters-1.gif" data-step="1"><span class="thumb-no">1</span><img src="zombie-blasters-1.gif" alt="步驟 1"></div>
+            <div class="thumb" data-gallery="3" data-src="zombie-blasters-2.gif" data-step="2"><span class="thumb-no">2</span><img src="zombie-blasters-2.gif" alt="步驟 2"></div>
+            <div class="thumb" data-gallery="3" data-src="zombie-blasters-3.gif" data-step="3"><span class="thumb-no">3</span><img src="zombie-blasters-3.gif" alt="步驟 3"></div>
+            <div class="thumb" data-gallery="3" data-src="zombie-blasters-4.gif" data-step="4"><span class="thumb-no">4</span><img src="zombie-blasters-4.gif" alt="步驟 4"></div>
+            <div class="thumb" data-gallery="3" data-src="zombie-blasters-5.gif" data-step="5"><span class="thumb-no">5</span><img src="zombie-blasters-5.gif" alt="步驟 5"></div>
+            <div class="thumb" data-gallery="3" data-src="zombie-blasters-paytable.jpg" data-step="6"><span class="thumb-no">6</span><img src="zombie-blasters-paytable.jpg" alt="步驟 6 賠率表"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title icon-core">核心設計</div>
+      <div class="core-block">核心是「三層倍數放大」層層堆疊：先是盤面隨機落下的 x2 倍數符號（同盤加總），接著警報轉盤把所有倍數格覆寫成 x5–x50 的同一高值，最後在免費遊戲用整局不重置的累加器，把每一轉的倍數持續往上疊。玩家的爆發瞬間，就是這三層在同一局裡疊在一起、把一次普通連消放大成大額獎金的過程。</div>
+
+      <a class="trial-link" href="https://slotslaunch.com/pocket-games-soft/zombie-blasters" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm1.5 4.5L6 8l3.5 3.5 1-1L8 8l2.5-2.5-1-1z"/></svg>遊戲頁面
+      </a>
+
+      <div class="bottom-row">
+        <a class="back-to-top" href="#top">↑ 回到最上方</a>
+        <span class="note-toggle" onclick="toggleNote(this)" title="企劃心得與提問">▼</span>
+      </div>
+      <div class="note-panel">
+        <div class="note-block">
+          <div class="note-intro">實測心得：這款是「初見驚豔、玩久單調」的典型。以下從體感 → 原因 → 企劃學到的點拆開講。</div>
+          <div class="dim">
+            <div class="dim-title">面向 1｜體感：兩個期待點、一個名場面，但玩久會膩</div>
+            <p><span class="tag-obs">觀察</span>給分大方，基礎連消幾次就有不錯分數；可期待的只有 <b>X2 符號</b>（多個相加）與 <b>警鈴</b>（滾 ×5–×50），基本遊戲就會出現。最期待的名場面＝多個 X2 被警鈴一次替換成更高倍數，初見很驚豔。</p>
+            <p><span class="tag-obs">反面</span>但大多只偶爾掉一個 X2、警鈴很少來，畫面常退回單純消消樂；FREE GAME 快一小時都測不到一次。</p>
+          </div>
+          <div class="dim">
+            <div class="dim-title">面向 2｜原因：固定 RTP 的分配取捨</div>
+            <p><span class="tag-obs">觀察</span>每款遊戲的總返還率是固定的（約 96%），等於有一筆固定的獎金預算要發：這筆錢<b>要嘛發給「常常中的小獎」、要嘛留給「難得的大倍數」，只能二選一</b>。這款把大部分預算拿去讓基本遊戲「中得多、給得大」，留給倍數的就很少——所以倍數上限只有 ×50、出現也不頻繁。</p>
+            <p><span class="tag-obs">觀察</span>外觀學宙斯／賽特（消除撒倍數），數字沒學到——宙斯平常摳、倍數上看 ×100–×500 才刺激；這款基礎太大、天花板太低、倍數太少，所以平。</p>
+          </div>
+          <div class="dim">
+            <div class="dim-title">面向 3｜大獎不是鎖在免費遊戲，而是「條件太苛」</div>
+            <p><span class="tag-obs">觀察</span>大獎要同時「多個 X2 ＋ 警鈴 ＋ 高倍 ＋ 有中獎」才成立，基本遊戲也可能發生、只是很少；X2 <b>每一轉結束就清空</b>、又不常出現，平常很難疊多。</p>
+            <p><span class="tag-obs">觀察</span>免費遊戲難進，是因為「FG 倍數不重置、一路累加」太強 → 只能用<b>低觸發率</b>平衡（強功能配低頻率）。</p>
+          </div>
+          <div class="dim">
+            <div class="dim-title">面向 4｜企劃角度學到的（解方方向）</div>
+            <p><span class="tag-sol">學習</span>幾個可帶走的設計點：</p>
+            <ul>
+              <li><b>「一次質變」的爆點</b>：警鈴把盤面一堆 x2 一次掃成 ×50，「累積的小東西瞬間全升級」情緒很強，可移植到別的機制（收集到一半一次全升、小倍數一次進化）。</li>
+              <li><b>強功能配低頻率</b>：FG 倍數不重置很強 → 觸發壓低；「愈強愈稀有」方向對，只是這款做過頭。</li>
+              <li><b>好點子要餵到「看得到」</b>：替換機制雖好，但要四件事同時才發光 → 幾乎看不到；要出現得夠頻繁、倍數夠大，玩家才感受得到。</li>
+              <li><b>基本遊戲不能只當「等大獎的走廊」</b>：爽點條件太苛、又鎖一部分在 FG，基本遊戲沒有等價替代刺激 → 只剩消消樂 → 膩；基本遊戲要能自己撐住娛樂性。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <footer>© 2026 傳奇亞太科技有限公司 ALPHABET ｜ 遊戲快訊</footer>
+
+</div>
+<script>
+  function toggleNote(arrowEl) {
+    arrowEl.classList.toggle('open');
+    var row = arrowEl.closest('.bottom-row');
+    var panel = row ? row.nextElementSibling : null;
+    if (panel) panel.classList.toggle('open');
+  }
+
+  document.querySelectorAll('.gameplay-list').forEach(function(list) {
+    var first = list.querySelector('li');
+    if (first) first.classList.add('step-active');
+  });
+
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    if (thumb.dataset.src) { var pre = new Image(); pre.src = thumb.dataset.src; }
+  });
+
+  function setMain(mainEl, src, step) {
+    var img = mainEl.querySelector('img');
+    if (img) { img.src = src; img.alt = '步驟 ' + step; }
+    else { mainEl.innerHTML = '<img src="' + src + '" alt="步驟 ' + step + '">'; }
+  }
+
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      var galleryId = thumb.dataset.gallery;
+      var src = thumb.dataset.src;
+      var step = thumb.dataset.step;
+      var mainEl = document.getElementById('gallery-main-' + galleryId);
+      document.querySelectorAll('.thumb[data-gallery="' + galleryId + '"]').forEach(function(t) { t.classList.remove('active'); });
+      thumb.classList.add('active');
+      var card = thumb.closest('.game-card');
+      if (card) {
+        card.querySelectorAll('.gameplay-list li').forEach(function(li) { li.classList.remove('step-active'); });
+        var targetLi = card.querySelectorAll('.gameplay-list li')[parseInt(step) - 1];
+        if (targetLi) targetLi.classList.add('step-active');
+      }
+      setMain(mainEl, src, step);
+    });
+  });
+
+  document.querySelectorAll('.gameplay-list li').forEach(function(li) {
+    li.addEventListener('click', function() {
+      var card = li.closest('.game-card');
+      if (!card) return;
+      var step = Array.prototype.indexOf.call(li.parentNode.children, li) + 1;
+      var thumb = card.querySelector('.gallery-thumbs .thumb[data-step="' + step + '"]');
+      if (thumb) thumb.click();
+    });
+  });
+</script>
+</body>
+</html>
