@@ -184,8 +184,15 @@
       <a href="games/" style="font-size:13px;font-weight:700;color:var(--brand-dark);text-decoration:none;background:#eef7f9;border:1px solid #bfe3ea;border-radius:999px;padding:4px 13px;white-space:nowrap;">遊戲庫 →</a>
     </div>
 
-    <a class="report latest" href="flash/F10/">
-      <div class="meta">第 10 期 ｜ 2026/07/02<span class="badge-new">最新</span></div>
+    <a class="report latest" href="flash/F11/">
+      <div class="meta">第 11 期 ｜ 2026/07/07<span class="badge-new">最新</span></div>
+      <div class="lead">Monkeys Wild Party、Lucky Gems Expand</div>
+      <div class="sub-lead">PG Soft Cluster 連鎖（Max 10,000×）＋ ACEWIN 乘倍框擴展</div>
+      <div class="go">閱讀本期速報</div>
+    </a>
+
+    <a class="report" href="flash/F10/">
+      <div class="meta">第 10 期 ｜ 2026/07/02</div>
       <div class="lead">3 Charge Bison、Lucky Tiger 2、Zombie Blasters</div>
       <div class="sub-lead">TaDa / JILI / PG Soft · 野牛西部 + 老虎叢林 + 殭屍末日 · Max 10,000×</div>
       <div class="go">閱讀本期速報</div>
@@ -272,4 +279,15 @@
       for (var i = 3; i < cards.length; i++) { cards[i].classList.add('extra'); }
       if (btn) {
         btn.style.display = 'block';
-        
+        btn.addEventListener('click', function() {
+          sec.querySelectorAll('.report.extra').forEach(function(c) { c.classList.remove('extra'); });
+          btn.style.display = 'none';
+        });
+      }
+    } else if (btn) {
+      btn.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>
