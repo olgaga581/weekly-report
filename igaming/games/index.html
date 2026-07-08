@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>遊戲庫｜iGaming 遊戲快訊總覽</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="遊戲庫｜iGaming 遊戲快訊總覽">
+<meta property="og:description" content="歷來遊戲快訊全收錄，可依開發廠商篩選">
+<meta property="og:image" content="https://olgaga581.github.io/weekly-report/igaming/logo.png">
+<meta property="og:url" content="https://olgaga581.github.io/weekly-report/igaming/games/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand: #24b4cc; --brand-dark: #167d91;
+    --text: #1a1a1a; --muted: #5a6470; --line: #e3e8ee; --bg: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Noto Sans TC", system-ui, "Microsoft JhengHei", sans-serif;
+    font-size: 17px; line-height: 1.8; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 40px 24px 80px; }
+  .back-link { display: inline-block; color: var(--brand-dark); text-decoration: none; font-size: 14px; margin-bottom: 16px; }
+  .back-link:hover { text-decoration: underline; }
+  .back-link::before { content: "← "; }
+  header { border-bottom: 3px solid var(--brand); padding-bottom: 16px; margin-bottom: 28px; }
+  .head-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .head-row img { height: 60px; width: auto; flex-shrink: 0; }
+  .head-text { text-align: right; }
+  h1 { font-size: 26px; line-height: 1.4; margin: 0; color: var(--brand-dark); }
+  .sub { color: var(--muted); font-size: 15px; margin-top: 4px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
+  .chip {
+    font-size: 14px; padding: 7px 16px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--brand); background: #fff; color: var(--brand-dark);
+    font-family: inherit; font-weight: 500; transition: all .12s;
+  }
+  .chip:hover { background: #eef7f9; }
+  .chip.active { background: var(--brand-dark); border-color: var(--brand-dark); color: #fff; }
+  .count { font-size: 14px; color: var(--muted); margin-bottom: 18px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+  a.game {
+    display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: inherit;
+    background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px;
+    transition: border-color .15s, box-shadow .15s, transform .15s;
+  }
+  a.game:hover { border-color: var(--brand); box-shadow: 0 4px 14px rgba(36,180,204,.15); transform: translateY(-1px); }
+  .g-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .g-name { font-size: 17px; font-weight: 700; color: var(--text); line-height: 1.35; }
+  .g-issue { font-size: 12px; color: var(--muted); white-space: nowrap; }
+  .g-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+  .badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: 6px; }
+  .badge-mw { background: #fef0f0; color: #c0392b; }
+  .g-meta { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted); }
+  .g-go { font-size: 13px; color: var(--brand-dark); font-weight: 500; }
+  .g-go::after { content: " →"; }
+  footer { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  @media (max-width: 600px) {
+    .wrap { padding: 28px 16px 60px; }
+    .head-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .head-row img { height: 46px; }
+    .head-text { text-align: left; }
+    h1 { font-size: 22px; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back-link" href="../">iGaming 競品動態</a>
+
+  <header>
+    <div class="head-row">
+      <img src="../logo.png" alt="傳奇亞太科技 ALPHABET" onerror="this.style.display='none'">
+      <div class="head-text">
+        <h1>遊戲庫</h1>
+        <div class="sub">歷來遊戲快訊全收錄 · 可依開發廠商篩選</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="filters" id="filters"></div>
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+
+  <footer>© 2026 傳奇亞太科技有限公司 ALPHABET ｜ 遊戲快訊總覽</footer>
+</div>
+
+<script>
+(function(){
+  var V = {
+    "FA CHAI":           {bg:"#FAECE7", fg:"#712B13"},
+    "TaDa Gaming":       {bg:"#E1F5EE", fg:"#085041"},
+    "JILI":              {bg:"#E6F1FB", fg:"#0C447C"},
+    "Pragmatic Play":    {bg:"#EEEDFE", fg:"#3C3489"},
+    "Pocket Games Soft": {bg:"#FAEEDA", fg:"#633806"}
+  };
+  var games = [
+    {n:"Monkeys Wild Party", v:["Pocket Games Soft"], t:"猴子派對 / 迷幻菇叢林", mw:"10,000×", f:"F11", a:"game-1", d:"2026/07/07"},
+    {n:"3 Charge Bison", v:["TaDa Gaming","JILI"], t:"北美野牛 / 西部", mw:"10,000×", f:"F10", a:"game-1", d:"2026/07/02"},
+    {n:"Lucky Tiger 2", v:["TaDa Gaming","JILI"], t:"老虎 / 叢林", mw:"待確認", f:"F10", a:"game-2", d:"2026/07/02"},
+    {n:"Zombie Blasters", v:["Pocket Games Soft"], t:"殭屍末日 / 像素街機", mw:"10,000×", f:"F10", a:"game-3", d:"2026/07/02"},
+    {n:"REVOLVER HARE", v:["FA CHAI"], t:"西部 / 牛仔", mw:"5,000×", f:"F09", a:"game-1", d:"2026/06/30"},
+    {n:"Fortune of Aztec", v:["TaDa Gaming","JILI"], t:"阿茲特克 / 古文明", mw:"10,000×", f:"F09", a:"game-2", d:"2026/06/30"},
+    {n:"3 Lucky Chong Tian Pao", v:["TaDa Gaming","JILI"], t:"鞭炮 / 東方賀歲", mw:"1,000×", f:"F08", a:"game-1", d:"2026/06/23"},
+    {n:"3 Fortune Nuts", v:["TaDa Gaming","JILI"], t:"松鼠 / 森林堅果", mw:"3,000×", f:"F08", a:"game-2", d:"2026/06/23"},
+    {n:"Mahjong Wins Triple Pot", v:["Pragmatic Play"], t:"麻將 / 東方富貴", mw:"100,000×", f:"F07", a:"game-1", d:"2026/06/17"},
+    {n:"Golden Empire 1000", v:["JILI"], t:"阿茲特克 / 古文明", mw:"10,000×", f:"F06", a:"game-1", d:"2026/06/12"},
+    {n:"Funky Fortunez", v:["Pocket Games Soft"], t:"Hip-hop / Funk / Disco", mw:"2,000×", f:"F05", a:"game-1", d:"2026/06/10"},
+    {n:"Pirate Fortune Tap", v:["JILI"], t:"海盜 / 射擊冒險", mw:"3,000×", f:"F04", a:"game-1", d:"2026/06/05"},
+    {n:"Bear Crazy", v:["Pragmatic Play"], t:"動物 / 野外（熊）", mw:"3,900×", f:"F04", a:"game-2", d:"2026/06/05"},
+    {n:"KONG ISLAND", v:["FA CHAI"], t:"熱帶海島 / 金剛", mw:"3,000×", f:"F03", a:"game-1", d:"2026/06/08"},
+    {n:"Super Wildrix", v:["Pocket Games Soft"], t:"超級英雄 / 都會夜景", mw:"20,000×", f:"F02", a:"game-1", d:"2026/06/03"},
+    {n:"Charge Bison", v:["JILI"], t:"北美野牛 / 大草原", mw:"5,000×", f:"F01", a:"game-1", d:"2026/06/02"},
+    {n:"Joker's Revenge", v:["Pragmatic Play"], t:"馬戲團 / 小丑", mw:"10,000×", f:"F01", a:"game-2", d:"2026/06/02"}
+  ];
+
+  var vendors = Object.keys(V);
+  var counts = {}; vendors.forEach(function(x){counts[x]=0;});
+  games.forEach(function(g){ g.v.forEach(function(x){ if(counts[x]!=null) counts[x]++; }); });
+
+  var active = "全部";
+  var filters = document.getElementById("filters");
+  var grid = document.getElementById("grid");
+  var countEl = document.getElementById("count");
+
+  function makeChip(label, c){
+    var b = document.createElement("button");
+    b.className = "chip";
+    b.textContent = c!=null ? (label + " · " + c) : label;
+    b.setAttribute("data-v", label);
+    b.addEventListener("click", function(){ active = label; render(); });
+    return b;
+  }
+
+  filters.appendChild(makeChip("全部", games.length));
+  vendors.forEach(function(x){ filters.appendChild(makeChip(x, counts[x])); });
+
+  function card(g){
+    var a = document.createElement("a");
+    a.className = "game";
+    a.href = "../flash/" + g.f + "/#" + g.a;
+    var badges = g.v.map(function(x){
+      var c = V[x] || {bg:"#f1efe8",fg:"#2c2c2a"};
+      return '<span class="badge" style="background:'+c.bg+';color:'+c.fg+';">'+x+'</span>';
+    }).join("");
+    a.innerHTML =
+      '<div class="g-top"><span class="g-name">'+g.n+'</span><span class="g-issue">第 '+g.f.slice(1)+' 期</span></div>' +
+      '<div class="g-badges">'+badges+'<span class="badge badge-mw">Max '+g.mw+'</span></div>' +
+      '<div class="g-meta"><span>'+g.t+'</span><span>'+g.d+'</span></div>' +
+      '<div class="g-go">看這款快訊</div>';
+    return a;
+  }
+
+  function render(){
+    Array.prototype.forEach.call(filters.children, function(b){
+      b.classList.toggle("active", b.getAttribute("data-v") === active);
+    });
+    var list = active === "全部" ? games : games.filter(function(g){ return g.v.indexOf(active) > -1; });
+    grid.innerHTML = "";
+    list.forEach(function(g){ grid.appendChild(card(g)); });
+    countEl.textContent = "共 " + list.length + " 款" + (active === "全部" ? "" : "（" + active + "）");
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>
