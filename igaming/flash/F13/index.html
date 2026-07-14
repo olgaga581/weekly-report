@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>遊戲快訊｜Monkeys Wild Party</title>
+<title>遊戲快訊｜Out of the Woods</title>
 <meta property="og:type" content="article">
-<meta property="og:title" content="Monkeys Wild Party（PG Soft）遊戲快訊">
-<meta property="og:description" content="iGaming 遊戲快訊 — Monkeys Wild Party：5×5 Cluster 相連消除 + 猴子百搭擴散 + 連鎖累積倍數">
-<meta property="og:image" content="https://olgaga581.github.io/weekly-report/igaming/flash/F11/monkeys-wild-party-title.jpg">
-<meta property="og:url" content="https://olgaga581.github.io/weekly-report/igaming/flash/F11/">
+<meta property="og:title" content="Out of the Woods（Pragmatic Play）遊戲快訊">
+<meta property="og:description" content="iGaming 遊戲快訊 — Out of the Woods：倍數百搭柱 + respin 疊高 + 免費跨轉累積倍數">
+<meta property="og:image" content="https://olgaga581.github.io/weekly-report/igaming/flash/F13/out-of-the-woods-title.jpg">
+<meta property="og:url" content="https://olgaga581.github.io/weekly-report/igaming/flash/F13/">
 <style>
   :root {
     --brand: #24b4cc;
@@ -37,7 +37,7 @@
   .card-index { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; opacity: .7; text-transform: uppercase; margin-bottom: 4px; }
   .card-title { font-size: 22px; font-weight: 700; margin: 0; line-height: 1.3; }
   .card-vendor-badge { display: inline-block; background: rgba(255,255,255,.2); border-radius: 4px; padding: 2px 10px; font-size: 13px; font-weight: 500; margin-top: 8px; }
-  .card-image { width: 100%; background: #ffffff; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; min-height: 60px; }
+  .card-image { width: 100%; background: #11202a; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; min-height: 60px; }
   .card-image img { width: 100%; max-width: 100%; height: auto; display: block; margin: 0 auto; }
   .card-body { padding: 24px; background: #fff; }
   .tags-section { margin-bottom: 22px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
@@ -63,13 +63,23 @@
   .gameplay-list li .step-body b { display: block; color: var(--brand-dark); margin-bottom: 2px; }
   .core-block { background: var(--card-bg); border-left: 4px solid var(--brand); border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 20px; font-size: 15px; color: var(--text); line-height: 1.75; }
   .gameplay-content { overflow: hidden; }
+  .help-toggle { display: flex; align-items: center; gap: 8px; cursor: pointer; background: var(--card-bg); border: 1px solid var(--line); border-radius: 8px; padding: 11px 16px; font-size: 15px; font-weight: 700; color: var(--brand-dark); user-select: none; transition: background .15s; }
+  .help-toggle:hover { background: #eef4f6; }
+  .help-toggle .help-caret { font-size: 11px; flex-shrink: 0; }
+  .help-panel { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .4s ease, opacity .25s ease; }
+  .help-panel.open { max-height: 9999px; opacity: 1; margin-top: 12px; }
+  .help-block { margin: 0 0 24px; }
+  .help-note { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+  .help-imgs { display: flex; flex-direction: column; gap: 12px; }
+  .help-imgs img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 8px; background: #11202a; cursor: zoom-in; transition: opacity .15s; }
+  .help-imgs img:hover { opacity: .92; }
   .gallery { margin: 20px 0 24px; border-top: 1px solid var(--line); padding-top: 20px; }
   .gallery-main { width: 100%; background: #11202a; border-radius: 8px; overflow: hidden; margin-bottom: 10px; border: 1px solid var(--line); min-height: 60px; display: flex; align-items: center; justify-content: center; }
-  .gallery-main img { width: auto; max-width: 100%; max-height: 480px; height: auto; display: block; margin: 0 auto; transition: opacity .2s ease; }
+  .gallery-main img { width: 100%; max-width: 640px; height: auto; display: block; margin: 0 auto; transition: opacity .2s ease; }
   .gallery-main .placeholder { color: var(--muted); font-size: 14px; text-align: center; padding: 24px; }
   .gallery-caption { text-align:center; color: var(--muted); font-size: 13px; margin: -2px 0 12px; }
   .gallery-thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
-  .gallery-thumbs .thumb { width: 78px; height: 110px; border-radius: 6px; overflow: hidden; cursor: pointer; border: 2px solid transparent; background: #11202a; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: border-color .15s; position: relative; }
+  .gallery-thumbs .thumb { width: 118px; height: 70px; border-radius: 6px; overflow: hidden; cursor: pointer; border: 2px solid transparent; background: #11202a; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: border-color .15s; position: relative; }
   .gallery-thumbs .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .gallery-thumbs .thumb .thumb-no { position:absolute; left:3px; top:3px; background:rgba(12,53,71,.85); color:#fff; font-size:10px; font-weight:700; border-radius:4px; padding:1px 5px; }
   .gallery-thumbs .thumb.active { border-color: var(--brand); }
@@ -121,66 +131,81 @@
       <img class="logo" src="logo.png" alt="傳奇亞太科技 ALPHABET" onerror="this.style.display='none'">
       <div class="head-text">
         <h1>iGaming 遊戲快訊</h1>
-        <div class="date">2026/07/07｜新上市</div>
+        <div class="date">2026/07/09｜新上市</div>
       </div>
     </div>
   </header>
 
-  <!-- Monkeys Wild Party -->
+  <!-- Out of the Woods -->
   <article class="game-card" id="game-1">
     <div class="card-header">
-      <div class="card-index">PG SOFT · 猴子派對 / 迷幻菇叢林</div>
-      <h2 class="card-title">Monkeys Wild Party</h2>
-      <span class="card-vendor-badge">Pocket Games Soft</span>
+      <div class="card-index">PRAGMATIC PLAY · 森林 / 童話森林</div>
+      <h2 class="card-title">Out of the Woods</h2>
+      <span class="card-vendor-badge">Pragmatic Play</span>
     </div>
     <div class="card-image">
-      <img src="monkeys-wild-party-title.jpg" alt="Monkeys Wild Party" onerror="this.parentElement.innerHTML='<span>遊戲主圖（待提供）</span>'">
+      <img src="out-of-the-woods-title.jpg" alt="Out of the Woods" onerror="this.parentElement.innerHTML='<span>遊戲主圖（待提供）</span>'">
     </div>
     <div class="card-body">
       <div class="tags-section">
         <div class="tags-row">
-          <span class="tag tag-theme"><span class="tag-label">主題</span>猴子派對 / 迷幻菇叢林</span>
+          <span class="tag tag-theme"><span class="tag-label">主題</span>森林 / 童話森林</span>
           <span class="tag tag-maxwin"><span class="tag-label">Max Win</span>10,000×</span>
         </div>
         <div class="tags-row">
-          <span class="tag tag-rule"><span class="tag-label">計線</span>Cluster Pays</span>
-          <span class="tag tag-rule"><span class="tag-label">中獎</span>4 個以上相連</span>
-          <span class="tag tag-rule"><span class="tag-label">盤面</span>5×5</span>
-          <span class="tag tag-trigger"><span class="tag-label">觸發</span>3 免費符號 → 8 轉</span>
+          <span class="tag tag-rule"><span class="tag-label">計線</span>LINE 25 線</span>
+          <span class="tag tag-rule"><span class="tag-label">盤面</span>4×5</span>
+          <span class="tag tag-rule"><span class="tag-label">RTP</span>96.52%</span>
+          <span class="tag tag-trigger"><span class="tag-label">觸發</span>3/4/5 Scatter → 10/15/20 轉</span>
         </div>
       </div>
 
       <div class="section-title">規格簡述</div>
-      <div class="core-block">5×5 / Cluster Pays（4 個以上相連）/ Tumble 連鎖消除 / Max Win 10,000× / RTP 96.75%<br>PG 猴子派對題材；核心為猴子百搭擴散 ＋ 連鎖累積倍數，免費旋轉倍數整局不重置。</div>
+      <div class="core-block">4×5 / 25 線 / 倍數百搭柱 ＋ respin / Max Win 10,000× / RTP 96.52%（Super Spin 95.46 / Buy 94.53）<br>PP 森林童話題材；核心為倍數百搭柱與免費跨轉累積倍數，下注模式分層＋直購入場。</div>
 
       <div class="section-title">遊戲玩法</div>
       <div class="gameplay-content">
         <ol class="gameplay-list" style="margin-top:14px">
-          <li><span class="step-body"><b>Cluster 相連消除連鎖</b>水平或豎直 4 個以上相連的同符號即中獎，不限位置<br>中獎後消除、上方符號掉落補位，連鎖計獎到沒有新的中獎為止。</span></li>
-          <li><span class="step-body"><b>猴子百搭擴散</b>迷幻菇百搭出現時，把水平／豎直相鄰的猴子符號轉成猴子百搭<br>並沿著相鄰位置一路擴散，擴大盤面連線。</span></li>
-          <li><span class="step-body"><b>連鎖累積倍數</b>每轉起始 ×1，每次連消中獎後倍數 +1<br>主遊戲每轉結束會重置回 ×1。</span></li>
-          <li><span class="step-body"><b>免費旋轉</b>3 個免費符號觸發 8 次免費旋轉，每多 1 個 +2 轉<br>免費旋轉的倍數整局不重置、一路累加；場上出現 +1 符號再加 1 轉。</span></li>
-          <li><span class="step-body"><b>賠率表</b>各符號與百搭、免費符號的相連賠付倍數對照，依下注額換算。</span></li>
+          <li data-step="1"><span class="step-body"><b>倍數百搭柱 ＋ respin 疊高</b>整軸的倍數百搭柱帶 Nx（由下而上 1x → 2x → 3x → 4x）<br>中獎後觸發 respin，柱身往下移、頂端露出更高倍數，倍數一路往上疊。（另有不帶倍數的貓頭鷹 WILD，限第 2–5 軸）</span></li>
+          <li data-step="1"><span class="step-body"><b>金框百搭（隨機大跳）</b>帶金框的倍數百搭若滑到最底、下一次 respin 會移出畫面時，改為隨機下移 2～10 格，一次露出更多、更高的倍數。</span></li>
+          <li data-step="2"><span class="step-body"><b>Free Spins 倍數跨轉累積</b>3／4／5 Scatter 觸發 10／15／20 轉<br>免費遊戲的倍數跨轉累積、只升不降，每根新柱從先前達到的最高倍數起跳<br>FG 中再湊 3／4／5 Scatter 可 retrigger +10／15／20 轉。</span></li>
+          <li data-step="3"><span class="step-body"><b>Buy Feature 直接購入</b>Buy 100× 直接進入免費遊戲<br>Super Buy 500× 進入 Super Free Spins，首柱倍數 10x～13x 起。</span></li>
+          <li data-step="3"><span class="step-body"><b>Super Free Spins 首柱高倍起手</b>第一根倍數柱直接從 10x～13x 起跳，之後同樣只升不降，起爆點比一般免費遊戲高很多。</span></li>
+          <li data-step="4"><span class="step-body"><b>Extra Bet 下注模式</b>普通押注 25×<br>Ante Bet 押注 125×，免費遊戲觸發率約提高 ×12<br>Super Spin 押注 250×，每轉保證出一根倍數柱、但無法觸發免費遊戲。</span></li>
+          <li data-step="5"><span class="step-body"><b>賠率表</b>各符號由左至右相鄰連線的賠付倍數對照，依下注額換算。</span></li>
         </ol>
         <div class="gallery">
           <div class="gallery-main" id="gallery-main-1">
-            <img src="monkeys-wild-party-1.gif" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>步驟 1</div>'">
+            <img src="out-of-the-woods-1.gif" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>步驟 1</div>'">
           </div>
           <div class="gallery-caption">點下方縮圖或左側步驟編號，切換對應機制動畫</div>
           <div class="gallery-thumbs" id="gallery-thumbs-1">
-            <div class="thumb active" data-gallery="1" data-src="monkeys-wild-party-1.gif" data-step="1"><span class="thumb-no">1</span><img src="monkeys-wild-party-1.gif" alt="步驟 1"></div>
-            <div class="thumb" data-gallery="1" data-src="monkeys-wild-party-2.gif" data-step="2"><span class="thumb-no">2</span><img src="monkeys-wild-party-2.gif" alt="步驟 2"></div>
-            <div class="thumb" data-gallery="1" data-src="monkeys-wild-party-3.gif" data-step="3"><span class="thumb-no">3</span><img src="monkeys-wild-party-3.gif" alt="步驟 3"></div>
-            <div class="thumb" data-gallery="1" data-src="monkeys-wild-party-4.gif" data-step="4"><span class="thumb-no">4</span><img src="monkeys-wild-party-4.gif" alt="步驟 4"></div>
-            <div class="thumb" data-gallery="1" data-src="monkeys-wild-party-paytable.jpg" data-step="5"><span class="thumb-no">5</span><img src="monkeys-wild-party-paytable.jpg" alt="步驟 5 賠率表"></div>
+            <div class="thumb active" data-gallery="1" data-src="out-of-the-woods-1.gif" data-step="1"><span class="thumb-no">1</span><img src="out-of-the-woods-1.gif" alt="步驟 1"></div>
+            <div class="thumb" data-gallery="1" data-src="out-of-the-woods-2.gif" data-step="2"><span class="thumb-no">2</span><img src="out-of-the-woods-2.gif" alt="步驟 2"></div>
+            <div class="thumb" data-gallery="1" data-src="out-of-the-woods-3.gif" data-step="3"><span class="thumb-no">3</span><img src="out-of-the-woods-3.gif" alt="步驟 3"></div>
+            <div class="thumb" data-gallery="1" data-src="out-of-the-woods-4.gif" data-step="4"><span class="thumb-no">4</span><img src="out-of-the-woods-4.gif" alt="步驟 4"></div>
+            <div class="thumb" data-gallery="1" data-src="out-of-the-woods-paytable.jpg" data-step="5"><span class="thumb-no">5</span><img src="out-of-the-woods-paytable.jpg" alt="步驟 5 賠率表"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="help-toggle" onclick="toggleHelp(this)"><span class="help-caret">▼</span> HELP 頁全文（點擊展開）</div>
+      <div class="help-panel">
+        <div class="help-block">
+          <p class="help-note">遊戲內 HELP 頁（賠率表、乘數 WILD、最大獎金／底注／購買、波動與 RTP）。點圖可放大。</p>
+          <div class="help-imgs">
+            <img src="out-of-the-woods-help-1.jpg" alt="HELP 賠率表" onclick="window.open(this.src,'_blank')">
+            <img src="out-of-the-woods-help-2.jpg" alt="HELP 乘數 WILD／次免費旋轉" onclick="window.open(this.src,'_blank')">
+            <img src="out-of-the-woods-help-3.jpg" alt="HELP 最大獎金／底注／購買功能" onclick="window.open(this.src,'_blank')">
+            <img src="out-of-the-woods-help-4.jpg" alt="HELP 波動與 RTP" onclick="window.open(this.src,'_blank')">
           </div>
         </div>
       </div>
 
       <div class="section-title icon-core">核心設計</div>
-      <div class="core-block">核心是「連鎖 × 倍數 × 百搭擴散」互相加乘：4 個以上相連就中獎、消除後掉落連鎖，每連消一次倍數就 +1；迷幻菇百搭還會把相鄰的猴子一路轉成百搭、把盤面連得更大。進入免費旋轉後倍數整局不重置、一路往上疊，連鎖拖得越長、倍數就越高，爆發潛力集中在免費旋轉。</div>
+      <div class="core-block">核心是一根「會長高的倍數百搭柱」：整軸百搭帶 1x→4x，只要中獎就 respin、柱往下滑、頂端不斷冒出更高的倍數。進入免費遊戲後，這個倍數改成跨轉累積、只升不降，一路把後面每一根柱的起跳點墊高；Super／Buy 模式再讓你用錢換「更高起跳、保證出柱」。玩家的爆發，就是倍數柱在免費場被一轉轉墊到很高之後、撞上一次好連線的那一刻。</div>
 
-      <a class="trial-link" href="https://slotslaunch.com/pocket-games-soft/monkeys-wild-party" target="_blank" rel="noopener">
+      <a class="trial-link" href="https://slotslaunch.com/pragmatic-play/out-of-the-woods" target="_blank" rel="noopener">
         <svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm1.5 4.5L6 8l3.5 3.5 1-1L8 8l2.5-2.5-1-1z"/></svg>遊戲頁面
       </a>
 
@@ -190,23 +215,28 @@
       </div>
       <div class="note-panel">
         <div class="note-block">
-          <div class="note-intro">實測心得：這款不靠「單次大倍數」，而是用「消除補位驅動的連鎖懸念」把期待感鋪進每一次連消。以下拆成明星機制、吸引力、給分節奏、隱憂四塊。</div>
+          <div class="note-intro">核心設計是一根「會加倍的百搭柱」。因為是 4×5 的線遊戲，盤面同時只會有一根倍數柱，玩家很容易理解倍率怎麼作用，不用處理多根柱子相加、相乘或先後順序等複雜規則，整個特色玩法非常聚焦。</div>
           <div class="dim">
-            <div class="dim-title">面向 1｜明星機制：靠「消除補位」接續的百搭連鎖</div>
-            <p><span class="tag-obs">觀察</span>迷幻菇百搭出現 → 相鄰猴子變猴子百搭、沿相連方向擴散。關鍵循環是：<b>猴子百搭中獎被消掉後，下一輪變回迷幻菇</b>；這顆新菇再去感染「消除後補下來、掉到它隔壁」的猴子 → 又變猴子百搭 → 再中獎。於是「贏 → 百搭變菇 → 菇感染補位的新猴子 → 再贏」一圈圈滾下去——連鎖是靠<b>消除＋補位</b>接續的，不是一次擴散到底。（每轉結束也可能隨機補一顆菇當新種子。）</p>
+            <div class="dim-title">基礎遊戲的重轉養成</div>
+            <p>另一個很成功的地方是基礎遊戲的重轉（respin）設計。只要倍數柱出現，就能免費進入一段連續重轉，玩家會有一種「在基礎遊戲也拿到小獎勵」的體感，同時倍數柱一路慢慢養高，建立出不錯的養成感。</p>
           </div>
           <div class="dim">
-            <div class="dim-title">面向 2｜吸引力：把期待感切碎、鋪進每一次連消</div>
-            <p><span class="tag-obs">觀察</span>它不走「一次大倍數」，而是讓你<b>每一 COMBO 都盯著看</b>——這次消完、補下來的猴子會不會被菇接上、把連鎖續下去。每消一次就多一次「會不會接著滾」的懸念；這種「盯著下一步會不會連動」的參與感，比天上隨機掉倍數更抓人，玩家是在看戲＋期待連鎖，而不是乾等大獎。</p>
+            <div class="dim-title">免費遊戲是基礎遊戲的延伸</div>
+            <p>免費遊戲並沒有加入太多新規則，最大的差異是已經養高的那根倍數柱會跨轉保留下來，新長出來的柱子直接沿用目前的倍率設定。這讓免費遊戲更像是基礎遊戲的延伸，而不是完全不同的玩法。</p>
           </div>
           <div class="dim">
-            <div class="dim-title">面向 3｜給分節奏：細水長流、靠連鎖累積</div>
-            <p><span class="tag-obs">觀察</span>倍數不大（實測基礎約 ×5、FG 約 ×7，是實測、非上限），不是等一發爆擊；分數一段一段疊上去，<b>連鎖每接一次</b>，中獎面積與倍數就往上加一點。真正的大分是「連鎖夠長 ＋ 百搭夠大片 ＋（FG）倍數累加」三者一起堆出來。手感偏穩、綿，爽點在「連鎖接不接得住」，不在「倍數爆不爆」。</p>
+            <div class="dim-title">優缺點</div>
+            <p><span class="tag-sol">優點</span>學習成本很低，基礎遊戲本身就很有趣，不需要一直等待進免費遊戲。</p>
+            <p><span class="tag-obs">隱憂</span>免費遊戲的價值感會稍微不足，因為玩家在基礎遊戲已經體驗到大部分核心樂趣。</p>
           </div>
           <div class="dim">
-            <div class="dim-title">面向 4｜隱憂與可改進：一條引擎，久了會膩</div>
-            <p><span class="tag-obs">觀察</span>全遊戲吃同一個「<b>菇 → 猴子 → 連鎖</b>」迴圈，沒有第二機制換口味；免費遊戲玩法又跟基礎場幾乎一樣、只差倍數不重置，進 FG 少了「換個模式」的儀式感。</p>
-            <p><span class="tag-sol">解方</span>加一個偶發的變體事件（超級菇、整排轉換…），或讓 FG 有專屬規則（例如每轉保證出菇），讓長玩不單一、進 FG 更有記憶點。</p>
+            <div class="dim-title">若由我調整</div>
+            <p>不一定會增加新機制，而是考慮提高免費遊戲的策略性。例如在進入免費遊戲時，讓玩家二選一：</p>
+            <ul>
+              <li>10x 起始倍率 ＋ 10 次免費旋轉</li>
+              <li>1x 起始倍率 ＋ 20 次免費旋轉</li>
+            </ul>
+            <p>透過「高風險高報酬 vs 低風險穩定」的取捨，讓免費遊戲除了延續基礎遊戲之外，也能提供更鮮明的專屬價值，又不會增加太多學習成本。</p>
           </div>
         </div>
       </div>
@@ -217,6 +247,14 @@
 
 </div>
 <script>
+  function toggleHelp(el) {
+    el.classList.toggle('open');
+    var panel = el.nextElementSibling;
+    if (panel) panel.classList.toggle('open');
+    var caret = el.querySelector('.help-caret');
+    if (caret) caret.textContent = el.classList.contains('open') ? '▲' : '▼';
+  }
+
   function toggleNote(arrowEl) {
     arrowEl.classList.toggle('open');
     var row = arrowEl.closest('.bottom-row');
@@ -250,8 +288,7 @@
       var card = thumb.closest('.game-card');
       if (card) {
         card.querySelectorAll('.gameplay-list li').forEach(function(li) { li.classList.remove('step-active'); });
-        var targetLi = card.querySelectorAll('.gameplay-list li')[parseInt(step) - 1];
-        if (targetLi) targetLi.classList.add('step-active');
+        card.querySelectorAll('.gameplay-list li[data-step="' + step + '"]').forEach(function(li) { li.classList.add('step-active'); });
       }
       setMain(mainEl, src, step);
     });
@@ -261,7 +298,8 @@
     li.addEventListener('click', function() {
       var card = li.closest('.game-card');
       if (!card) return;
-      var step = Array.prototype.indexOf.call(li.parentNode.children, li) + 1;
+      var step = li.dataset.step;
+      if (!step) return;
       var thumb = card.querySelector('.gallery-thumbs .thumb[data-step="' + step + '"]');
       if (thumb) thumb.click();
     });
