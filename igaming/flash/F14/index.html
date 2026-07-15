@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>遊戲快訊｜XBomb Fiesta</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="XBomb Fiesta（ACEWIN）遊戲快訊">
+<meta property="og:description" content="iGaming 遊戲快訊 — XBomb Fiesta：背景乘倍板持續疊加 + 三特色補位連消 + 免費遊戲乘倍不歸零">
+<meta property="og:image" content="https://olgaga581.github.io/weekly-report/igaming/flash/F14/xbomb-fiesta-title.jpg">
+<meta property="og:url" content="https://olgaga581.github.io/weekly-report/igaming/flash/F14/">
+<style>
+  :root {
+    --brand: #24b4cc;
+    --brand-dark: #167d91;
+    --text: #1a1a1a;
+    --muted: #5a6470;
+    --line: #e3e8ee;
+    --bg: #ffffff;
+    --card-bg: #f8fbfc;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: system-ui, "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif;
+    font-size: 17px; line-height: 1.8; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+  header { border-bottom: 3px solid var(--brand); padding-bottom: 16px; margin-bottom: 32px; }
+  .head-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .head-row img.logo { height: 56px; width: auto; flex-shrink: 0; }
+  .head-text { text-align: right; }
+  .head-text h1 { font-size: 26px; line-height: 1.4; margin: 0; color: var(--brand-dark); }
+  .head-text .date { color: var(--muted); font-size: 15px; margin-top: 4px; }
+  .game-card { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
+  .card-header { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 100%); padding: 20px 24px 16px; color: #fff; }
+  .card-index { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; opacity: .7; text-transform: uppercase; margin-bottom: 4px; }
+  .card-title { font-size: 22px; font-weight: 700; margin: 0; line-height: 1.3; }
+  .card-vendor-badge { display: inline-block; background: rgba(255,255,255,.2); border-radius: 4px; padding: 2px 10px; font-size: 13px; font-weight: 500; margin-top: 8px; }
+  .card-image { width: 100%; background: #11202a; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; min-height: 60px; }
+  .card-image img { width: 70%; max-width: 70%; height: auto; display: block; margin: 0 auto; }
+  .card-body { padding: 24px; background: #fff; }
+  .tags-section { margin-bottom: 22px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  .tags-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .tag { display: inline-flex; align-items: center; gap: 5px; border-radius: 6px; padding: 4px 10px; font-size: 13px; font-weight: 500; line-height: 1.4; }
+  .tag-label { font-size: 11px; font-weight: 700; opacity: .65; text-transform: uppercase; letter-spacing: .5px; }
+  .tag-theme   { background: #e8f4f7; color: #167d91; }
+  .tag-rule    { background: #f0f4ff; color: #3d5af1; }
+  .tag-trigger { background: #fff4e6; color: #c26a00; }
+  .tag-maxwin  { background: #fef0f0; color: #c0392b; }
+  .section-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; display: flex; align-items: center; gap: 7px; }
+  .section-title::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: var(--brand); flex-shrink: 0; }
+  .section-title.icon-core::before { background: var(--brand-dark); border-radius: 50%; }
+  .gameplay-list { list-style: none; margin: 0 0 24px; padding: 0; counter-reset: step; }
+  .gameplay-list li { counter-increment: step; display: flex; gap: 14px; margin-bottom: 12px; line-height: 1.7; font-size: 16px; cursor: pointer; }
+  .gameplay-list li::before {
+    content: counter(step); min-width: 26px; height: 26px; background: var(--brand); color: #fff;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 3px; transition: background .2s;
+  }
+  .gameplay-list li.step-active::before { background: #0c3547; }
+  .gameplay-list li .step-body { flex: 1; min-width: 0; }
+  .gameplay-list li .step-body b { display: block; color: var(--brand-dark); margin-bottom: 2px; }
+  .core-block { background: var(--card-bg); border-left: 4px solid var(--brand); border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 20px; font-size: 15px; color: var(--text); line-height: 1.75; }
+  .gameplay-content { overflow: hidden; }
+  .help-toggle { display: flex; align-items: center; gap: 8px; cursor: pointer; background: var(--card-bg); border: 1px solid var(--line); border-radius: 8px; padding: 11px 16px; font-size: 15px; font-weight: 700; color: var(--brand-dark); user-select: none; transition: background .15s; }
+  .help-toggle:hover { background: #eef4f6; }
+  .help-toggle .help-caret { font-size: 11px; flex-shrink: 0; }
+  .help-panel { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .4s ease, opacity .25s ease; }
+  .help-panel.open { max-height: 9999px; opacity: 1; margin-top: 12px; }
+  .help-block { margin: 0 0 24px; }
+  .help-note { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+  .help-imgs { display: flex; flex-direction: column; gap: 12px; }
+  .help-imgs img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 8px; background: #11202a; cursor: zoom-in; transition: opacity .15s; }
+  .help-imgs img:hover { opacity: .92; }
+  .gallery { margin: 20px 0 24px; border-top: 1px solid var(--line); padding-top: 20px; }
+  .gallery-main { width: 100%; background: #11202a; border-radius: 8px; overflow: hidden; margin-bottom: 10px; border: 1px solid var(--line); min-height: 60px; display: flex; align-items: center; justify-content: center; }
+  .gallery-main img { width: 70%; max-width: 448px; height: auto; display: block; margin: 0 auto; transition: opacity .2s ease; }
+  .gallery-main .placeholder { color: var(--muted); font-size: 14px; text-align: center; padding: 24px; }
+  .gallery-caption { text-align:center; color: var(--muted); font-size: 13px; margin: -2px 0 12px; }
+  .gallery-thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
+  .gallery-thumbs .thumb { width: 118px; height: 70px; border-radius: 6px; overflow: hidden; cursor: pointer; border: 2px solid transparent; background: #11202a; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: border-color .15s; position: relative; }
+  .gallery-thumbs .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery-thumbs .thumb .thumb-no { position:absolute; left:3px; top:3px; background:rgba(12,53,71,.85); color:#fff; font-size:10px; font-weight:700; border-radius:4px; padding:1px 5px; }
+  .gallery-thumbs .thumb.active { border-color: var(--brand); }
+  .gallery-thumbs .thumb:hover { border-color: var(--brand); opacity: .9; }
+  .trial-link { display: inline-flex; align-items: center; gap: 6px; background: var(--brand); color: #fff; text-decoration: none; padding: 9px 20px; border-radius: 6px; font-size: 14px; font-weight: 700; transition: background .15s; }
+  .trial-link:hover { background: var(--brand-dark); }
+  .trial-link svg { width: 14px; height: 14px; fill: currentColor; }
+  .back-to-top { display: block; text-align: center; margin: 0; padding: 10px; border: 1px solid var(--line); border-radius: 8px; color: var(--brand-dark); text-decoration: none; font-size: 14px; font-weight: 500; transition: background .15s; }
+  .back-to-top:hover { background: var(--card-bg); }
+  .bottom-row { position: relative; margin: 32px 0 0; }
+  .note-toggle { position: absolute; right: 12px; bottom: 8px; cursor: pointer; color: var(--muted); font-size: 13px; line-height: 1; user-select: none; padding: 6px 8px; transition: transform .25s ease, color .15s; }
+  .note-toggle:hover { color: var(--brand-dark); }
+  .note-toggle.open { transform: rotate(180deg); }
+  .note-panel { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .35s ease, opacity .25s ease; }
+  .note-panel.open { max-height: 9999px; opacity: 1; margin-top: 10px; }
+  .note-block { background: #fffdf5; border-left: 4px solid #e7c14b; border-radius: 0 8px 8px 0; padding: 16px 18px; font-size: 15px; color: var(--text); line-height: 1.8; }
+  .note-block b { color: var(--brand-dark); }
+  .note-block .note-intro { margin-bottom: 16px; }
+  .note-block .dim { margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px dashed #ead9a0; }
+  .note-block .dim:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+  .note-block .dim-title { font-weight: 700; color: #b58a00; margin-bottom: 8px; }
+  .note-block .dim p { margin: 0 0 7px; }
+  .note-block .dim p:last-child { margin-bottom: 0; }
+  .note-block ul { margin: 4px 0 0; padding-left: 18px; }
+  .note-block li { margin-bottom: 6px; }
+  .note-block li:last-child { margin-bottom: 0; }
+  .note-block .tag-obs, .note-block .tag-sol { display: inline-block; font-size: 11px; font-weight: 700; border-radius: 4px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+  .note-block .tag-obs { background: #eef2f7; color: #5a6470; }
+  .note-block .tag-sol { background: #e6f4ea; color: #2c7a4b; }
+  footer { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 28px 16px 60px; }
+    .head-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .head-row img.logo { height: 44px; }
+    .head-text { text-align: left; }
+    .head-text h1 { font-size: 22px; }
+    .card-title { font-size: 19px; }
+    .card-body { padding: 18px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <a href="../../" style="display:inline-block;font-size:14px;color:var(--brand-dark);text-decoration:none;margin-bottom:16px;">← iGaming 競品動態</a>
+
+  <header>
+    <div class="head-row">
+      <img class="logo" src="logo.png" alt="傳奇亞太科技 ALPHABET" onerror="this.style.display='none'">
+      <div class="head-text">
+        <h1>iGaming 遊戲快訊</h1>
+        <div class="date">2026/07/14｜新上市</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- XBomb Fiesta -->
+  <article class="game-card" id="game-1">
+    <div class="card-header">
+      <div class="card-index">ACEWIN · 網紅聯名 / 糖果甜點</div>
+      <h2 class="card-title">XBomb Fiesta</h2>
+      <span class="card-vendor-badge">ACEWIN</span>
+    </div>
+    <div class="card-image">
+      <img src="xbomb-fiesta-title.jpg" alt="XBomb Fiesta" onerror="this.parentElement.innerHTML='<span>遊戲主圖（待提供）</span>'">
+    </div>
+    <div class="card-body">
+      <div class="tags-section">
+        <div class="tags-row">
+          <span class="tag tag-theme"><span class="tag-label">主題</span>網紅聯名 / 糖果甜點</span>
+          <span class="tag tag-maxwin"><span class="tag-label">Max Win</span>官方未公開</span>
+        </div>
+        <div class="tags-row">
+          <span class="tag tag-rule"><span class="tag-label">計線</span>Cluster Pays</span>
+          <span class="tag tag-rule"><span class="tag-label">盤面</span>7×7</span>
+          <span class="tag tag-trigger"><span class="tag-label">觸發</span>3~7 Scatter → 10~30轉 / Buy Bonus</span>
+        </div>
+      </div>
+
+      <div class="section-title">規格簡述</div>
+      <div class="core-block">7×7 / Cluster Pays（最小5連，上下左右）/ Max Win 官方未公開<br>背景乘倍標記 2x→1024x 持續累加<br>Bomb／Cluster／Swap 三特色補位連消<br>Free Game 中標記不歸零</div>
+
+      <div class="section-title">遊戲玩法</div>
+      <div class="gameplay-content">
+        <ol class="gameplay-list" style="margin-top:14px">
+          <li data-step="1"><span class="step-body"><b>掉落消去</b>5個以上相連（上下左右）即消除，上方補新符號，直到無新連線為止。</span></li>
+          <li data-step="2"><span class="step-body"><b>背景乘倍標記</b>得獎生成標記，初始2x，同格再得獎則翻倍，最高1024x，多標記可疊加。</span></li>
+          <li data-step="3"><span class="step-body"><b>Bomb特色</b>盤面卡住時機率觸發，Mhyca丟出炸彈，爆炸3x3範圍使區域內標記翻倍。</span></li>
+          <li data-step="4"><span class="step-body"><b>Cluster特色</b>Aifha賦予盤面一個2x2同符號區塊，可與其他符號同時出現。</span></li>
+          <li data-step="5"><span class="step-body"><b>Swap特色</b>Shane將盤面上某符號整批轉換為另一種已存在的符號。</span></li>
+          <li data-step="6"><span class="step-body"><b>Free Game</b>3~7顆Scatter觸發10~30次免費遊戲，2顆以上有機率增加Scatter數。</span></li>
+          <li data-step="7"><span class="step-body"><b>乘倍標記跨局保留</b>免費遊戲期間標記不會消失，持續累加到FG結束才結算，是最大期待值來源。</span></li>
+          <li data-step="8"><span class="step-body"><b>Buy Bonus</b>可購買直接進Free Game（50倍），或購買每轉必觸發特色（200倍）。</span></li>
+        </ol>
+        <div class="gallery">
+          <div class="gallery-main" id="gallery-main-1">
+            <img src="xbomb-fiesta-1.gif" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>步驟 1</div>'">
+          </div>
+          <div class="gallery-caption">點下方縮圖或左側步驟編號，切換對應機制動畫</div>
+          <div class="gallery-thumbs" id="gallery-thumbs-1">
+            <div class="thumb active" data-gallery="1" data-src="xbomb-fiesta-1.gif" data-step="1"><span class="thumb-no">1</span><img src="xbomb-fiesta-1.gif" alt="步驟 1"></div>
+            <div class="thumb" data-gallery="1" data-src="xbomb-fiesta-2.gif" data-step="2"><span class="thumb-no">2</span><img src="xbomb-fiesta-2.gif" alt="步驟 2"></div>
+            <div class="thumb" data-gallery="1" data-src="xbomb-fiesta-3.gif" data-step="3"><span class="thumb-no">3</span><img src="xbomb-fiesta-3.gif" alt="步驟 3"></div>
+            <div class="thumb" data-gallery="1" data-src="xbomb-fiesta-4.gif" data-step="4"><span class="thumb-no">4</span><img src="xbomb-fiesta-4.gif" alt="步驟 4"></div>
+            <div class="thumb" data-gallery="1" data-src="xbomb-fiesta-5.gif" data-step="5"><span class="thumb-no">5</span><img src="xbomb-fiesta-5.gif" alt="步驟 5"></div>
+            <div class="thumb" data-gallery="1" data-src="xbomb-fiesta-6.gif" data-step="6"><span class="thumb-no">6</span><img src="xbomb-fiesta-6.gif" alt="步驟 6"></div>
+            <div class="thumb" data-gallery="1" data-src="xbomb-fiesta-7.gif" data-step="7"><span class="thumb-no">7</span><img src="xbomb-fiesta-7.gif" alt="步驟 7"></div>
+            <div class="thumb" data-gallery="1" data-src="xbomb-fiesta-8.gif" data-step="8"><span class="thumb-no">8</span><img src="xbomb-fiesta-8.gif" alt="步驟 8"></div>
+            <div class="thumb" data-gallery="1" data-src="xbomb-fiesta-paytable.jpg" data-step="9"><span class="thumb-no">9</span><img src="xbomb-fiesta-paytable.jpg" alt="步驟 9 賠率表"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="help-toggle" onclick="toggleHelp(this)"><span class="help-caret">▼</span> HELP 頁全文（點擊展開）</div>
+      <div class="help-panel">
+        <div class="help-block">
+          <p class="help-note">遊戲內 HELP 頁全文（Scatter、Feature Game、Combo Multiplier、Multiplier Mark、Free Game、Buy Bonus、賠率表、遊戲規則）。點圖可放大。</p>
+          <div class="help-imgs">
+            <img src="xbomb-fiesta-help-1.png" alt="HELP 1" onclick="window.open(this.src,'_blank')">
+            <img src="xbomb-fiesta-help-2.png" alt="HELP 2" onclick="window.open(this.src,'_blank')">
+            <img src="xbomb-fiesta-help-3.png" alt="HELP 3" onclick="window.open(this.src,'_blank')">
+            <img src="xbomb-fiesta-help-4.png" alt="HELP 4" onclick="window.open(this.src,'_blank')">
+            <img src="xbomb-fiesta-help-5.png" alt="HELP 5" onclick="window.open(this.src,'_blank')">
+            <img src="xbomb-fiesta-help-6.png" alt="HELP 6" onclick="window.open(this.src,'_blank')">
+            <img src="xbomb-fiesta-help-7.png" alt="HELP 7" onclick="window.open(this.src,'_blank')">
+            <img src="xbomb-fiesta-help-8.png" alt="HELP 8" onclick="window.open(this.src,'_blank')">
+            <img src="xbomb-fiesta-help-9.png" alt="HELP 9" onclick="window.open(this.src,'_blank')">
+            <img src="xbomb-fiesta-help-10.png" alt="HELP 10" onclick="window.open(this.src,'_blank')">
+            <img src="xbomb-fiesta-help-11.png" alt="HELP 11" onclick="window.open(this.src,'_blank')">
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title icon-core">核心設計</div>
+      <div class="core-block">
+        <p style="margin:0 0 14px;">真正的核心是那塊「背景乘倍板」：每個格子一旦贏過一次就會留下標記，並隨著同格再次得獎持續翻倍，最高1024x。</p>
+        <p style="margin:0 0 14px;">掉落消去機制建立在這塊乘倍板之上，讓玩家不斷有機會在同一格觸發翻倍。Bomb／Cluster／Swap 三特色的作用，是在盤面卡住、無法再自然連消時，強制製造新的連消機會，讓乘倍板可以繼續往上疊，而不是機制本身的重點。</p>
+        <p style="margin:0 0 14px;">Free Game 則是把「乘倍板持續累加、不歸零」的核心特性再放大，讓期待值集中在「這塊板最後能疊到多誇張」。</p>
+        <p style="margin:0;">整體玩法邏輯與 Pragmatic Play 的 Sugar Rush（同樣是掉落消去＋盤面乘倍持續累加）相近，可視為同類型的變化款。</p>
+      </div>
+
+      <div class="bottom-row">
+        <a class="back-to-top" href="#top">↑ 回到最上方</a>
+        <span class="note-toggle" onclick="toggleNote(this)" title="企劃心得與提問">▼</span>
+      </div>
+      <div class="note-panel">
+        <div class="note-block">
+          <div class="note-intro">三位角色的機制不只是行銷包裝，Bomb／Cluster／Swap 的丟擲動畫實際上會補位清除盤面卡住的狀態，直接輔助核心的乘倍板持續運作；免費遊戲的觸發，除了 Scatter 湊滿之外，也有機會透過角色互動方式帶出，三個角色的機制都是圍繞著核心玩法在服務，而不是獨立的裝飾特色。</div>
+          <div class="dim">
+            <div class="dim-title">IP 行銷角度</div>
+            <p>Mhyca／Aifha／Shane 是當地市場家喻戶曉的真人網紅／藝人，並非純虛構角色。用真人 IP 包成遊戲角色，能直接借用她們在當地的知名度與粉絲基礎，讓玩家對角色有記憶點，是這款遊戲在行銷操作上比較特別的地方。</p>
+          </div>
+          <div class="dim">
+            <div class="dim-title">優缺點</div>
+            <p><span class="tag-sol">優點</span>三特色都直接服務核心乘倍板，機制單一聚焦，玩家不用學習太多獨立規則；角色演出同時兼具行銷記憶點與玩法功能，一魚兩吃。</p>
+            <p><span class="tag-obs">隱憂</span>可能因為三個特色都綁在「消除／補位」上，缺乏其他類型的加分機制，中獎率感覺不高、容易連續斷連，波動偏大且爆發點集中在乘倍板堆疊完成的瞬間。</p>
+          </div>
+          <div class="dim">
+            <div class="dim-title">值得借鑑的競品做法</div>
+            <p>競品在玩家進場時，會主動導引使用 Buy Feature 機制，目標是讓玩家嘗試該功能；同時競品把 Buy Feature 分成一般版與強化版，強化版的差異是必發角色特色，讓整個主題更緊密圍繞在玩法上。這個操作覺得做得不錯，說不定有地方可以借鑑。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <footer>© 2026 傳奇亞太科技有限公司 ALPHABET ｜ 遊戲快訊</footer>
+
+</div>
+<script>
+  function toggleHelp(el) {
+    el.classList.toggle('open');
+    var panel = el.nextElementSibling;
+    if (panel) panel.classList.toggle('open');
+    var caret = el.querySelector('.help-caret');
+    if (caret) caret.textContent = el.classList.contains('open') ? '▲' : '▼';
+  }
+
+  function toggleNote(arrowEl) {
+    arrowEl.classList.toggle('open');
+    var row = arrowEl.closest('.bottom-row');
+    var panel = row ? row.nextElementSibling : null;
+    if (panel) panel.classList.toggle('open');
+  }
+
+  document.querySelectorAll('.gameplay-list').forEach(function(list) {
+    var first = list.querySelector('li');
+    if (first) first.classList.add('step-active');
+  });
+
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    if (thumb.dataset.src) { var pre = new Image(); pre.src = thumb.dataset.src; }
+  });
+
+  function setMain(mainEl, src, step) {
+    var img = mainEl.querySelector('img');
+    if (img) { img.src = src; img.alt = '步驟 ' + step; }
+    else { mainEl.innerHTML = '<img src="' + src + '" alt="步驟 ' + step + '">'; }
+  }
+
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      var galleryId = thumb.dataset.gallery;
+      var src = thumb.dataset.src;
+      var step = thumb.dataset.step;
+      var mainEl = document.getElementById('gallery-main-' + galleryId);
+      document.querySelectorAll('.thumb[data-gallery="' + galleryId + '"]').forEach(function(t) { t.classList.remove('active'); });
+      thumb.classList.add('active');
+      var card = thumb.closest('.game-card');
+      if (card) {
+        card.querySelectorAll('.gameplay-list li').forEach(function(li) { li.classList.remove('step-active'); });
+        card.querySelectorAll('.gameplay-list li[data-step="' + step + '"]').forEach(function(li) { li.classList.add('step-active'); });
+      }
+      setMain(mainEl, src, step);
+    });
+  });
+
+  document.querySelectorAll('.gameplay-list li').forEach(function(li) {
+    li.addEventListener('click', function() {
+      var card = li.closest('.game-card');
+      if (!card) return;
+      var step = li.dataset.step;
+      if (!step) return;
+      var thumb = card.querySelector('.gallery-thumbs .thumb[data-step="' + step + '"]');
+      if (thumb) thumb.click();
+    });
+  });
+</script>
+</body>
+</html>

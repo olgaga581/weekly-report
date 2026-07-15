@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>遊戲快訊｜Jungle Bang Bang</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jungle Bang Bang（FA CHAI）遊戲快訊">
+<meta property="og:description" content="iGaming 遊戲快訊 — Jungle Bang Bang：1024/2000 WAYS 相連消除 + 連擊倍數階梯 640x + 榴槤炸彈 Featured WILD">
+<meta property="og:image" content="jungle-bang-bang-title.jpg">
+<style>
+  :root {
+    --brand: #24b4cc;
+    --brand-dark: #167d91;
+    --text: #1a1a1a;
+    --muted: #5a6470;
+    --line: #e3e8ee;
+    --bg: #ffffff;
+    --card-bg: #f8fbfc;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: system-ui, "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif;
+    font-size: 17px; line-height: 1.8; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+  header { border-bottom: 3px solid var(--brand); padding-bottom: 16px; margin-bottom: 32px; }
+  .head-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .head-row img.logo { height: 56px; width: auto; flex-shrink: 0; }
+  .head-text { text-align: right; }
+  .head-text h1 { font-size: 26px; line-height: 1.4; margin: 0; color: var(--brand-dark); }
+  .head-text .date { color: var(--muted); font-size: 15px; margin-top: 4px; }
+  .game-card { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
+  .card-header { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 100%); padding: 20px 24px 16px; color: #fff; }
+  .card-index { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; opacity: .7; text-transform: uppercase; margin-bottom: 4px; }
+  .card-title { font-size: 22px; font-weight: 700; margin: 0; line-height: 1.3; }
+  .card-vendor-badge { display: inline-block; background: rgba(255,255,255,.2); border-radius: 4px; padding: 2px 10px; font-size: 13px; font-weight: 500; margin-top: 8px; }
+  .card-image { width: 100%; background: #11202a; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; min-height: 60px; }
+  .card-image img { width: 100%; max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .card-body { padding: 24px; background: #fff; }
+  .tags-section { margin-bottom: 22px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  .tags-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .tag { display: inline-flex; align-items: center; gap: 5px; border-radius: 6px; padding: 4px 10px; font-size: 13px; font-weight: 500; line-height: 1.4; }
+  .tag-label { font-size: 11px; font-weight: 700; opacity: .65; text-transform: uppercase; letter-spacing: .5px; }
+  .tag-theme   { background: #e8f4f7; color: #167d91; }
+  .tag-rule    { background: #f0f4ff; color: #3d5af1; }
+  .tag-trigger { background: #fff4e6; color: #c26a00; }
+  .tag-maxwin  { background: #fef0f0; color: #c0392b; }
+  .section-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; display: flex; align-items: center; gap: 7px; }
+  .section-title::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: var(--brand); flex-shrink: 0; }
+  .section-title.icon-core::before { background: var(--brand-dark); border-radius: 50%; }
+  .gameplay-list { list-style: none; margin: 0 0 24px; padding: 0; counter-reset: step; }
+  .gameplay-list li { counter-increment: step; display: flex; gap: 14px; margin-bottom: 12px; line-height: 1.7; font-size: 16px; cursor: pointer; }
+  .gameplay-list li::before {
+    content: counter(step); min-width: 26px; height: 26px; background: var(--brand); color: #fff;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 3px; transition: background .2s;
+  }
+  .gameplay-list li.step-active::before { background: #0c3547; }
+  .gameplay-list li .step-body { flex: 1; min-width: 0; }
+  .gameplay-list li .step-body b { display: block; color: var(--brand-dark); margin-bottom: 2px; }
+  .core-block { background: var(--card-bg); border-left: 4px solid var(--brand); border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 20px; font-size: 15px; color: var(--text); line-height: 1.75; }
+  .gameplay-content { overflow: hidden; }
+  .help-toggle { display: flex; align-items: center; gap: 8px; cursor: pointer; background: var(--card-bg); border: 1px solid var(--line); border-radius: 8px; padding: 11px 16px; font-size: 15px; font-weight: 700; color: var(--brand-dark); user-select: none; transition: background .15s; }
+  .help-toggle:hover { background: #eef4f6; }
+  .help-toggle .help-caret { font-size: 11px; flex-shrink: 0; }
+  .help-panel { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .4s ease, opacity .25s ease; }
+  .help-panel.open { max-height: 9999px; opacity: 1; margin-top: 12px; }
+  .help-block { margin: 0 0 24px; }
+  .help-note { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+  .help-imgs { display: flex; flex-direction: column; gap: 12px; }
+  .help-imgs img { width: 100%; max-width: 340px; height: auto; display: block; margin: 0 auto; border: 1px solid var(--line); border-radius: 8px; background: #11202a; cursor: zoom-in; transition: opacity .15s; }
+  .help-imgs img:hover { opacity: .92; }
+  .gallery { margin: 20px 0 24px; border-top: 1px solid var(--line); padding-top: 20px; }
+  .gallery-main { width: 100%; background: #11202a; border-radius: 8px; overflow: hidden; margin-bottom: 10px; border: 1px solid var(--line); min-height: 60px; display: flex; align-items: center; justify-content: center; }
+  .gallery-main img { width: auto; max-width: 100%; max-height: 520px; height: auto; display: block; margin: 0 auto; transition: opacity .2s ease; }
+  .gallery-main .placeholder { color: var(--muted); font-size: 14px; text-align: center; padding: 24px; }
+  .gallery-caption { text-align:center; color: var(--muted); font-size: 13px; margin: -2px 0 12px; }
+  .gallery-thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
+  .gallery-thumbs .thumb { width: 72px; height: 110px; border-radius: 6px; overflow: hidden; cursor: pointer; border: 2px solid transparent; background: #11202a; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: border-color .15s; position: relative; }
+  .gallery-thumbs .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery-thumbs .thumb .thumb-no { position:absolute; left:3px; top:3px; background:rgba(12,53,71,.85); color:#fff; font-size:10px; font-weight:700; border-radius:4px; padding:1px 5px; }
+  .gallery-thumbs .thumb.active { border-color: var(--brand); }
+  .gallery-thumbs .thumb:hover { border-color: var(--brand); opacity: .9; }
+  .trial-link { display: inline-flex; align-items: center; gap: 6px; background: var(--brand); color: #fff; text-decoration: none; padding: 9px 20px; border-radius: 6px; font-size: 14px; font-weight: 700; transition: background .15s; }
+  .trial-link:hover { background: var(--brand-dark); }
+  .trial-link svg { width: 14px; height: 14px; fill: currentColor; }
+  .back-to-top { display: block; text-align: center; margin: 0; padding: 10px; border: 1px solid var(--line); border-radius: 8px; color: var(--brand-dark); text-decoration: none; font-size: 14px; font-weight: 500; transition: background .15s; }
+  .back-to-top:hover { background: var(--card-bg); }
+  .bottom-row { position: relative; margin: 32px 0 0; }
+  .note-toggle { position: absolute; right: 12px; bottom: 8px; cursor: pointer; color: var(--muted); font-size: 13px; line-height: 1; user-select: none; padding: 6px 8px; transition: transform .25s ease, color .15s; }
+  .note-toggle:hover { color: var(--brand-dark); }
+  .note-toggle.open { transform: rotate(180deg); }
+  .note-panel { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .35s ease, opacity .25s ease; }
+  .note-panel.open { max-height: 9999px; opacity: 1; margin-top: 10px; }
+  .note-block { background: #fffdf5; border-left: 4px solid #e7c14b; border-radius: 0 8px 8px 0; padding: 16px 18px; font-size: 15px; color: var(--text); line-height: 1.8; }
+  .note-block b { color: var(--brand-dark); }
+  .note-block .note-intro { margin-bottom: 16px; }
+  .note-block .dim { margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px dashed #ead9a0; }
+  .note-block .dim:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+  .note-block .dim-title { font-weight: 700; color: #b58a00; margin-bottom: 8px; }
+  .note-block .dim p { margin: 0 0 7px; }
+  .note-block .dim p:last-child { margin-bottom: 0; }
+  footer { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 28px 16px 60px; }
+    .head-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .head-row img.logo { height: 44px; }
+    .head-text { text-align: left; }
+    .head-text h1 { font-size: 22px; }
+    .card-title { font-size: 19px; }
+    .card-body { padding: 18px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <a href="../../" style="display:inline-block;font-size:14px;color:var(--brand-dark);text-decoration:none;margin-bottom:16px;">← iGaming 競品動態</a>
+
+  <header>
+    <div class="head-row">
+      <img class="logo" src="logo.png" alt="傳奇亞太科技 ALPHABET" onerror="this.style.display='none'">
+      <div class="head-text">
+        <h1>iGaming 遊戲快訊</h1>
+        <div class="date">2026/07/14｜新上市</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Jungle Bang Bang -->
+  <article class="game-card" id="game-1">
+    <div class="card-header">
+      <div class="card-index">FA CHAI · 叢林探險 / 水果消除</div>
+      <h2 class="card-title">Jungle Bang Bang</h2>
+      <span class="card-vendor-badge">FA CHAI</span>
+    </div>
+    <div class="card-image">
+      <img src="jungle-bang-bang-title.jpg" alt="Jungle Bang Bang" onerror="this.parentElement.innerHTML='<span>遊戲主圖（待提供）</span>'">
+    </div>
+    <div class="card-body">
+      <div class="tags-section">
+        <div class="tags-row">
+          <span class="tag tag-theme"><span class="tag-label">主題</span>叢林探險 / 水果消除</span>
+          <span class="tag tag-maxwin"><span class="tag-label">Max Win</span>12,000×</span>
+        </div>
+        <div class="tags-row">
+          <span class="tag tag-rule"><span class="tag-label">計線</span>WAY 1024（Extra Bet 2000）</span>
+          <span class="tag tag-rule"><span class="tag-label">盤面</span>5 軸 4 列</span>
+          <span class="tag tag-rule"><span class="tag-label">RTP</span>96.5%／High 波動</span>
+          <span class="tag tag-trigger"><span class="tag-label">觸發</span>3 SCATTER → 10 免費</span>
+        </div>
+      </div>
+
+      <div class="section-title">規格簡述</div>
+      <div class="core-block">5 軸 4 列 / 1024 Ways（Extra Bet 1.5× 開 2000 Ways）/ 相連消除 WAYS 機 / Max Win 12,000× / RTP 96.5%、High 波動<br>FA CHAI 叢林水果消除機，SUGAR BANG BANG 家族；核心為連擊倍數階梯（最高 640x）＋榴槤炸彈 Featured WILD，免費遊戲起始 5x 跨轉不重置。</div>
+
+      <div class="section-title">遊戲玩法</div>
+      <div class="gameplay-content">
+        <ol class="gameplay-list" style="margin-top:14px">
+          <li data-step="1"><span class="step-body"><b>相連消除計獎</b>相鄰符號由左至右相連即中獎（1024 Ways）；中獎後消除、上方補位，連鎖到沒有新中獎為止。</span></li>
+          <li data-step="1"><span class="step-body"><b>連擊倍數階梯（最高 640x）</b>每連消一次倍數往上跳一階：1x → 2x → 3x → 5x …最高 640x<br>每轉結束重置回起始倍數（基礎 1x、免費 5x）。</span></li>
+          <li data-step="2"><span class="step-body"><b>金框符號 → WILD／榴槤炸彈</b>金框只出現在第 2–4 軸，與一般符號同樣計算消除與賠付<br>被消除後在原位變成 WILD——可能是「一般 WILD」，也可能是「榴槤炸彈」。</span></li>
+          <li data-step="2"><span class="step-body"><b>榴槤炸彈 Featured WILD</b>變成榴槤炸彈時才會炸開變 WILD，並把上下左右四格轉成金框（僅田字框內，框外不變）。</span></li>
+          <li data-step="3"><span class="step-body"><b>Free Game 起始 5x 不重置</b>3 SCATTER 觸發 10 轉；起始倍數就是 5x，每中獎翻倍，且跨轉不重置、累積到 640x。</span></li>
+          <li data-step="3"><span class="step-body"><b>免費遊戲加轉</b>免費遊戲中再收集 3 SCATTER +5 轉，可重複累加。</span></li>
+          <li data-step="4"><span class="step-body"><b>Extra Bet 擴框 2000 Ways</b>加注 1.5× 開啟；盤面中間往上鼓起、解鎖 2000 Ways，中獎組合機會大增。</span></li>
+          <li data-step="4"><span class="step-body"><b>Buy Feature 直接購入</b>另有 Buy Feature 可直接買進免費遊戲（一般版／Extra Bet 版）。</span></li>
+          <li data-step="5"><span class="step-body"><b>賠率表</b>各符號相鄰連線 3／4／5 連的賠付倍數對照，依下注額換算。</span></li>
+        </ol>
+        <div class="gallery">
+          <div class="gallery-main" id="gallery-main-1">
+            <img src="jungle-bang-bang-1.gif" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>步驟 1</div>'">
+          </div>
+          <div class="gallery-caption">點下方縮圖或左側步驟編號，切換對應機制動畫</div>
+          <div class="gallery-thumbs" id="gallery-thumbs-1">
+            <div class="thumb active" data-gallery="1" data-src="jungle-bang-bang-1.gif" data-step="1"><span class="thumb-no">1</span><img src="jungle-bang-bang-1.gif" alt="步驟 1"></div>
+            <div class="thumb" data-gallery="1" data-src="jungle-bang-bang-2.gif" data-step="2"><span class="thumb-no">2</span><img src="jungle-bang-bang-2.gif" alt="步驟 2"></div>
+            <div class="thumb" data-gallery="1" data-src="jungle-bang-bang-3.gif" data-step="3"><span class="thumb-no">3</span><img src="jungle-bang-bang-3.gif" alt="步驟 3"></div>
+            <div class="thumb" data-gallery="1" data-src="jungle-bang-bang-4.gif" data-step="4"><span class="thumb-no">4</span><img src="jungle-bang-bang-4.gif" alt="步驟 4"></div>
+            <div class="thumb" data-gallery="1" data-src="jungle-bang-bang-paytable.jpg" data-step="5"><span class="thumb-no">5</span><img src="jungle-bang-bang-paytable.jpg" alt="步驟 5 賠率表"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="help-toggle" onclick="toggleHelp(this)"><span class="help-caret">▼</span> HELP 頁全文（點擊展開）</div>
+      <div class="help-panel">
+        <div class="help-block">
+          <p class="help-note">遊戲內 HELP 頁全文（依原頁順序）：賠率表、WILD／SCATTER、1024／2000 WAYS 與金框符號、金框消除轉 WILD、榴槤炸彈 Featured WILD、倍數 Feature 640x、免費遊戲、Extra Bet、Max Win。點圖可放大。</p>
+          <div class="help-imgs">
+            <img src="help-1.jpg" alt="HELP 賠率表" onclick="window.open(this.src,'_blank')">
+            <img src="help-2.jpg" alt="HELP WILD / SCATTER" onclick="window.open(this.src,'_blank')">
+            <img src="help-3.jpg" alt="HELP 1024/2000 WAYS 與金框符號" onclick="window.open(this.src,'_blank')">
+            <img src="help-4.jpg" alt="HELP 金框符號消除後在原位變 WILD" onclick="window.open(this.src,'_blank')">
+            <img src="help-5.jpg" alt="HELP 榴槤炸彈 Featured WILD" onclick="window.open(this.src,'_blank')">
+            <img src="help-6.jpg" alt="HELP SCATTER／WILD／榴槤 不會被轉成金框" onclick="window.open(this.src,'_blank')">
+            <img src="help-7.jpg" alt="HELP 榴槤炸彈盤面示意" onclick="window.open(this.src,'_blank')">
+            <img src="help-8.jpg" alt="HELP 倍數 Feature（最高 640x）" onclick="window.open(this.src,'_blank')">
+            <img src="help-9.jpg" alt="HELP 免費遊戲" onclick="window.open(this.src,'_blank')">
+            <img src="help-10.jpg" alt="HELP Extra Bet" onclick="window.open(this.src,'_blank')">
+            <img src="help-11.jpg" alt="HELP Extra Bet 盤面示意" onclick="window.open(this.src,'_blank')">
+            <img src="help-12.jpg" alt="HELP Max Win" onclick="window.open(this.src,'_blank')">
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title icon-core">核心設計</div>
+      <div class="core-block">核心是「連擊倍數階梯 × 榴槤炸彈」：每連消一次倍數就往上跳一階，最高 640x<br>榴槤炸彈靠「消掉金框符號」觸發，炸開變 WILD 並把周圍四格變成新的金框，替下一次連鎖鋪路<br>免費遊戲把起始倍數拉到 5x 且跨轉不重置，是最大的爆分來源<br>Extra Bet 花 1.5× 注額擴框到 2000 Ways，Buy Feature 提供付費捷徑。</div>
+
+      <a class="trial-link" href="https://fachaigaming.com/en/games/slot/jungle-bang-bang" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm1.5 4.5L6 8l3.5 3.5 1-1L8 8l2.5-2.5-1-1z"/></svg>遊戲頁面
+      </a>
+
+      <div class="bottom-row">
+        <a class="back-to-top" href="#top">↑ 回到最上方</a>
+        <span class="note-toggle" onclick="toggleNote(this)" title="企劃心得與提問">▼</span>
+      </div>
+      <div class="note-panel">
+        <div class="note-block">
+          <div class="note-intro">這一款想聊的是一個設計取捨：<b>「散黃金」還是「直接散 WILD」</b>。<br>先解釋兩種做法：所謂「直接散 WILD」，就是 WILD 直接掉在盤面上，越多越好、一眼就懂；而本作採用的「散黃金」，是先在盤面撒「金框符號」，金框被消除後才會在原位變成 WILD（有機會是一般 WILD，也有機會是會炸開的榴槤炸彈）。WILD 不是直接給你，而是要你先把金框消掉才「兌現」。這個「間接產生 WILD」的選擇，會同時牽動可讀性、位置限制的觀感、以及爆點節奏三件事。</div>
+          <div class="dim">
+            <div class="dim-title">可讀性：直接散 WILD 完勝</div>
+            <p>散黃金要玩家多記一條規則「金框不是 WILD、要被消到才變」，理解成本比較高；直接散 WILD 一眼就懂「越多越好」。對低下注、玩一小段就走的玩家來說，直接散 WILD 更友善。</p>
+          </div>
+          <div class="dim">
+            <div class="dim-title">位置限制的觀感：散黃金反而較好</div>
+            <p>消除型遊戲常會把 WILD 擋在第 1 軸不出現，用來控制中獎率（守住 RTP）。問題是——如果是「直接散 WILD」又要擋第 1 軸，等於當著玩家面把本來要掉的 WILD 抽掉，觀感很差；但改成散黃金後，金框當下「還不是 WILD」，把它限制成只長在第 2–4 軸、不上第 1 軸，玩家不會有「WILD 被拿走」的感覺，這道位置閘門就藏得自然多了。</p>
+          </div>
+          <div class="dim">
+            <div class="dim-title">命門＝黃金的「消除率」，而且是雙面刃</div>
+            <p>散黃金本質是一台「差一點就中（near-miss）」的引擎：金框一直冒出來、勾著你期待它被消掉變 WILD。用得巧是懸念、是張力；用不好玩家會覺得「一直被釣」——金框散了一堆卻很少真的消到，看得到吃不到。而 PH（菲律賓）玩家對這種「假期待」特別敏感、還會口耳相傳，所以金框的「散出頻率 × 真的被消到的機率」一定要調到讓玩家覺得「金大致會兌現」，而不是「逗你玩的餌」。這是整個散黃金設計的成敗關鍵。</p>
+          </div>
+          <div class="dim">
+            <div class="dim-title">Extra Bet 擴框也是一種可讀性設計</div>
+            <p>加注後盤面「中間鼓起、往上長一排」，讓玩家一眼就看出「我開了加注、盤面變大了」，boost 有回饋感。如果一開就直接全開成滿盤（5×5），反而太耗成本，又少了「開了加注」的視覺對比。所以保留「中間鼓、不全開」，是對的取捨。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <footer>© 2026 傳奇亞太科技有限公司 ALPHABET ｜ 遊戲快訊</footer>
+
+</div>
+<script>
+  function toggleHelp(el) {
+    el.classList.toggle('open');
+    var panel = el.nextElementSibling;
+    if (panel) panel.classList.toggle('open');
+    var caret = el.querySelector('.help-caret');
+    if (caret) caret.textContent = el.classList.contains('open') ? '▲' : '▼';
+  }
+
+  function toggleNote(arrowEl) {
+    arrowEl.classList.toggle('open');
+    var row = arrowEl.closest('.bottom-row');
+    var panel = row ? row.nextElementSibling : null;
+    if (panel) panel.classList.toggle('open');
+  }
+
+  document.querySelectorAll('.gameplay-list').forEach(function(list) {
+    var first = list.querySelector('li');
+    if (first) first.classList.add('step-active');
+  });
+
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    if (thumb.dataset.src) { var pre = new Image(); pre.src = thumb.dataset.src; }
+  });
+
+  function setMain(mainEl, src, step) {
+    var img = mainEl.querySelector('img');
+    if (img) { img.src = src; img.alt = '步驟 ' + step; }
+    else { mainEl.innerHTML = '<img src="' + src + '" alt="步驟 ' + step + '">'; }
+  }
+
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      var galleryId = thumb.dataset.gallery;
+      var src = thumb.dataset.src;
+      var step = thumb.dataset.step;
+      var mainEl = document.getElementById('gallery-main-' + galleryId);
+      document.querySelectorAll('.thumb[data-gallery="' + galleryId + '"]').forEach(function(t) { t.classList.remove('active'); });
+      thumb.classList.add('active');
+      var card = thumb.closest('.game-card');
+      if (card) {
+        card.querySelectorAll('.gameplay-list li').forEach(function(li) { li.classList.remove('step-active'); });
+        card.querySelectorAll('.gameplay-list li[data-step="' + step + '"]').forEach(function(li) { li.classList.add('step-active'); });
+      }
+      setMain(mainEl, src, step);
+    });
+  });
+
+  document.querySelectorAll('.gameplay-list li').forEach(function(li) {
+    li.addEventListener('click', function() {
+      var card = li.closest('.game-card');
+      if (!card) return;
+      var step = li.dataset.step;
+      if (!step) return;
+      var thumb = card.querySelector('.gallery-thumbs .thumb[data-step="' + step + '"]');
+      if (thumb) thumb.click();
+    });
+  });
+</script>
+</body>
+</html>
