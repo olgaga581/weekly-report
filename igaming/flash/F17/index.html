@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>遊戲快訊｜The Big Dog House</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Big Dog House（Pragmatic Play）遊戲快訊">
+<meta property="og:description" content="iGaming 遊戲快訊 — The Big Dog House：狗屋 Wild 三尺寸帶 2x/3x 相加倍數，免費特色黏 Wild 跨轉累積，三特色分流。">
+<meta property="og:image" content="the-big-dog-house.webp">
+<style>
+  :root {
+    --brand: #24b4cc;
+    --brand-dark: #167d91;
+    --text: #1a1a1a;
+    --muted: #5a6470;
+    --line: #e3e8ee;
+    --bg: #ffffff;
+    --card-bg: #f8fbfc;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: system-ui, "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif;
+    font-size: 17px; line-height: 1.8; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+  header { border-bottom: 3px solid var(--brand); padding-bottom: 16px; margin-bottom: 32px; }
+  .head-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .head-row img.logo { height: 56px; width: auto; flex-shrink: 0; }
+  .head-text { text-align: right; }
+  .head-text h1 { font-size: 26px; line-height: 1.4; margin: 0; color: var(--brand-dark); }
+  .head-text .date { color: var(--muted); font-size: 15px; margin-top: 4px; }
+  .game-card { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
+  .card-header { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 100%); padding: 20px 24px 16px; color: #fff; }
+  .card-index { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; opacity: .7; text-transform: uppercase; margin-bottom: 4px; }
+  .card-title { font-size: 22px; font-weight: 700; margin: 0; line-height: 1.3; }
+  .card-vendor-badge { display: inline-block; background: rgba(255,255,255,.2); border-radius: 4px; padding: 2px 10px; font-size: 13px; font-weight: 500; margin-top: 8px; }
+  .card-image { width: 100%; background: #11202a; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; min-height: 60px; }
+  .card-image img { width: 100%; max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .card-body { padding: 24px; background: #fff; }
+  .tags-section { margin-bottom: 22px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  .tags-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .tag { display: inline-flex; align-items: center; gap: 5px; border-radius: 6px; padding: 4px 10px; font-size: 13px; font-weight: 500; line-height: 1.4; }
+  .tag-label { font-size: 11px; font-weight: 700; opacity: .65; text-transform: uppercase; letter-spacing: .5px; }
+  .tag-theme   { background: #e8f4f7; color: #167d91; }
+  .tag-rule    { background: #f0f4ff; color: #3d5af1; }
+  .tag-trigger { background: #fff4e6; color: #c26a00; }
+  .tag-maxwin  { background: #fef0f0; color: #c0392b; }
+  .section-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; display: flex; align-items: center; gap: 7px; }
+  .section-title::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: var(--brand); flex-shrink: 0; }
+  .section-title.icon-core::before { background: var(--brand-dark); border-radius: 50%; }
+  .gameplay-list { list-style: none; margin: 0 0 24px; padding: 0; counter-reset: step; }
+  .gameplay-list li { counter-increment: step; display: flex; gap: 14px; margin-bottom: 12px; line-height: 1.7; font-size: 16px; cursor: pointer; }
+  .gameplay-list li::before {
+    content: counter(step); min-width: 26px; height: 26px; background: var(--brand); color: #fff;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 3px; transition: background .2s;
+  }
+  .gameplay-list li.step-active::before { background: #0c3547; }
+  .gameplay-list li .step-body { flex: 1; min-width: 0; }
+  .gameplay-list li .step-body b { display: block; color: var(--brand-dark); margin-bottom: 2px; }
+  .core-block { background: var(--card-bg); border-left: 4px solid var(--brand); border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 20px; font-size: 15px; color: var(--text); line-height: 1.75; }
+  .gameplay-content { overflow: hidden; }
+  .help-toggle { display: flex; align-items: center; gap: 8px; cursor: pointer; background: var(--card-bg); border: 1px solid var(--line); border-radius: 8px; padding: 11px 16px; font-size: 15px; font-weight: 700; color: var(--brand-dark); user-select: none; transition: background .15s; }
+  .help-toggle:hover { background: #eef4f6; }
+  .help-toggle .help-caret { font-size: 11px; flex-shrink: 0; }
+  .help-panel { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .4s ease, opacity .25s ease; }
+  .help-panel.open { max-height: 9999px; opacity: 1; margin-top: 12px; }
+  .help-block { margin: 0 0 24px; }
+  .help-note { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+  .help-imgs { display: flex; flex-direction: column; gap: 12px; }
+  .help-imgs img { width: 100%; max-width: 340px; height: auto; display: block; margin: 0 auto; border: 1px solid var(--line); border-radius: 8px; background: #11202a; cursor: zoom-in; transition: opacity .15s; }
+  .help-imgs img:hover { opacity: .92; }
+  .gallery { margin: 20px 0 24px; border-top: 1px solid var(--line); padding-top: 20px; }
+  .gallery-main { width: 100%; background: #11202a; border-radius: 8px; overflow: hidden; margin-bottom: 10px; border: 1px solid var(--line); min-height: 60px; display: flex; align-items: center; justify-content: center; }
+  /* 橫式盤面 */
+  .gallery-main img { width: 100%; max-width: 640px; height: auto; display: block; margin: 0 auto; transition: opacity .2s ease; }
+  .gallery-main .placeholder { color: var(--muted); font-size: 14px; text-align: center; padding: 24px; }
+  .gallery-caption { text-align:center; color: var(--muted); font-size: 13px; margin: -2px 0 12px; }
+  .gallery-thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
+  /* 橫式縮圖 118×70 */
+  .gallery-thumbs .thumb { width: 118px; height: 70px; border-radius: 6px; overflow: hidden; cursor: pointer; border: 2px solid transparent; background: #11202a; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: border-color .15s; position: relative; }
+  .gallery-thumbs .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery-thumbs .thumb .thumb-no { position:absolute; left:3px; top:3px; background:rgba(12,53,71,.85); color:#fff; font-size:10px; font-weight:700; border-radius:4px; padding:1px 5px; }
+  .gallery-thumbs .thumb.active { border-color: var(--brand); }
+  .gallery-thumbs .thumb:hover { border-color: var(--brand); opacity: .9; }
+  .trial-link { display: inline-flex; align-items: center; gap: 6px; background: var(--brand); color: #fff; text-decoration: none; padding: 9px 20px; border-radius: 6px; font-size: 14px; font-weight: 700; transition: background .15s; }
+  .trial-link:hover { background: var(--brand-dark); }
+  .trial-link svg { width: 14px; height: 14px; fill: currentColor; }
+  .back-to-top { display: block; text-align: center; margin: 0; padding: 10px; border: 1px solid var(--line); border-radius: 8px; color: var(--brand-dark); text-decoration: none; font-size: 14px; font-weight: 500; transition: background .15s; }
+  .back-to-top:hover { background: var(--card-bg); }
+  .bottom-row { position: relative; margin: 32px 0 0; }
+  .note-toggle { position: absolute; right: 12px; bottom: 8px; cursor: pointer; color: var(--muted); font-size: 13px; line-height: 1; user-select: none; padding: 6px 8px; transition: transform .25s ease, color .15s; }
+  .note-toggle:hover { color: var(--brand-dark); }
+  .note-toggle.open { transform: rotate(180deg); }
+  .note-panel { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .35s ease, opacity .25s ease; }
+  .note-panel.open { max-height: 9999px; opacity: 1; margin-top: 10px; }
+  .note-block { background: #fffdf5; border-left: 4px solid #e7c14b; border-radius: 0 8px 8px 0; padding: 16px 18px; font-size: 15px; color: var(--text); line-height: 1.8; }
+  .note-block b { color: var(--brand-dark); }
+  .note-block .note-intro { margin-bottom: 16px; }
+  .note-block .dim { margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px dashed #ead9a0; }
+  .note-block .dim:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+  .note-block .dim-title { font-weight: 700; color: #b58a00; margin-bottom: 8px; }
+  .note-block .dim p { margin: 0 0 7px; }
+  .note-block .dim p:last-child { margin-bottom: 0; }
+  .note-block .tag-obs, .note-block .tag-sol { display: inline-block; font-size: 11px; font-weight: 700; border-radius: 4px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+  .note-block .tag-obs { background: #eef2f7; color: #5a6470; }
+  .note-block .tag-sol { background: #e6f4ea; color: #2c7a4b; }
+  footer { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 28px 16px 60px; }
+    .head-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .head-row img.logo { height: 44px; }
+    .head-text { text-align: left; }
+    .head-text h1 { font-size: 22px; }
+    .card-title { font-size: 19px; }
+    .card-body { padding: 18px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <a href="../../" style="display:inline-block;font-size:14px;color:var(--brand-dark);text-decoration:none;margin-bottom:16px;">← iGaming 競品動態</a>
+
+  <header>
+    <div class="head-row">
+      <img class="logo" src="logo.png" alt="傳奇亞太科技 ALPHABET" onerror="this.style.display='none'">
+      <div class="head-text">
+        <h1>iGaming 遊戲快訊</h1>
+        <div class="date">2026/07/17｜新上市</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- The Big Dog House -->
+  <article class="game-card" id="game-1">
+    <div class="card-header">
+      <div class="card-index">Pragmatic Play · 萌犬狗屋</div>
+      <h2 class="card-title">The Big Dog House</h2>
+      <span class="card-vendor-badge">Pragmatic Play</span>
+    </div>
+    <div class="card-image">
+      <img src="the-big-dog-house.webp" alt="The Big Dog House" onerror="this.parentElement.innerHTML='<span>遊戲主圖（待提供）</span>'">
+    </div>
+    <div class="card-body">
+      <div class="tags-section">
+        <div class="tags-row">
+          <span class="tag tag-theme"><span class="tag-label">主題</span>萌犬狗屋</span>
+          <span class="tag tag-maxwin"><span class="tag-label">Max Win</span>15,000×</span>
+        </div>
+        <div class="tags-row">
+          <span class="tag tag-rule"><span class="tag-label">計線</span>20 線 LINE</span>
+          <span class="tag tag-rule"><span class="tag-label">盤面</span>3×5</span>
+          <span class="tag tag-rule"><span class="tag-label">RTP</span>96.53%｜Medium</span>
+          <span class="tag tag-trigger"><span class="tag-label">觸發</span>Scatter 觸發</span>
+        </div>
+      </div>
+
+      <div class="section-title">規格簡述</div>
+      <div class="core-block">5 軸 3 列、20 條固定賠付線，RTP 96.53%、波動 Medium，Max Win 15,000×。核心是第 2/3/4 軸的狗屋 Wild：分 1×1、1×3、3×3 三種尺寸，每格隨機帶 2x 或 3x 倍數，同線相加。</div>
+
+      <div class="section-title">遊戲玩法</div>
+      <div class="gameplay-content">
+        <ol class="gameplay-list" style="margin-top:14px">
+          <li data-step="1"><span class="step-body"><b>狗屋巨無霸 Wild</b>只在第 2/3/4 軸出現，分 1×1、1×3、3×3 三尺寸，每格隨機帶 2x 或 3x。同一條線經過的 Wild 倍數相加，例如 2x＋3x＋3x 等於 8x。</span></li>
+          <li data-step="2"><span class="step-body"><b>免費特色 · 木桶抽次數</b>第 1/3/5 軸湊滿 3 個爪印 BONUS 進免費特色。開場 3×3 木桶各開 1、2 或 3，全部相加就是總次數。</span></li>
+          <li data-step="3"><span class="step-body"><b>黏 Wild 累積 · 鬼狗屋</b>免費特色中 Wild 變 1×1 黏住不走、帶固定倍數跨轉累積。第 5 軸的藍色鬼狗屋每次出現，會移除一顆黏 Wild。</span></li>
+          <li data-step="4"><span class="step-body"><b>BIGGIE 特色 · 加大 Wild</b>綠爪觸發。免費特色中 Wild 只出 1×3 或 3×3 大尺寸，鬼狗屋仍在。</span></li>
+          <li data-step="5"><span class="step-body"><b>GHOST OUT 特色 · 永久黏</b>藍爪觸發。鬼狗屋被移除，黏 Wild 全程不掉、穩定累積。</span></li>
+          <li data-step="6"><span class="step-body"><b>賠率表</b>各符號相鄰連線的賠付倍數對照，依下注額換算。</span></li>
+        </ol>
+        <div class="gallery">
+          <div class="gallery-main" id="gallery-main-1">
+            <img src="gif-1.gif" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>步驟 1</div>'">
+          </div>
+          <div class="gallery-caption">點下方縮圖或左側步驟編號，切換對應機制動畫</div>
+          <div class="gallery-thumbs" id="gallery-thumbs-1">
+            <div class="thumb active" data-gallery="1" data-src="gif-1.gif" data-step="1"><span class="thumb-no">1</span><img src="gif-1.gif" alt="步驟 1"></div>
+            <div class="thumb" data-gallery="1" data-src="gif-2.gif" data-step="2"><span class="thumb-no">2</span><img src="gif-2.gif" alt="步驟 2"></div>
+            <div class="thumb" data-gallery="1" data-src="gif-3.gif" data-step="3"><span class="thumb-no">3</span><img src="gif-3.gif" alt="步驟 3"></div>
+            <div class="thumb" data-gallery="1" data-src="gif-4.gif" data-step="4"><span class="thumb-no">4</span><img src="gif-4.gif" alt="步驟 4"></div>
+            <div class="thumb" data-gallery="1" data-src="gif-5.gif" data-step="5"><span class="thumb-no">5</span><img src="gif-5.gif" alt="步驟 5"></div>
+            <div class="thumb" data-gallery="1" data-src="paytable.jpg" data-step="6"><span class="thumb-no">6</span><img src="paytable.jpg" alt="步驟 6 賠率表"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="help-toggle" onclick="toggleHelp(this)"><span class="help-caret">▼</span> HELP 頁全文（點擊展開）</div>
+      <div class="help-panel">
+        <div class="help-block">
+          <p class="help-note">涵蓋賠付表與 WILD、三種 BONUS 與免費特色、GHOST WILD 與特色規則、SPECIAL BETS、RTP 與賠付線（遊戲內 HELP 第 1–5 頁）。</p>
+          <div class="help-imgs">
+            <img src="help-1.jpg" alt="HELP 1 賠付表 · WILD" onclick="window.open(this.src,'_blank')">
+            <img src="help-2.jpg" alt="HELP 2 BONUS · 免費規則" onclick="window.open(this.src,'_blank')">
+            <img src="help-3.jpg" alt="HELP 3 GHOST WILD · 特色 · Max Win" onclick="window.open(this.src,'_blank')">
+            <img src="help-4.jpg" alt="HELP 4 SPECIAL BETS · Buy Free Spins" onclick="window.open(this.src,'_blank')">
+            <img src="help-5.jpg" alt="HELP 5 波動 · RTP · 賠付線" onclick="window.open(this.src,'_blank')">
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title icon-core">核心設計</div>
+      <div class="core-block">狗屋 Wild × 免費特色黏 Wild — 底盤用巨無霸 Wild 與「相加倍數」做出單轉爆發<br>免費特色把 Wild 變成黏住、跨轉累積倍數，再以 BIGGIE（加大命中面積）與 GHOST OUT（移除鬼、黏 Wild 永久）兩種特色，把免費玩法切成不同節奏</div>
+
+      <a class="trial-link" href="https://www.pragmaticplay.com/en/games/the-big-dog-house/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm1.5 4.5L6 8l3.5 3.5 1-1L8 8l2.5-2.5-1-1z"/></svg>遊戲頁面
+      </a>
+
+      <div class="bottom-row">
+        <a class="back-to-top" href="#top">↑ 回到最上方</a>
+        <span class="note-toggle" onclick="toggleNote(this)" title="企劃心得與提問">▼</span>
+      </div>
+      <div class="note-panel">
+        <div class="note-block">
+          <div class="note-intro">《The Big Dog House》厲害的地方不是做了三套不同的 Bonus，而是用 Wild 尺寸、Sticky 保留、Ghost 剝落 這幾個變因排列組合——特色看起來豐富，理解成本卻很低。</div>
+          <div class="dim">
+            <div class="dim-title"><span class="tag-obs">觀察</span>三變因排列組合，強弱一眼可讀</div>
+            <p>標準免費：sticky multiplier wild，但 Ghost Wild 會介入，能累積、卻不穩定。<br>BIGGIE：強化 Wild 覆蓋率、更有存在感，但仍可能被 Ghost 剝落。<br>GHOST OUT：拿掉 Ghost，黏住的 Wild 不被移除，累積感最乾淨，但少了 Ghost 補第 5 軸與自帶倍數的爆點。<br>BIGGIE＋GHOST OUT：Wild 更大又不剝落，最直覺的強化版。<br>四種免費誰強誰弱，一眼看得出來。</p>
+          </div>
+          <div class="dim">
+            <div class="dim-title"><span class="tag-obs">觀察</span>Ghost Wild 亦正亦邪，才撐得起「用減法當特色」</div>
+            <p>Ghost Wild 不是單純阻礙——它補第 5 軸連線、也帶倍數；但每次出現又剝落一顆 sticky，讓玩家在「眼前補線加倍」與「保住累積盤面」間取捨。也正因為它有好有壞，GHOST OUT（200x 可買）才不是純懲罰，而是有感、合理的強化：Ghost 若只有好處，玩家不會想拿掉；若只有壞處，拿掉也理所當然、沒巧思。而且業界特色大多是「加玩法」，很少見到「把一個機制拔掉」還能當賣點——這款做到了。</p>
+          </div>
+          <div class="dim">
+            <div class="dim-title"><span class="tag-sol">借鑑</span>再加強，不是再加法</div>
+            <p>這款不是靠加一堆新機制製造豐富感，而是把同一套核心玩法做出層次——特色好懂、升級感明確。做續作的正解：先問「核心那顆旋鈕能不能拆成 2–3 個可組合的變因」，用組合擴充特色，比再發明機制安全又好賣。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <footer>© 2026 傳奇亞太科技有限公司 ALPHABET ｜ 遊戲快訊</footer>
+
+</div>
+<script>
+  function toggleHelp(el) {
+    el.classList.toggle('open');
+    var panel = el.nextElementSibling;
+    if (panel) panel.classList.toggle('open');
+    var caret = el.querySelector('.help-caret');
+    if (caret) caret.textContent = el.classList.contains('open') ? '▲' : '▼';
+  }
+
+  function toggleNote(arrowEl) {
+    arrowEl.classList.toggle('open');
+    var row = arrowEl.closest('.bottom-row');
+    var panel = row ? row.nextElementSibling : null;
+    if (panel) panel.classList.toggle('open');
+  }
+
+  document.querySelectorAll('.gameplay-list').forEach(function(list) {
+    var first = list.querySelector('li');
+    if (first) first.classList.add('step-active');
+  });
+
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    if (thumb.dataset.src) { var pre = new Image(); pre.src = thumb.dataset.src; }
+  });
+
+  function setMain(mainEl, src, step) {
+    var img = mainEl.querySelector('img');
+    if (img) { img.src = src; img.alt = '步驟 ' + step; }
+    else { mainEl.innerHTML = '<img src="' + src + '" alt="步驟 ' + step + '">'; }
+  }
+
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      var galleryId = thumb.dataset.gallery;
+      var src = thumb.dataset.src;
+      var step = thumb.dataset.step;
+      var mainEl = document.getElementById('gallery-main-' + galleryId);
+      document.querySelectorAll('.thumb[data-gallery="' + galleryId + '"]').forEach(function(t) { t.classList.remove('active'); });
+      thumb.classList.add('active');
+      var card = thumb.closest('.game-card');
+      if (card) {
+        card.querySelectorAll('.gameplay-list li').forEach(function(li) { li.classList.remove('step-active'); });
+        card.querySelectorAll('.gameplay-list li[data-step="' + step + '"]').forEach(function(li) { li.classList.add('step-active'); });
+      }
+      setMain(mainEl, src, step);
+    });
+  });
+
+  document.querySelectorAll('.gameplay-list li').forEach(function(li) {
+    li.addEventListener('click', function() {
+      var card = li.closest('.game-card');
+      if (!card) return;
+      var step = li.dataset.step;
+      if (!step) return;
+      var thumb = card.querySelector('.gallery-thumbs .thumb[data-step="' + step + '"]');
+      if (thumb) thumb.click();
+    });
+  });
+</script>
+</body>
+</html>
