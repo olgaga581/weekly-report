@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>遊戲快訊｜Halo Halo</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="Halo Halo（FA CHAI）遊戲快訊">
+<meta property="og:description" content="iGaming 遊戲快訊 — Halo Halo：消除爬倍階梯 × 金框 +1 倍，把爆發做成高頻小事件。">
+<meta property="og:image" content="title.jpg">
+<style>
+  :root {
+    --brand: #24b4cc;
+    --brand-dark: #167d91;
+    --text: #1a1a1a;
+    --muted: #5a6470;
+    --line: #e3e8ee;
+    --bg: #ffffff;
+    --card-bg: #f8fbfc;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: system-ui, "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif;
+    font-size: 17px; line-height: 1.8; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+  header { border-bottom: 3px solid var(--brand); padding-bottom: 16px; margin-bottom: 32px; }
+  .head-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .head-row img.logo { height: 56px; width: auto; flex-shrink: 0; }
+  .head-text { text-align: right; }
+  .head-text h1 { font-size: 26px; line-height: 1.4; margin: 0; color: var(--brand-dark); }
+  .head-text .date { color: var(--muted); font-size: 15px; margin-top: 4px; }
+  .game-card { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
+  .card-header { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 100%); padding: 20px 24px 16px; color: #fff; }
+  .card-index { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; opacity: .7; text-transform: uppercase; margin-bottom: 4px; }
+  .card-title { font-size: 22px; font-weight: 700; margin: 0; line-height: 1.3; }
+  .card-vendor-badge { display: inline-block; background: rgba(255,255,255,.2); border-radius: 4px; padding: 2px 10px; font-size: 13px; font-weight: 500; margin-top: 8px; }
+  .card-image { width: 100%; background: #11202a; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; min-height: 60px; }
+  .card-image img { width: 100%; max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .card-body { padding: 24px; background: #fff; }
+  .tags-section { margin-bottom: 22px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  .tags-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .tag { display: inline-flex; align-items: center; gap: 5px; border-radius: 6px; padding: 4px 10px; font-size: 13px; font-weight: 500; line-height: 1.4; }
+  .tag-label { font-size: 11px; font-weight: 700; opacity: .65; text-transform: uppercase; letter-spacing: .5px; }
+  .tag-theme   { background: #e8f4f7; color: #167d91; }
+  .tag-rule    { background: #f0f4ff; color: #3d5af1; }
+  .tag-trigger { background: #fff4e6; color: #c26a00; }
+  .tag-maxwin  { background: #fef0f0; color: #c0392b; }
+  .section-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; display: flex; align-items: center; gap: 7px; }
+  .section-title::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: var(--brand); flex-shrink: 0; }
+  .section-title.icon-core::before { background: var(--brand-dark); border-radius: 50%; }
+  .gameplay-list { list-style: none; margin: 0 0 24px; padding: 0; counter-reset: step; }
+  .gameplay-list li { counter-increment: step; display: flex; gap: 14px; margin-bottom: 12px; line-height: 1.7; font-size: 16px; cursor: pointer; }
+  .gameplay-list li::before {
+    content: counter(step); min-width: 26px; height: 26px; background: var(--brand); color: #fff;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 3px; transition: background .2s;
+  }
+  .gameplay-list li.step-active::before { background: #0c3547; }
+  .gameplay-list li .step-body { flex: 1; min-width: 0; }
+  .gameplay-list li .step-body b { display: block; color: var(--brand-dark); margin-bottom: 2px; }
+  .core-block { background: var(--card-bg); border-left: 4px solid var(--brand); border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 20px; font-size: 15px; color: var(--text); line-height: 1.75; }
+  .gameplay-content { overflow: hidden; }
+  .help-toggle { display: flex; align-items: center; gap: 8px; cursor: pointer; background: var(--card-bg); border: 1px solid var(--line); border-radius: 8px; padding: 11px 16px; font-size: 15px; font-weight: 700; color: var(--brand-dark); user-select: none; transition: background .15s; }
+  .help-toggle:hover { background: #eef4f6; }
+  .help-toggle .help-caret { font-size: 11px; flex-shrink: 0; }
+  .help-panel { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .4s ease, opacity .25s ease; }
+  .help-panel.open { max-height: 9999px; opacity: 1; margin-top: 12px; }
+  .help-block { margin: 0 0 24px; }
+  .help-note { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+  .help-imgs { display: flex; flex-direction: column; gap: 12px; }
+  .help-imgs img { width: 100%; max-width: 340px; height: auto; display: block; margin: 0 auto; border: 1px solid var(--line); border-radius: 8px; background: #11202a; cursor: zoom-in; transition: opacity .15s; }
+  .help-imgs img:hover { opacity: .92; }
+  .gallery { margin: 20px 0 24px; border-top: 1px solid var(--line); padding-top: 20px; }
+  .gallery-main { width: 100%; background: #11202a; border-radius: 8px; overflow: hidden; margin-bottom: 10px; border: 1px solid var(--line); min-height: 60px; display: flex; align-items: center; justify-content: center; }
+  .gallery-main img { width: auto; max-width: 100%; max-height: 520px; height: auto; display: block; margin: 0 auto; transition: opacity .2s ease; }
+  .gallery-main .placeholder { color: var(--muted); font-size: 14px; text-align: center; padding: 24px; }
+  .gallery-caption { text-align:center; color: var(--muted); font-size: 13px; margin: -2px 0 12px; }
+  .gallery-thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
+  .gallery-thumbs .thumb { width: 72px; height: 110px; border-radius: 6px; overflow: hidden; cursor: pointer; border: 2px solid transparent; background: #11202a; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: border-color .15s; position: relative; }
+  .gallery-thumbs .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery-thumbs .thumb .thumb-no { position:absolute; left:3px; top:3px; background:rgba(12,53,71,.85); color:#fff; font-size:10px; font-weight:700; border-radius:4px; padding:1px 5px; }
+  .gallery-thumbs .thumb.active { border-color: var(--brand); }
+  .gallery-thumbs .thumb:hover { border-color: var(--brand); opacity: .9; }
+  .trial-link { display: inline-flex; align-items: center; gap: 6px; background: var(--brand); color: #fff; text-decoration: none; padding: 9px 20px; border-radius: 6px; font-size: 14px; font-weight: 700; transition: background .15s; }
+  .trial-link:hover { background: var(--brand-dark); }
+  .trial-link svg { width: 14px; height: 14px; fill: currentColor; }
+  .back-to-top { display: block; text-align: center; margin: 0; padding: 10px; border: 1px solid var(--line); border-radius: 8px; color: var(--brand-dark); text-decoration: none; font-size: 14px; font-weight: 500; transition: background .15s; }
+  .back-to-top:hover { background: var(--card-bg); }
+  .bottom-row { position: relative; margin: 32px 0 0; }
+  .note-toggle { position: absolute; right: 12px; bottom: 8px; cursor: pointer; color: var(--muted); font-size: 13px; line-height: 1; user-select: none; padding: 6px 8px; transition: transform .25s ease, color .15s; }
+  .note-toggle:hover { color: var(--brand-dark); }
+  .note-toggle.open { transform: rotate(180deg); }
+  .note-panel { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .35s ease, opacity .25s ease; }
+  .note-panel.open { max-height: 9999px; opacity: 1; margin-top: 10px; }
+  .note-block { background: #fffdf5; border-left: 4px solid #e7c14b; border-radius: 0 8px 8px 0; padding: 16px 18px; font-size: 15px; color: var(--text); line-height: 1.8; }
+  .note-block b { color: var(--brand-dark); }
+  .note-block .note-intro { margin-bottom: 16px; }
+  .note-block .dim { margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px dashed #ead9a0; }
+  .note-block .dim:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+  .note-block .dim-title { font-weight: 700; color: #b58a00; margin-bottom: 8px; }
+  .note-block .dim p { margin: 0 0 7px; }
+  .note-block .dim p:last-child { margin-bottom: 0; }
+  .note-block .tag-obs, .note-block .tag-sol { display: inline-block; font-size: 11px; font-weight: 700; border-radius: 4px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+  .note-block .tag-obs { background: #eef2f7; color: #5a6470; }
+  .note-block .tag-sol { background: #e6f4ea; color: #2c7a4b; }
+  footer { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 28px 16px 60px; }
+    .head-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .head-row img.logo { height: 44px; }
+    .head-text { text-align: left; }
+    .head-text h1 { font-size: 22px; }
+    .card-title { font-size: 19px; }
+    .card-body { padding: 18px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <a href="../../" style="display:inline-block;font-size:14px;color:var(--brand-dark);text-decoration:none;margin-bottom:16px;">← iGaming 競品動態</a>
+
+  <header>
+    <div class="head-row">
+      <img class="logo" src="logo.png" alt="傳奇亞太科技 ALPHABET" onerror="this.style.display='none'">
+      <div class="head-text">
+        <h1>iGaming 遊戲快訊</h1>
+        <div class="date">2026/07/24｜新上市</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Halo Halo -->
+  <article class="game-card" id="game-1">
+    <div class="card-header">
+      <div class="card-index">FA CHAI · 菲律賓剉冰甜點</div>
+      <h2 class="card-title">Halo Halo</h2>
+      <span class="card-vendor-badge">FA CHAI</span>
+    </div>
+    <div class="card-image">
+      <img src="title.jpg" alt="Halo Halo" onerror="this.parentElement.innerHTML='<span>遊戲主圖（待提供）</span>'">
+    </div>
+    <div class="card-body">
+      <div class="tags-section">
+        <div class="tags-row">
+          <span class="tag tag-theme"><span class="tag-label">主題</span>菲律賓剉冰甜點</span>
+          <span class="tag tag-maxwin"><span class="tag-label">Max Win</span>5000x</span>
+        </div>
+        <div class="tags-row">
+          <span class="tag tag-rule"><span class="tag-label">計線</span>1024 Ways</span>
+          <span class="tag tag-rule"><span class="tag-label">盤面</span>4×5</span>
+          <span class="tag tag-rule"><span class="tag-label">RTP</span>待確認</span>
+          <span class="tag tag-trigger"><span class="tag-label">觸發</span>固定觸發</span>
+        </div>
+      </div>
+
+      <div class="section-title">規格簡述</div>
+      <div class="core-block">4×5 盤面、1024 Ways 全路徑計獎，相鄰同符自左至右即中，消除掉落補位。Max Win 5000x，RTP 待確認。核心是「消除倍數階梯＋金框轉 WILD」的爬倍消除機。經比對，本款為 FA CHAI《Sugar Bang Bang 2》的換皮款，數值與機制相同，主題由糖果改為菲律賓剉冰甜點。本款目前僅見於 Bingo Plus 平台，推測為 FA CHAI 為 Bingo Plus 量身打造的客製遊戲。[推測]</div>
+
+      <div class="section-title">遊戲玩法</div>
+      <div class="gameplay-content">
+        <ol class="gameplay-list" style="margin-top:14px">
+          <li data-step="1"><span class="step-body"><b>消除倍數階梯</b>連線消除後掉落補位，連續消除倍數沿 1x → 2x → 3x → 5x 往上爬；無法再中獎時重置回 1x。</span></li>
+          <li data-step="2"><span class="step-body"><b>黃金符號 +1x</b>金框限第 2／3／4 軸，被消除後原位轉為 WILD，並讓當前倍數階層額外 +1x；同一次連鎖消越多金框、加越多。</span></li>
+          <li data-step="3"><span class="step-body"><b>搖鈴 Featured WILD</b>金框消除後盤面出現金鈴鐺，隨機灑出 WILD 替換其他符號（Scatter 除外），延長連鎖、幫忙再爬一階。</span></li>
+          <li data-step="4"><span class="step-body"><b>免費遊戲</b>集 3 個 Scatter 進 10 次免費遊戲，倍數階梯整組翻倍為 2x／4x／6x／10x；免費遊戲中再集 3 個可 +5 次。</span></li>
+          <li data-step="5"><span class="step-body"><b>Extra Bet 加注</b>加注 1.5x 後，金框 +1x 升級成橘框 +2x：橘符消除後原位轉 WILD 並額外 +2x。</span></li>
+          <li data-step="6"><span class="step-body"><b>Buy Feature 購買特色</b>直接購買免費遊戲：一般版（+1x）50x 投注、Extra Bet 版（+2x）75x 投注。</span></li>
+          <li data-step="7"><span class="step-body"><b>賠率表</b>8 階符號相鄰連線的賠付倍數對照，依下注額換算。</span></li>
+        </ol>
+        <div class="gallery">
+          <div class="gallery-main" id="gallery-main-1">
+            <img src="gif1_ladder.gif" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>步驟 1</div>'">
+          </div>
+          <div class="gallery-caption">點下方縮圖或左側步驟編號，切換對應機制動畫</div>
+          <div class="gallery-thumbs" id="gallery-thumbs-1">
+            <div class="thumb active" data-gallery="1" data-src="gif1_ladder.gif" data-step="1"><span class="thumb-no">1</span><img src="gif1_ladder.gif" alt="步驟 1"></div>
+            <div class="thumb" data-gallery="1" data-src="gif2_golden.gif" data-step="2"><span class="thumb-no">2</span><img src="gif2_golden.gif" alt="步驟 2"></div>
+            <div class="thumb" data-gallery="1" data-src="gif3_bell.gif" data-step="3"><span class="thumb-no">3</span><img src="gif3_bell.gif" alt="步驟 3"></div>
+            <div class="thumb" data-gallery="1" data-src="gif4_freegame.gif" data-step="4"><span class="thumb-no">4</span><img src="gif4_freegame.gif" alt="步驟 4"></div>
+            <div class="thumb" data-gallery="1" data-src="extrabet.jpg" data-step="5"><span class="thumb-no">5</span><img src="extrabet.jpg" alt="步驟 5 Extra Bet"></div>
+            <div class="thumb" data-gallery="1" data-src="buyfeature.jpg" data-step="6"><span class="thumb-no">6</span><img src="buyfeature.jpg" alt="步驟 6 Buy Feature"></div>
+            <div class="thumb" data-gallery="1" data-src="paytable.jpg" data-step="7"><span class="thumb-no">7</span><img src="paytable.jpg" alt="步驟 7 賠率表"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="help-toggle" onclick="toggleHelp(this)"><span class="help-caret">▼</span> HELP 頁全文（點擊展開）</div>
+      <div class="help-panel">
+        <div class="help-block">
+          <p class="help-note">依遊戲內 HELP 原頁順序共 13 張：主畫面／Buy Feature／賠率表／WILD／SCATTER／1024 WAYS／黃金符號／鈴鐺 Featured WILD／消除倍數／免費遊戲／Extra Bet 等。</p>
+          <div class="help-imgs">
+            <img src="help-1.jpg" alt="HELP 1" onclick="window.open(this.src,'_blank')">
+            <img src="help-2.jpg" alt="HELP 2" onclick="window.open(this.src,'_blank')">
+            <img src="help-3.jpg" alt="HELP 3" onclick="window.open(this.src,'_blank')">
+            <img src="help-4.jpg" alt="HELP 4" onclick="window.open(this.src,'_blank')">
+            <img src="help-5.jpg" alt="HELP 5" onclick="window.open(this.src,'_blank')">
+            <img src="help-6.jpg" alt="HELP 6" onclick="window.open(this.src,'_blank')">
+            <img src="help-7.jpg" alt="HELP 7" onclick="window.open(this.src,'_blank')">
+            <img src="help-8.jpg" alt="HELP 8" onclick="window.open(this.src,'_blank')">
+            <img src="help-9.jpg" alt="HELP 9" onclick="window.open(this.src,'_blank')">
+            <img src="help-10.jpg" alt="HELP 10" onclick="window.open(this.src,'_blank')">
+            <img src="help-11.jpg" alt="HELP 11" onclick="window.open(this.src,'_blank')">
+            <img src="help-12.jpg" alt="HELP 12" onclick="window.open(this.src,'_blank')">
+            <img src="help-13.jpg" alt="HELP 13" onclick="window.open(this.src,'_blank')">
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title icon-core">核心設計</div>
+      <div class="core-block">消除倍數階梯 × 金框轉 WILD × 免費遊戲倍數翻倍，三者串接成單一爬倍結構。<br>
+      Base game 倍數沿 1 → 2 → 3 → 5 隨連鎖遞進；金框消除後轉為 WILD，並使當前倍數 +1x。<br>
+      鈴鐺於金框消除後灑出 WILD，延長連鎖。<br>
+      免費遊戲沿用同一套倍數邏輯，階梯放大為 2／4／6／10。<br>
+      Extra Bet 與 Buy Feature 提供加注、直購兩種進入特色的付費選項。</div>
+
+      <a class="trial-link" href="https://fachaigaming.com/en/games" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm1.5 4.5L6 8l3.5 3.5 1-1L8 8l2.5-2.5-1-1z"/></svg>遊戲頁面
+      </a>
+
+      <div class="bottom-row">
+        <a class="back-to-top" href="#top">↑ 回到最上方</a>
+        <span class="note-toggle" onclick="toggleNote(this)" title="企劃心得與提問">▼</span>
+      </div>
+      <div class="note-panel">
+        <div class="note-block">
+          <div class="note-intro">Halo Halo 是 FA CHAI《Sugar Bang Bang 2》的換皮款（主題糖果 → 菲律賓剉冰），數學模型、賠付、Max Win 全同。它最聰明的地方不是「加倍數」，而是<b>把爽感做成常常發生的小事件</b>。</div>
+          <div class="dim">
+            <div class="dim-title">倍數階梯像進度條</div>
+            <p>玩家看得到自己一階一階往上爬（1 → 2 → 3 → 5），比純看運氣有感——人喜歡「我在前進」的感覺。</p>
+          </div>
+          <div class="dim">
+            <div class="dim-title">鈴鐺是幫手，不是獎金</div>
+            <p>金鈴鐺灑出 WILD、幫你多連幾條線，讓消除不會斷掉、爬階能繼續。沒有它，運氣差的那幾轉就卡住、階梯就白擺了。</p>
+          </div>
+          <div class="dim">
+            <div class="dim-title">金框 +1 倍「只加這一次」是關鍵</div>
+            <p>加成不會累積、下一輪就歸零，成本比較低，所以他們敢讓金框常常出現。等於把「爆發的期待」變成天天有的小驚喜，而不是難得一次的大獎。<b>賣的是頻率，不是大小。</b></p>
+          </div>
+          <div class="dim">
+            <div class="dim-title">免費遊戲把倍數直接放大</div>
+            <p>同一套階梯，倍數直接翻倍（2／4／6／10）。不用學新玩法，爽度感官上明顯升一級——這比硬塞一個新機制聰明。</p>
+          </div>
+          <div class="dim">
+            <div class="dim-title">付費入口對準不同喜好</div>
+            <p>喜歡免費遊戲 2／4／6／10 就買特色；喜歡 +1 爬階、想更爽就開 Extra Bet（+1 變 +2）；兩個都愛就買 Extra Bet 版特色。<span class="tag-sol">解方</span>同一套機制拆成幾個付費選擇，讓不同偏好的人各買各的。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <footer>© 2026 傳奇亞太科技有限公司 ALPHABET ｜ 遊戲快訊</footer>
+
+</div>
+<script>
+  function toggleHelp(el) {
+    el.classList.toggle('open');
+    var panel = el.nextElementSibling;
+    if (panel) panel.classList.toggle('open');
+    var caret = el.querySelector('.help-caret');
+    if (caret) caret.textContent = el.classList.contains('open') ? '▲' : '▼';
+  }
+
+  function toggleNote(arrowEl) {
+    arrowEl.classList.toggle('open');
+    var row = arrowEl.closest('.bottom-row');
+    var panel = row ? row.nextElementSibling : null;
+    if (panel) panel.classList.toggle('open');
+  }
+
+  document.querySelectorAll('.gameplay-list').forEach(function(list) {
+    var first = list.querySelector('li');
+    if (first) first.classList.add('step-active');
+  });
+
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    if (thumb.dataset.src) { var pre = new Image(); pre.src = thumb.dataset.src; }
+  });
+
+  function setMain(mainEl, src, step) {
+    var img = mainEl.querySelector('img');
+    if (img) { img.src = src; img.alt = '步驟 ' + step; }
+    else { mainEl.innerHTML = '<img src="' + src + '" alt="步驟 ' + step + '">'; }
+  }
+
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      var galleryId = thumb.dataset.gallery;
+      var src = thumb.dataset.src;
+      var step = thumb.dataset.step;
+      var mainEl = document.getElementById('gallery-main-' + galleryId);
+      document.querySelectorAll('.thumb[data-gallery="' + galleryId + '"]').forEach(function(t) { t.classList.remove('active'); });
+      thumb.classList.add('active');
+      var card = thumb.closest('.game-card');
+      if (card) {
+        card.querySelectorAll('.gameplay-list li').forEach(function(li) { li.classList.remove('step-active'); });
+        card.querySelectorAll('.gameplay-list li[data-step="' + step + '"]').forEach(function(li) { li.classList.add('step-active'); });
+      }
+      setMain(mainEl, src, step);
+    });
+  });
+
+  document.querySelectorAll('.gameplay-list li').forEach(function(li) {
+    li.addEventListener('click', function() {
+      var card = li.closest('.game-card');
+      if (!card) return;
+      var step = li.dataset.step;
+      if (!step) return;
+      var thumb = card.querySelector('.gallery-thumbs .thumb[data-step="' + step + '"]');
+      if (thumb) thumb.click();
+    });
+  });
+</script>
+</body>
+</html>
