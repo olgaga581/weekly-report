@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>遊戲快訊｜Museo Yaman</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="遊戲快訊 — Museo Yaman">
+<meta property="og:description" content="iGaming 遊戲快訊 2026/07/23 — Museo Yaman（GAMEZONE）金框標誌＋FG倍率累積不歸零，Max Win 5,000×">
+<meta property="og:image" content="https://olgaga581.github.io/weekly-report/igaming/flash/F20/museo-yaman-title.jpg">
+<meta property="og:url" content="https://olgaga581.github.io/weekly-report/igaming/flash/F20/">
+<style>
+  :root {
+    --brand: #24b4cc;
+    --brand-dark: #167d91;
+    --text: #1a1a1a;
+    --muted: #5a6470;
+    --line: #e3e8ee;
+    --bg: #ffffff;
+    --card-bg: #f8fbfc;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: system-ui, "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif;
+    font-size: 17px; line-height: 1.8; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 48px 24px 80px; }
+  header { border-bottom: 3px solid var(--brand); padding-bottom: 16px; margin-bottom: 32px; }
+  .head-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .head-row img.logo { height: 56px; width: auto; flex-shrink: 0; }
+  .head-text { text-align: right; }
+  .head-text h1 { font-size: 26px; line-height: 1.4; margin: 0; color: var(--brand-dark); }
+  .head-text .date { color: var(--muted); font-size: 15px; margin-top: 4px; }
+  .summary-bar { background: #eef7f9; border-radius: 8px; padding: 16px 22px; margin-bottom: 32px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .summary-bar .count { font-size: 15px; color: var(--muted); white-space: nowrap; }
+  .summary-bar .count strong { font-size: 28px; font-weight: 700; color: var(--brand-dark); margin-right: 4px; }
+  .summary-divider { width: 1px; height: 36px; background: var(--line); flex-shrink: 0; }
+  .summary-games { display: flex; flex-wrap: wrap; gap: 8px; }
+  .summary-chip { background: #fff; border: 1px solid var(--brand); border-radius: 20px; padding: 4px 14px; font-size: 14px; color: var(--brand-dark); font-weight: 500; text-decoration: none; transition: background .15s; }
+  .summary-chip:hover { background: var(--brand); color: #fff; }
+  .game-card { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
+  .card-header { background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 100%); padding: 20px 24px 16px; color: #fff; }
+  .card-index { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; opacity: .7; text-transform: uppercase; margin-bottom: 4px; }
+  .card-title { font-size: 22px; font-weight: 700; margin: 0; line-height: 1.3; }
+  .card-vendor-badge { display: inline-block; background: rgba(255,255,255,.2); border-radius: 4px; padding: 2px 10px; font-size: 13px; font-weight: 500; margin-top: 8px; }
+  .card-image { width: 100%; background: #ffffff; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; min-height: 60px; }
+  .card-image img { width: 100%; max-width: 100%; height: auto; display: block; margin: 0 auto; }
+  .card-image.dark { background: #11202a; padding: 12px 0; }
+  .card-image.dark img { width: auto; max-height: 360px; }
+  .card-body { padding: 24px; background: #fff; }
+  .tags-section { margin-bottom: 22px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+  .tags-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .tag { display: inline-flex; align-items: center; gap: 5px; border-radius: 6px; padding: 4px 10px; font-size: 13px; font-weight: 500; line-height: 1.4; }
+  .tag-label { font-size: 11px; font-weight: 700; opacity: .65; text-transform: uppercase; letter-spacing: .5px; }
+  .tag-theme   { background: #e8f4f7; color: #167d91; }
+  .tag-rule    { background: #f0f4ff; color: #3d5af1; }
+  .tag-trigger { background: #fff4e6; color: #c26a00; }
+  .tag-maxwin  { background: #fef0f0; color: #c0392b; }
+  .section-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; display: flex; align-items: center; gap: 7px; }
+  .section-title::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 2px; background: var(--brand); flex-shrink: 0; }
+  .section-title.icon-core::before { background: var(--brand-dark); border-radius: 50%; }
+  .gameplay-list { list-style: none; margin: 0 0 24px; padding: 0; counter-reset: step; }
+  .gameplay-list li { counter-increment: step; display: flex; gap: 14px; margin-bottom: 12px; line-height: 1.7; font-size: 16px; cursor: pointer; }
+  .gameplay-list li::before {
+    content: counter(step); min-width: 26px; height: 26px; background: var(--brand); color: #fff;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 3px; transition: background .2s;
+  }
+  .gameplay-list li.step-active::before { background: #0c3547; }
+  .gameplay-list li .step-body { flex: 1; min-width: 0; }
+  .gameplay-list li .step-body b { display: block; color: var(--brand-dark); margin-bottom: 2px; }
+  .core-block { background: var(--card-bg); border-left: 4px solid var(--brand); border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 20px; font-size: 15px; color: var(--text); line-height: 1.75; }
+  .footnote { font-size: 12.5px; color: var(--muted); margin: -12px 0 20px; }
+  .gameplay-content { overflow: hidden; }
+  .gallery { margin: 20px 0 24px; border-top: 1px solid var(--line); padding-top: 20px; }
+  .gallery-main { width: 100%; background: #11202a; border-radius: 8px; overflow: hidden; margin-bottom: 10px; border: 1px solid var(--line); min-height: 60px; display: flex; align-items: center; justify-content: center; }
+  .gallery-main img { width: auto; max-width: 100%; max-height: 480px; display: block; margin: 0 auto; transition: opacity .2s ease; }
+  .gallery-main .placeholder { color: var(--muted); font-size: 14px; text-align: center; padding: 24px; }
+  .gallery-caption { text-align:center; color: var(--muted); font-size: 13px; margin: -2px 0 12px; }
+  .gallery-thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
+  .gallery-thumbs .thumb { width: 78px; height: 110px; border-radius: 6px; overflow: hidden; cursor: pointer; border: 2px solid transparent; background: #11202a; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: border-color .15s; position: relative; }
+  .gallery-thumbs .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery-thumbs .thumb .thumb-no { position:absolute; left:3px; top:3px; background:rgba(12,53,71,.85); color:#fff; font-size:10px; font-weight:700; border-radius:4px; padding:1px 5px; }
+  .gallery-thumbs .thumb.active { border-color: var(--brand); }
+  .gallery-thumbs .thumb:hover { border-color: var(--brand); opacity: .9; }
+  .help-full { margin: 4px 0 24px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .help-full > summary { cursor: pointer; list-style: none; padding: 12px 16px; background: var(--card-bg); color: var(--brand-dark); font-size: 14px; font-weight: 700; user-select: none; display: flex; align-items: center; gap: 8px; }
+  .help-full > summary::-webkit-details-marker { display: none; }
+  .help-full > summary::before { content: "\25B8"; color: var(--brand); transition: transform .2s; }
+  .help-full[open] > summary::before { transform: rotate(90deg); }
+  .help-full .help-images { padding: 12px 16px 16px; display: flex; flex-direction: column; gap: 10px; }
+  .help-full .help-images img { width: 100%; height: auto; display: block; border-radius: 6px; border: 1px solid var(--line); }
+  .trial-link { display: inline-flex; align-items: center; gap: 6px; background: var(--brand); color: #fff; text-decoration: none; padding: 9px 20px; border-radius: 6px; font-size: 14px; font-weight: 700; transition: background .15s; }
+  .trial-link:hover { background: var(--brand-dark); }
+  .trial-link svg { width: 14px; height: 14px; fill: currentColor; }
+  .no-trial { display: inline-flex; align-items: center; gap: 6px; background: #f2f4f7; color: var(--muted); padding: 9px 20px; border-radius: 6px; font-size: 14px; font-weight: 700; border: 1px dashed #c4ccd6; cursor: default; }
+  .back-to-top { display: block; text-align: center; margin: 0; padding: 10px; border: 1px solid var(--line); border-radius: 8px; color: var(--brand-dark); text-decoration: none; font-size: 14px; font-weight: 500; transition: background .15s; }
+  .back-to-top:hover { background: var(--card-bg); }
+  .bottom-row { position: relative; margin: 32px 0 0; }
+  .note-toggle { position: absolute; right: 12px; bottom: 8px; cursor: pointer; color: var(--muted); font-size: 13px; line-height: 1; user-select: none; padding: 6px 8px; transition: transform .25s ease, color .15s; }
+  .note-toggle:hover { color: var(--brand-dark); }
+  .note-toggle.open { transform: rotate(180deg); }
+  .note-panel { overflow: hidden; max-height: 0; opacity: 0; transition: max-height .35s ease, opacity .25s ease; }
+  .note-panel.open { max-height: 9999px; opacity: 1; margin-top: 10px; }
+  .note-block { background: #fffdf5; border-left: 4px solid #e7c14b; border-radius: 0 8px 8px 0; padding: 16px 18px; font-size: 15px; color: var(--text); line-height: 1.8; }
+  .note-block b { color: var(--brand-dark); }
+  .note-block .note-intro { margin-bottom: 16px; }
+  .note-block .dim { margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px dashed #ead9a0; }
+  .note-block .dim:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+  .note-block .dim-title { font-weight: 700; color: #b58a00; margin-bottom: 8px; }
+  .note-block .dim p { margin: 0 0 7px; }
+  .note-block .dim p:last-child { margin-bottom: 0; }
+  .note-block ul { margin: 4px 0 0; padding-left: 18px; }
+  .note-block li { margin-bottom: 6px; }
+  .note-block li:last-child { margin-bottom: 0; }
+  .note-block .tag-obs, .note-block .tag-sol { display: inline-block; font-size: 11px; font-weight: 700; border-radius: 4px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+  .note-block .tag-obs { background: #eef2f7; color: #5a6470; }
+  .note-block .tag-sol { background: #e6f4ea; color: #2c7a4b; }
+  footer { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 28px 16px 60px; }
+    .head-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .head-row img.logo { height: 44px; }
+    .head-text { text-align: left; }
+    .head-text h1 { font-size: 22px; }
+    .card-title { font-size: 19px; }
+    .card-body { padding: 18px 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <a href="../../" style="display:inline-block;font-size:14px;color:var(--brand-dark);text-decoration:none;margin-bottom:16px;">← iGaming 競品動態</a>
+
+  <header>
+    <div class="head-row">
+      <img class="logo" src="logo.png" alt="傳奇亞太科技 ALPHABET" onerror="this.style.display='none'">
+      <div class="head-text">
+        <h1>iGaming 遊戲快訊</h1>
+        <div class="date">2026/07/23｜新上市</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-bar">
+    <div class="count"><strong>1</strong> 款本期新增</div>
+    <div class="summary-divider"></div>
+    <div class="summary-games">
+      <a class="summary-chip" href="#game-1">Museo Yaman</a>
+    </div>
+  </div>
+
+  <!-- Museo Yaman -->
+  <article class="game-card" id="game-1">
+    <div class="card-header">
+      <div class="card-index">GAMEZONE · 博物館尋寶</div>
+      <h2 class="card-title">Museo Yaman</h2>
+      <span class="card-vendor-badge">GAMEZONE</span>
+    </div>
+    <div class="card-image dark">
+      <img src="museo-yaman-title.jpg" alt="Museo Yaman" onerror="this.parentElement.innerHTML='<span>遊戲主圖（待提供）</span>'">
+    </div>
+    <div class="card-body">
+      <div class="tags-section">
+        <div class="tags-row">
+          <span class="tag tag-theme"><span class="tag-label">主題</span>博物館尋寶 / 黃金雕像女神像</span>
+          <span class="tag tag-maxwin"><span class="tag-label">Max Win</span>5,000×</span>
+        </div>
+        <div class="tags-row">
+          <span class="tag tag-rule"><span class="tag-label">計線</span>WAYS</span>
+          <span class="tag tag-rule"><span class="tag-label">Ways</span>2,400（動態 4~3,456+）</span>
+          <span class="tag tag-trigger"><span class="tag-label">觸發</span>3+ Scatter 觸發 Free Game</span>
+        </div>
+      </div>
+
+      <div class="section-title">規格簡述</div>
+      <div class="core-block">2,400 WAYS（實測動態範圍 4~3,456+），Cascade 消除<br>金框標誌：一般計獎符號的金框強化版，隨機帶 2x~100x 倍率，消除後固定轉為 2 顆 WILD，不進入計獎<br>Free Game：3 顆以上 Scatter 觸發 10 次免費遊戲；金框標誌倍率持續累加不歸零，結束才清零；Buy Free Spins 可付費 50× 直接進場；Max Win 5,000×</div>
+      <div class="footnote">＊5,000× 為免費遊戲功能本身宣稱的贏分上限；與 Buy Free Spins 50× 購買價格為兩個獨立數字，不可混為一談。RTP／波動率／觸發率官方未公佈。</div>
+
+      <div class="section-title">遊戲玩法</div>
+      <div class="gameplay-content">
+        <ol class="gameplay-list" style="margin-top:14px">
+          <li><span class="step-body"><b>基礎盤面</b>2,400 WAYS，相鄰輪出現同符號即成立得獎組合；得獎符號消除後上方補位，連續掉落直到無新連線。</span></li>
+          <li><span class="step-body"><b>金框標誌</b>一般計獎符號（已知博物館建築 WILD、女神像、字母 A）皆可能以金框強化版樣式出現，帶隨機 2x~100x 倍率，非侷限特定 1-2 種專屬圖案。</span></li>
+          <li><span class="step-body"><b>WILD 轉換</b>金框標誌消除後不計獎，固定轉為 2 顆新 WILD，帶動後續連消鏈。</span></li>
+          <li><span class="step-body"><b>Free Game 觸發</b>3 顆以上 Scatter 自然落地，觸發 10 次免費遊戲；亦可付費購買 Buy Free Spins，實測 50× 下注額直接進場。</span></li>
+          <li><span class="step-body"><b>FG 倍率累積</b>免費遊戲期間，金框標誌倍率持續累加不歸零，直到整輪 FG 結束才清零；本次測試實測累積達 11x（測試參考值，非官方固定倍率）。</span></li>
+          <li><span class="step-body"><b>賠率表</b>各符號 5/4/3 連賠付對照，WILD 可替代除 SCATTER 外所有符號。</span></li>
+        </ol>
+        <div class="gallery">
+          <div class="gallery-main" id="gallery-main-1">
+            <img src="museo-yaman-1.gif" alt="步驟 1" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>步驟 1</div>'">
+          </div>
+          <div class="gallery-caption">點下方縮圖或左側步驟編號，切換對應機制動畫</div>
+          <div class="gallery-thumbs" id="gallery-thumbs-1">
+            <div class="thumb active" data-gallery="1" data-src="museo-yaman-1.gif" data-step="1"><span class="thumb-no">1</span><img src="museo-yaman-1.gif" alt="步驟 1"></div>
+            <div class="thumb" data-gallery="1" data-src="museo-yaman-2.gif" data-step="2"><span class="thumb-no">2</span><img src="museo-yaman-2.gif" alt="步驟 2"></div>
+            <div class="thumb" data-gallery="1" data-src="museo-yaman-3.gif" data-step="3"><span class="thumb-no">3</span><img src="museo-yaman-3.gif" alt="步驟 3"></div>
+            <div class="thumb" data-gallery="1" data-src="museo-yaman-4.gif" data-step="4"><span class="thumb-no">4</span><img src="museo-yaman-4.gif" alt="步驟 4"></div>
+            <div class="thumb" data-gallery="1" data-src="museo-yaman-5.gif" data-step="5"><span class="thumb-no">5</span><img src="museo-yaman-5.gif" alt="步驟 5"></div>
+            <div class="thumb" data-gallery="1" data-src="museo-yaman-paytable.jpg" data-step="6"><span class="thumb-no">6</span><img src="museo-yaman-paytable.jpg" alt="步驟 6 賠率表"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HELP 頁全文（預設收合，點擊展開） -->
+      <details class="help-full">
+        <summary>HELP 頁全文（點擊展開）</summary>
+        <div class="help-images">
+          <img src="museo-yaman-help-1.jpg" alt="HELP 1" loading="lazy">
+          <img src="museo-yaman-help-2.jpg" alt="HELP 2" loading="lazy">
+          <img src="museo-yaman-help-3.jpg" alt="HELP 3" loading="lazy">
+          <img src="museo-yaman-help-4.jpg" alt="HELP 4" loading="lazy">
+          <img src="museo-yaman-help-5.jpg" alt="HELP 5" loading="lazy">
+        </div>
+      </details>
+
+      <div class="section-title icon-core">核心設計</div>
+      <div class="core-block">基礎遊戲以金框標誌轉換而成的 WILD 參與連線計獎，搭配隨機倍率機制，在消除過程中持續給予獎勵；免費遊戲則轉為倍率累積玩法，倍率不歸零、一路疊加，玩家等待的是倍率累積到後段、集中在局末結算時給出的極大獎項。</div>
+
+      <span class="no-trial">尚無試玩連結</span>
+
+      <div class="bottom-row">
+        <a class="back-to-top" href="#top">↑ 回到最上方</a>
+        <span class="note-toggle" onclick="toggleNote(this)" title="企劃心得與提問">▼</span>
+      </div>
+      <div class="note-panel">
+        <div class="note-block">
+          <div class="note-intro">基礎遊戲的金框標誌一開出就直接轉換成 2 顆 WILD 加入連線，本身即是一次中獎，轉換後的 WILD 又會帶動後續連消鏈，等於一次觸發同時創造「當下贏分」與「延伸連鎖」兩層效果，再疊上隨機 2x~100x 倍率乘算，讓基礎遊戲階段的獎勵屬於隨時可能發生、隨轉隨給的漸進式驚喜。免費遊戲則把同一套金框標誌機制整個翻轉：倍率不再即時結算、用完即沒，而是被鎖進一個持續累積、直到整輪 FG 結束才一次性乘算兌現的池子。這代表 FG 前段每一次金框標誌開出，玩家得到的不是即時獎勵，而是「累積池又變大了」的期待感，真正的兌現被刻意延後到最後一轉——同一套核心機制（金框標誌＋隨機倍率），在基礎遊戲與免費遊戲兩種情境下，被設計成「即時滿足」與「延遲爆發」兩種截然不同的心理節奏。</div>
+          <p><span class="tag-obs">觀察</span>本作的金框標誌固定只佔 2 格空間，轉換時也一定是 2 顆 WILD 疊放呈現，格數與轉換結果都是定值，不會有更大或更小的變化，算是滿特別的設計選擇。</p>
+          <p><span class="tag-obs">觀察</span>雖然畫面上會出現佔多格的巨型圖騰，但本作不算傳統常見的 Megaways／浮動列數設計——巨型圖騰本身固定只有 2 格高，並非每輪列數隨機浮動，單純是「金框標誌固定 2 格」這個規則帶來的視覺效果。</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <footer>© 2026 傳奇亞太科技有限公司 ALPHABET ｜ 遊戲快訊</footer>
+
+</div>
+<script>
+  function toggleNote(arrowEl) {
+    arrowEl.classList.toggle('open');
+    var row = arrowEl.closest('.bottom-row');
+    var panel = row ? row.nextElementSibling : null;
+    if (panel) panel.classList.toggle('open');
+  }
+
+  document.querySelectorAll('.gameplay-list').forEach(function(list) {
+    var first = list.querySelector('li');
+    if (first) first.classList.add('step-active');
+  });
+
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    if (thumb.dataset.src) { var pre = new Image(); pre.src = thumb.dataset.src; }
+  });
+
+  function setMain(mainEl, src, step) {
+    var img = mainEl.querySelector('img');
+    if (img) { img.src = src; img.alt = '步驟 ' + step; }
+    else { mainEl.innerHTML = '<img src="' + src + '" alt="步驟 ' + step + '">'; }
+  }
+
+  document.querySelectorAll('.gallery-thumbs .thumb').forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      var galleryId = thumb.dataset.gallery;
+      var src = thumb.dataset.src;
+      var step = thumb.dataset.step;
+      var mainEl = document.getElementById('gallery-main-' + galleryId);
+      document.querySelectorAll('.thumb[data-gallery="' + galleryId + '"]').forEach(function(t) { t.classList.remove('active'); });
+      thumb.classList.add('active');
+      var card = thumb.closest('.game-card');
+      if (card) {
+        card.querySelectorAll('.gameplay-list li').forEach(function(li) { li.classList.remove('step-active'); });
+        var targetLi = card.querySelectorAll('.gameplay-list li')[parseInt(step) - 1];
+        if (targetLi) targetLi.classList.add('step-active');
+      }
+      setMain(mainEl, src, step);
+    });
+  });
+
+  document.querySelectorAll('.gameplay-list li').forEach(function(li) {
+    li.addEventListener('click', function() {
+      var card = li.closest('.game-card');
+      if (!card) return;
+      var step = Array.prototype.indexOf.call(li.parentNode.children, li) + 1;
+      var thumb = card.querySelector('.gallery-thumbs .thumb[data-step="' + step + '"]');
+      if (thumb) thumb.click();
+    });
+  });
+</script>
+</body>
+</html>
